@@ -29,6 +29,7 @@
 
   home.packages = with pkgs; [
     micro
+    ncdu
   ];
 
   programs.home-manager.enable = true;

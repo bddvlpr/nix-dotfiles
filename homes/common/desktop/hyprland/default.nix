@@ -39,5 +39,8 @@
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.default;
     # TODO: monitors
+    extraConfig = (import ./config.nix {
+      inherit (config) home;
+    });
   };
 }

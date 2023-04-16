@@ -4,7 +4,7 @@
   imports = [
     ./kitty.nix
     ./mako.nix
-    #./sway.nix
+    ./waybar.nix
     ./wofi.nix
   ];
 
