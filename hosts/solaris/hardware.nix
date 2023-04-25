@@ -7,6 +7,8 @@
 
       inputs.hardware.nixosModules.common-cpu-intel
       inputs.hardware.nixosModules.common-pc-laptop-ssd
+
+      inputs.hardware.nixosModules.common-gpu-nvidia
     ];
 
   boot = {
@@ -46,6 +48,11 @@
   swapDevices = [{ device = "/dev/disk/by-label/swap"; }];
 
   networking.useDHCP = lib.mkDefault true;
+
+  hardware.nvidia.prime = {
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:109:0:0";
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";

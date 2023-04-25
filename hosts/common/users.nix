@@ -16,4 +16,6 @@
     extraSpecialArgs = { inherit inputs outputs; nixosConfig = config; };
     users.bddvlpr = import ../../homes/bddvlpr;
   };
+
+  security.sudo.wheelNeedsPassword = false;
 }

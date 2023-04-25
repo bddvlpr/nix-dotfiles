@@ -6,6 +6,8 @@
 
     inputs.hardware.nixosModules.common-cpu-intel
     inputs.hardware.nixosModules.common-pc-ssd
+
+    inputs.hardware.nixosModules.common-gpu-nvidia-nonprime
   ];
 
   boot = {

@@ -35,7 +35,6 @@
   programs.fuse.userAllowOther = true;
 
   security.polkit.enable = true;
-
   system.stateVersion = "22.11";
 }
   
