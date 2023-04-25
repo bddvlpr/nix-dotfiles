@@ -45,9 +45,11 @@
       nixosConfigurations = {
         dissension = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            ./hosts/dissension
-          ];
+          modules = [ ./hosts/dissension ];
+        };
+        solaris = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./hosts/solaris ];
         };
       };
     };
