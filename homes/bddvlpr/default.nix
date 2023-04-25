@@ -22,13 +22,12 @@
     homeDirectory = "/home/bddvlpr";
 
     persistence."/nix/persist/home/bddvlpr" = {
-      directories = [ "Documents" "Pictures" "Videos" ];
+      directories = [ "Documents" "Pictures" "Videos" "Music" "Desktop" "Downloads" ];
       allowOther = true;
     };
   };
 
   home.packages = with pkgs; [
-    micro
     nixpkgs-fmt
     ncdu
   ];

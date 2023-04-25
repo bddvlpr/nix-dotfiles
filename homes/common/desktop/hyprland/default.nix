@@ -25,10 +25,13 @@
       fi
     '';
   };
+  fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
     swaybg
     swayidle
+
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
   programs.waybar.package = pkgs.waybar.overrideAttrs (oa: {

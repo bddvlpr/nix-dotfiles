@@ -15,6 +15,10 @@ in
 
   programs.kitty = {
     enable = true;
-    # TODO: settings, font, styling
+
+    font = {
+      name = "FiraCode Nerd Font";
+      size = 10;
+    };
   };
 }

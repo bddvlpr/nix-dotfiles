@@ -3,6 +3,11 @@
 {
   gtk = {
     enable = true;
-    # TODO: styling
+
+    font = {
+      name = "FiraCode Nerd Font";
+      size = 12;
+    };
   };
+  #home.packages = [ pkgs.dconf ];
 }
