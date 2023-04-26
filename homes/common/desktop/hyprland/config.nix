@@ -1,3 +1,4 @@
+
 { home }:
 let
   inherit (home.sessionVariables) TERMINAL BROWSER EDITOR;
@@ -134,29 +135,29 @@ in
   bind = SUPERSHIFT, a, movetoworkspace, special
   bind = SUPER, c, exec, hyprctl dispatch centerwindow
 
-  bind = SUPER, 1, workspace, 1
-  bind = SUPER, 2, workspace, 2
-  bind = SUPER, 3, workspace, 3
-  bind = SUPER, 4, workspace, 4
-  bind = SUPER, 5, workspace, 5
-  bind = SUPER, 6, workspace, 6
-  bind = SUPER, 7, workspace, 7
-  bind = SUPER, 8, workspace, 8
-  bind = SUPER, 9, workspace, 9
-  bind = SUPER, 0, workspace, 10
+  bind = SUPER, ampersand, workspace, 1
+  bind = SUPER, eacute, workspace, 2
+  bind = SUPER, quotedbl, workspace, 3
+  bind = SUPER, apostrophe, workspace, 4
+  bind = SUPER, parenleft, workspace, 5
+  bind = SUPER, section, workspace, 6
+  bind = SUPER, egrave, workspace, 7
+  bind = SUPER, exclam, workspace, 8
+  bind = SUPER, ccedilla, workspace, 9
+  bind = SUPER, agrave, workspace, 10
   bind = SUPER ALT, up, workspace, e+1
   bind = SUPER ALT, down, workspace, e-1
 
-  bind = SUPERSHIFT, 1, movetoworkspace, 1
-  bind = SUPERSHIFT, 2, movetoworkspace, 2
-  bind = SUPERSHIFT, 3, movetoworkspace, 3
-  bind = SUPERSHIFT, 4, movetoworkspace, 4
-  bind = SUPERSHIFT, 5, movetoworkspace, 5
-  bind = SUPERSHIFT, 6, movetoworkspace, 6
-  bind = SUPERSHIFT, 7, movetoworkspace, 7
-  bind = SUPERSHIFT, 8, movetoworkspace, 8
-  bind = SUPERSHIFT, 9, movetoworkspace, 9
-  bind = SUPERSHIFT, 0, movetoworkspace, 10
+  bind = SUPER SHIFT, ampersand, movetoworkspace, 1
+  bind = SUPER SHIFT, eacute, movetoworkspace, 2
+  bind = SUPER SHIFT, quotedbl, movetoworkspace, 3
+  bind = SUPER SHIFT, apostrophe, movetoworkspace, 4
+  bind = SUPER SHIFT, parenleft, movetoworkspace, 5
+  bind = SUPER SHIFT, section, movetoworkspace, 6
+  bind = SUPER SHIFT, egrave, movetoworkspace, 7
+  bind = SUPER SHIFT, exclam, movetoworkspace, 8
+  bind = SUPER SHIFT, ccedilla, movetoworkspace, 9
+  bind = SUPER SHIFT, agrave, movetoworkspace, 10
 
   bindm = SUPER, mouse:272, movewindow
   bindm = SUPER, mouse:273, resizewindow
