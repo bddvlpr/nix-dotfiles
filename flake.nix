@@ -12,7 +12,6 @@
     hyprwm-contrib.url = "github:hyprwm/contrib";
 
     impermanence.url = "github:nix-community/impermanence";
-
     hardware.url = "github:nixos/nixos-hardware";
   };
 

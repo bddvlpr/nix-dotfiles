@@ -1,4 +1,3 @@
-
 { home }:
 let
   inherit (home.sessionVariables) TERMINAL BROWSER EDITOR;
@@ -40,7 +39,7 @@ in
     multisample_edges = true
 
     active_opacity = 1.0
-    inactive_opacity = 0.7
+    inactive_opacity = 0.95
 
     blur = false
     blur_size = 3
@@ -110,11 +109,12 @@ in
   windowrule = opacity 0.92, Thunar
 
   bind = SUPER, Return, exec, ${TERMINAL}
+  bind = SUPER, Space, exec, rofi -show drun -I -m -i
 
   bind = SUPER, Q, killactive,
-  bind = SUPERSHIFT, Q, exit,
+  bind = SUPER SHIFT, Q, exit,
   bind = SUPER, F, fullscreen,
-  bind = SUPER, Space, togglefloating,
+  bind = SUPER SHIFT, Space, togglefloating,
   bind = SUPER, P, pseudo,
   bind = SUPER, S, togglesplit,
 
@@ -132,7 +132,7 @@ in
   bind = SUPER, tab, changegroupactive
 
   bind = SUPER, a, togglespecialworkspace
-  bind = SUPERSHIFT, a, movetoworkspace, special
+  bind = SUPER SHIFT, a, movetoworkspace, special
   bind = SUPER, c, exec, hyprctl dispatch centerwindow
 
   bind = SUPER, ampersand, workspace, 1

@@ -2,10 +2,9 @@
 
 {
   imports = [
-    ./kitty.nix
-    ./mako.nix
-    ./waybar.nix
-    ./wofi.nix
+    ./kitty
+    ./mako
+    ./rofi
   ];
 
   home = {
