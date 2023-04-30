@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  services.mako = {
+  programs.mako = {
     enable = true;
     #TODO: styling
   };
