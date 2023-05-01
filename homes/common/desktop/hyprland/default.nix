@@ -31,6 +31,7 @@
     swaybg
     swayidle
 
+    fira-code
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 

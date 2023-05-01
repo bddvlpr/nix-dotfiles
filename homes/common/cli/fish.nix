@@ -17,5 +17,9 @@
 
       code = "codium";
     };
+
+    shellInit = ''
+      set fish_greeting
+    '';
   };
 }

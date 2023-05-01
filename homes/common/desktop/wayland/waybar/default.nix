@@ -1,43 +1,24 @@
-{ outputs, config, lib, pkgs, ... }:
-
 {
   programs.waybar = {
     enable = true;
 
-    style = builtins.readFile ./style/waybar.css;
+    style = ./style.css;
 
     settings = {
-      primary = {
+      bar = {
+        # Configuration & Setup
         layer = "top";
         position = "top";
-        mod = "dock";
-        exclusive = true;
-        passthrough = false;
-        gtk-layer-shell = true;
-        height = 0;
+        spacing = 4;
+        modules-left = [ "wlr/workspaces" ];
+        #modules-center = [ "hyprland/window" ];
+        modules-right = [ "network" "backlight" "battery" "clock" ];
 
-        modules-left = [
-          "clock"
-          "wlr/workspaces"
-        ];
-
-        modules-center = [ "hyprland/window" ];
-
-        modules-right = [
-          "tray"
-          "pulseaudio"
-          "pulseaudio#microphone"
-        ];
-
-        "hyprland/window" = {
-          format = "{}";
-        };
-
+        # Modules
         "wlr/workspaces" = {
+          all-outputs = true;
           on-scroll-up = "hyprctl dispatch workspace e+1";
           on-scroll-down = "hyprctl dispatch workspace e-1";
-          all-outputs = true;
-          on-click = "activate";
           format = "{icon}";
           format-icons = {
             "1" = "";
@@ -45,20 +26,45 @@
             "3" = "";
             "4" = "";
             "5" = "";
-            urgent = "";
-            active = "";
-            default = "";
+            "6" = "";
+            "7" = "";
+            "8" = "";
+            "9" = "";
+            "urgent" = "";
+            "focused" = "";
+            "default" = "";
           };
         };
-        tray = {
-          icon-size = 13;
-          tooltip = false;
-          spacing = 10;
+
+        network = {
+          format-wifi = " {signalStrength}%";
+          format-ethernet = " {ipaddr}/{cidr}";
+          tooltip-format = "{ifname} via {gwaddr}";
+          format-linked = " (No IP)";
+        };
+
+        backlight = {
+          format = "{icon} {percent}%";
+          format-icons = [ "" "" "" "" "" "" "" "" "" ];
+        };
+
+        battery = {
+          states = {
+            warning = 30;
+            critical = 15;
+          };
+          format = "{icon} {capacity}%";
+          format-charging = " {capacity}%";
+          format-plugged = " {capacity}%";
+          format-alt = "{time} {icon}";
+          format-icons = [ " " " " " " " " " " ];
         };
 
         clock = {
-          format = "{: %R   %d/%m}";
+          format = " {:%I:%M%p}";
+          format-alt = "{:%Y-%m-%d}";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          timezone = "Europe/Brussels";
         };
       };
     };

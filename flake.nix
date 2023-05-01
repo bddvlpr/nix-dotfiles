@@ -9,7 +9,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland.url = "github:hyprwm/hyprland/v0.23.0beta";
-    hyprwm-contrib.url = "github:hyprwm/contrib";
+    #hyprwm-contrib.url = "github:hyprwm/contrib";
+    #hyprwm-hyprpaper.url = "github:hyprwm/hyprpaper";
 
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";
@@ -29,13 +30,11 @@
     rec {
       packages = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./pkgs { inherit pkgs; }
-      );
+        in import ./pkgs { inherit pkgs; });
 
       devShells = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./shell.nix { inherit pkgs; }
-      );
+        in import ./shell.nix { inherit pkgs; });
 
       overlays = import ./overlays { inherit inputs; };
       nixosModules = import ./modules/nixos;

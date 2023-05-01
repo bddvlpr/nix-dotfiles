@@ -1,6 +1,10 @@
 { home }:
 let
   inherit (home.sessionVariables) TERMINAL BROWSER EDITOR;
+  wallpaper = builtins.fetchurl {
+    sha256 = "91e8142bad98b48ec6dcffe922a7167451a5a8de12d7fe3138e98e6e83f124a1";
+    url = "https://raw.githubusercontent.com/yousifm/dotfiles/master/bg.png";
+  };
 in
 ''
   input {
@@ -12,17 +16,19 @@ in
     }
   }
 
+  env = XCURSOR_SIZE,24
+
   exec-once=waybar
-  #exec=swaybg -i #$#{wallpaper} --mode fill
-  exec-once=mako
-  exec-once=swayidle -w
+  exec=swaybg -i ${wallpaper} --mode fill
+  #exec-once=mako
+  #exec-once=swayidle -w
 
   general {
-    gaps_in = 5
+    gaps_in = 3
     gaps_out = 5
-    border_size = 1
-    col.active_border = 0xFF7D4045
-    col.inactive_border = 0xFF382D2E
+    border_size = 2
+    col.active_border = rgba(b4befeaa)
+    col.inactive_border = rgba(595959aa)
     layout = dwindle
     no_cursor_warps = true
   }
@@ -35,23 +41,23 @@ in
   }
 
   decoration {
-    rounding = 0
+    rounding = 3
     multisample_edges = true
 
     active_opacity = 1.0
-    inactive_opacity = 0.95
+    inactive_opacity = 0.75
 
     blur = false
     blur_size = 3
-    blur_passes = 3
+    blur_passes = 1
     blur_new_optimizations = true
 
     drop_shadow = true
-    shadow_ignore_window = true
-    shadow_offset = 1 2
-    shadow_range = 10
-    shadow_render_power = 2
-    col.shadow = 0x66404040
+    #shadow_ignore_window = true
+    #shadow_offset = 1 2
+    shadow_range = 4
+    shadow_render_power = 3
+    col.shadow = rgba(1a1a1aee)
 
     blurls = waybar
   }

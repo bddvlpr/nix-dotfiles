@@ -4,10 +4,14 @@
   gtk = {
     enable = true;
 
-    font = {
-      name = "FiraCode Nerd Font";
-      size = 12;
-    };
+    #theme = {
+    #  name = "Adwaita-dark";
+    #  package = pkgs.gnome.gnome-themes-extra;
+    #};
+
+    #font = {
+    #  name = "FiraCode Nerd Font";
+    #  size = 12;
+    #};
   };
-  #home.packages = [ pkgs.dconf ];
 }

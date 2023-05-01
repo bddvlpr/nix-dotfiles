@@ -7,7 +7,7 @@ let
 in
 {
   home = {
-    packages = [ kitty-xterm ];
+    packages = [ kitty-xterm pkgs.kitty-themes ];
     sessionVariables = {
       TERMINAL = "kitty -1";
     };
@@ -20,5 +20,7 @@ in
       name = "FiraCode Nerd Font";
       size = 10;
     };
+
+    theme = "Catppuccin-Macchiato";
   };
 }

@@ -4,5 +4,5 @@
     nvidia.modesetting.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [ cudatoolkit nvtop ];
+  environment.systemPackages = with pkgs; [ nvtop ];
 }

@@ -5,6 +5,7 @@
     ./kitty
     ./mako
     ./rofi
+    ./waybar
   ];
 
   home = {

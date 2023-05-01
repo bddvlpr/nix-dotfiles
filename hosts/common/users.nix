@@ -3,12 +3,14 @@
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
 
-  users.users = {
-    bddvlpr = {
-      passwordFile = "/nix/persist/passwd";
-      isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" ];
-      shell = pkgs.fish;
+  users = {
+    defaultUserShell = pkgs.fish;
+    users = {
+      bddvlpr = {
+        passwordFile = "/nix/persist/passwd";
+        isNormalUser = true;
+        extraGroups = [ "wheel" "networkmanager" ];
+      };
     };
   };
 
