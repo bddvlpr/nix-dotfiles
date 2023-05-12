@@ -31,6 +31,8 @@
     };
   };
 
+  programs.dconf.enable = true;
+
   console.keyMap = "be-latin1";
 
   programs.fuse.userAllowOther = true;

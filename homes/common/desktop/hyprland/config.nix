@@ -9,7 +9,7 @@ in
 ''
   input {
     kb_layout=be
-    follow_mouse = 1
+    follow_mouse = 2
     sensitivity = 0
     touchpad {
       disable_while_typing=false
