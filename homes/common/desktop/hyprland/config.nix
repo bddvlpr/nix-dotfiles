@@ -118,7 +118,7 @@ in
   bind = SUPER, Space, exec, rofi -show drun -I -m -i
 
   bind = SUPER, Q, killactive,
-  bind = SUPER SHIFT, Q, exit,
+  bind = SUPER SHIFT, Escape, exit,
   bind = SUPER, F, fullscreen,
   bind = SUPER SHIFT, Space, togglefloating,
   bind = SUPER, P, pseudo,
