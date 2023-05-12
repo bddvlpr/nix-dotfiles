@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./docker.nix
     ./boot.nix
     ./impermanence.nix
     ./networking.nix
