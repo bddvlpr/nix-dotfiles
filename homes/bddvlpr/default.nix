@@ -30,6 +30,8 @@
   home.packages = with pkgs; [
     nixpkgs-fmt
     ncdu
+    htop
+    neofetch
   ];
 
   programs.home-manager.enable = true;
