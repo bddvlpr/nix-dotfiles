@@ -2,6 +2,6 @@
   imports = [
     ./discord.nix
     ./firefox.nix
-    ./vscode.nix
+    ./vscodium.nix
   ];
 }
