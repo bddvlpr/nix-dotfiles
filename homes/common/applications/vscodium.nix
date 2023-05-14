@@ -15,7 +15,7 @@
     ];
 
     userSettings = {
-      "workbench.colorTheme" = "Catppuccin Mocha";
+      "workbench.colorTheme" = "Catppuccin Macchiato";
     };
   };
 }
