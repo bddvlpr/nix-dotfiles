@@ -45,7 +45,7 @@ in
     multisample_edges = true
 
     active_opacity = 1.0
-    inactive_opacity = 0.75
+    inactive_opacity = 1.0
 
     blur = false
     blur_size = 3

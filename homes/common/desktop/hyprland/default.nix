@@ -49,9 +49,8 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.default;
-    # TODO: monitors
-    extraConfig = (import ./config.nix {
-      inherit (config) home;
-    });
+    extraConfig =
+      (import ./config.nix { inherit (config) home; }) +
+      (import ./monitors.nix { inherit lib; inherit (config) monitors; });
   };
 }
