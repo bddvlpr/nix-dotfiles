@@ -1,5 +1,7 @@
-{ pkgs, ... }:
-
+{ inputs, pkgs, ... }:
+let
+  openVsxExtensions = inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx;
+in
 {
   programs.vscode = {
     enable = true;
@@ -9,9 +11,10 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
 
-    extensions = with pkgs; [
-      vscode-extensions.bbenoist.nix
-      vscode-extensions.catppuccin.catppuccin-vsc
+    extensions = with openVsxExtensions; [
+      bbenoist.nix
+      catppuccin.catppuccin-vsc
+      icrawl.discord-vscode
     ];
 
     userSettings = {
