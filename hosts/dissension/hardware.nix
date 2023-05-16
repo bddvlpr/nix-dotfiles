@@ -4,7 +4,7 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
 
-    inputs.hardware.nixosModules.common-cpu-intel
+    inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
 
     inputs.hardware.nixosModules.common-gpu-nvidia-nonprime
@@ -13,13 +13,13 @@
   boot = {
     initrd = {
       availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
-      kernelModules = [ "dm-snapshot" ];
+      kernelModules = [ "dm-snapshot" "nvidia" ];
       luks.devices.crypted = {
         device = "/dev/disk/by-uuid/1c016456-1ccd-4cd3-8a5e-d5db9526060b";
         preLVM = true;
       };
     };
-    kernelModules = [ "kvm-intel" ];
+    kernelModules = [ "kvm-amd" ];
     extraModulePackages = [ ];
   };
 

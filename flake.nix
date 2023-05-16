@@ -2,19 +2,20 @@
   description = "Luna's NixOS configuration.";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager/release-22.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    hyprland.url = "github:hyprwm/hyprland/v0.23.0beta";
+    hyprland.url = "github:hyprwm/hyprland";
     #hyprwm-contrib.url = "github:hyprwm/contrib";
     #hyprwm-hyprpaper.url = "github:hyprwm/hyprpaper";
 
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";
-    
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
@@ -50,20 +51,6 @@
         solaris = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ ./hosts/solaris ];
-        };
-      };
-
-      homeConfigurations = {
-        "bddvlpr@dissension" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./hosts/dissension/home-manager.nix ];
-        };
-
-        "bddvlpr@solaris" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./hosts/solaris/home-manager.nix ];
         };
       };
     };
