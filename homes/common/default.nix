@@ -1,8 +1,7 @@
 { inputs, ... }: {
   imports = [
     inputs.impermanence.nixosModules.home-manager.impermanence
-
-    ./cli
-    ./applications
   ];
+
+  programs.home-manager.enable = true;
 }

@@ -25,15 +25,22 @@
       fi
     '';
   };
+
   fonts.fontconfig.enable = true;
 
-  home.packages = with pkgs; [
-    swaybg
-    swayidle
+  home = {
+    packages = with pkgs; [
+      swaybg
+      swayidle
 
-    fira-code
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  ];
+      fira-code
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    ];
+
+    sessionVariables = {
+      WLR_NO_HARDWARE_CURSORS = 1;
+    };
+  };
 
   programs.waybar.package = pkgs.waybar.overrideAttrs (oa: {
     mesonFlags = (oa.mesonFlags or [ ]) ++ [ "-Dexperimental=true" ];

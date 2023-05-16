@@ -1,7 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ../common
-    ../common/desktop/hyprland
   ];
 
   nixpkgs = {

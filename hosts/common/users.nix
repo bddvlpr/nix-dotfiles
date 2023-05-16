@@ -1,8 +1,6 @@
 { outputs, inputs, config, pkgs, ... }:
 
 {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
-
   users = {
     defaultUserShell = pkgs.fish;
     users = {
@@ -12,11 +10,6 @@
         extraGroups = [ "wheel" "networkmanager" "docker" ];
       };
     };
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; nixosConfig = config; };
-    users.bddvlpr = import ../../homes/bddvlpr;
   };
 
   security.sudo.wheelNeedsPassword = false;

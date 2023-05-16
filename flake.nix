@@ -50,5 +50,19 @@
           modules = [ ./hosts/solaris ];
         };
       };
+
+      homeConfigurations = {
+        "bddvlpr@dissension" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./hosts/dissension/home-manager.nix ];
+        };
+
+        "bddvlpr@solaris" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./hosts/solaris/home-manager.nix ];
+        };
+      };
     };
 }
