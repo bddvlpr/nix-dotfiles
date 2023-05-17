@@ -12,9 +12,16 @@ in
     enableExtensionUpdateCheck = false;
 
     extensions = with openVsxExtensions; [
-      bbenoist.nix
+      # Theme & flair
       catppuccin.catppuccin-vsc
       icrawl.discord-vscode
+
+      # Nix(OS)
+      bbenoist.nix
+
+      # Flutter
+      dart-code.flutter
+      dart-code.dart-code
     ];
 
     userSettings = {
