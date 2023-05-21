@@ -3,6 +3,7 @@
     ../common/global.nix
     ../common/nvidia.nix
     ./hardware.nix
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   home-manager = {
