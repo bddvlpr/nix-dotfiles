@@ -16,8 +16,6 @@
       snrs = "sudo nixos-rebuild --flake . switch";
       hm = "home-manager --flake .";
       hms = "home-manager --flake . switch";
-
-      code = "codium";
     };
 
     shellInit = ''

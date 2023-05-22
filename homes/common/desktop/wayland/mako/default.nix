@@ -10,7 +10,7 @@
     progressColor = "#363a4f";
 
     extraConfig = ''
-     [urgency=high]
-     border-color=#f5a97f'';
+      [urgency=high]
+      border-color=#f5a97f'';
   };
 }
