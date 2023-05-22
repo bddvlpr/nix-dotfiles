@@ -13,8 +13,7 @@
     };
 
     #font = {
-    #  name = "FiraCode Nerd Font";
-    #  size = 12;
+    #  name = "RobotoMono Nerd Font";
     #};
   };
 

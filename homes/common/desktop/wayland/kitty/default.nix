@@ -17,7 +17,7 @@ in
     enable = true;
 
     font = {
-      name = "FiraCode Nerd Font";
+      name = "RobotoMono Nerd Font";
     };
 
     theme = "Catppuccin-Macchiato";

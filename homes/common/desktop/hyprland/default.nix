@@ -33,8 +33,7 @@
       swaybg
       swayidle
 
-      fira-code
-      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+      (nerdfonts.override { fonts = [ "FiraCode" "RobotoMono" "NerdFontsSymbolsOnly" ]; })
     ];
 
     sessionVariables = {

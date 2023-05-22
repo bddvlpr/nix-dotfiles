@@ -37,88 +37,208 @@
 @define-color rosewater #f4dbd6;
 
 * {
-  font-family: "Fira Code Nerd Font", "Font Awesome 5 Free";
+  /* border: none; */
+  border-radius: 0px;
+  font-family: "Symbols Nerd Font Mono", "Roboto Nerd Font Mono";
+  font-weight: 500;
   font-size: 14px;
+  min-height: 20px;
 }
 
 window#waybar {
-  background-color: alpha(@base, 0.0);
-  border: 2px solid alpha(@crust, 0.0);
+  background: transparent;
+  color: #cdd6f4;
+  opacity: 1;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#backlight,
-#disk,
-#network,
-#pulseaudio {
-  padding: 0 10px;
-}
-
-#clock {
-  color: @sky;
-}
-
-#wifi {
-  color: @sapphire;
-}
-
-#battery {
-  color: @green;
-}
-
-#pulseaudio {
-  color: @flamingo;
-}
-
-#network {
-  color: @maroon;
-}
-
-#backlight {
-  color: @mauve;
+tooltip {
+  background: #12121e;
+  border-radius: 7px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
 }
 
 #workspaces button {
-  color: @text;
-  border-radius: 16px;
-  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
-}
-
-#workspaces button:hover {
-  background-color: @mauve;
+  padding: 5px;
+  color: #313244;
+  margin-right: 5px;
+  /* margin-left: 10px; */
 }
 
 #workspaces button.active {
-  color: @maroon;
-  background-color: shade(@surface1, 0.9);
+  color: @lavender;
 }
 
-.modules-right {
-  background-color: @surface1;
-  border-radius: 16px;
-  margin: 5px;
+#workspaces button.focused {
+  color: #707880;
+  background: #eba0ac;
+  border-radius: 7px;
 }
 
-.modules-left {
-  background-color: @surface1;
-  border-radius: 16px;
-  margin: 5px;
+#workspaces button.urgent {
+  color: #11111b;
+  background: #f28fad;
+  border-radius: 7px;
 }
 
-.modules-center {
-  background-color: @surface1;
-  border-radius: 16px;
-  margin: 5px;
+#workspaces button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+  border-radius: 17px;
 }
 
-.custom-spotify {
-  padding: 0 10px;
+/* #custom-power_profile, */
+/* #custom-weather, */
+
+#custom-logo,
+#window,
+#clock,
+#battery,
+#mpris,
+#pulseaudio,
+#custom-pacman,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#tray,
+#mpd,
+#custom-pomodoro,
+#cpu,
+#memory,
+#custom-spotify,
+#modbackground {
+  background: #1e1e2e;
+  opacity: 1;
+  padding: 0px 7px;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  /* border: 1px solid #b5b0a7; */
+}
+
+#custom-logo {
+  color: @lavender;
+  border-radius: 7px 0px 0px 7px;
+  margin-left: 7px;
+}
+
+#backlight {
+  color: @teal;
+  border-radius: 7px 0px 0px 7px;
+  background: #1e1e2e;
+  opacity: 1;
+  padding: 0px 7px;
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+
+#pulseaudio {
   color: @green;
+  border-radius: 0px;
+  border-left: 0px;
+  border-right: 0px;
 }
 
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
+#pulseaudio.microphone {
+  color: @yellow;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px 7px 7px 0px;
+  margin-right: 5px;
 }
+
+#cpu {
+  color: @sapphire;
+  border-radius: 7px 0px 0px 7px;
+}
+
+#memory {
+  color: @sky;
+  border-radius: 0px 7px 7px 0px;
+  margin-right: 5px;
+}
+
+#tray {
+  border-radius: 7px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#workspaces {
+  border-radius: 0px 7px 7px 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#window {
+  border-radius: 7px;
+  margin-left: 10px;
+  margin-right: 60px;
+}
+
+#clock {
+  color: @red;
+  border-radius: 7px;
+  /* margin-left: 10px; */
+  margin-right: 5px;
+}
+
+#network {
+  color: @peach;
+  border-radius: 7px;
+  margin-right: 5px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#bluetooth {
+  color: @teal;
+  border-radius: 7px;
+  margin-right: 5px;
+}
+
+#battery {
+  color: @maroon;
+  border-radius: 7px;
+  margin-right: 5px;
+  border-left: 0px;
+}
+
+#custom-spotify {
+  border-radius: 7px;
+  margin-right: 5px;
+  border-right: 0px;
+}
+
+#mpris {
+  border-radius: 7px;
+  margin-right: 5px;
+  border-right: 0px;
+}
+
+#mpris.paused {
+  border-bottom: 2px solid @yellow;
+}
+
+#mpd {
+  border-radius: 7px;
+  margin-right: 5px;
+  border-right: 0px;
+}
+
+#custom-pomodoro {
+  color: #cdd6e1;
+  border-radius: 7px;
+  margin-right: 5px;
+}
+
+#custom-pomodoro.paused {
+  border-bottom: 2px solid @yellow;
+}
+/**/
+/* #custom-weather { */
+/*   border-radius: 0px 10px 10px 0px; */
+/*   border-right: 0px; */
+/*   margin-left: 0px; */
+/* } */

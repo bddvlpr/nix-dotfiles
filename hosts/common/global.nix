@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./audio.nix
     ./docker.nix
     ./boot.nix
     ./impermanence.nix
