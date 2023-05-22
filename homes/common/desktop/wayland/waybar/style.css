@@ -92,6 +92,7 @@ tooltip {
 /* #custom-weather, */
 
 #custom-logo,
+#backlight,
 #window,
 #clock,
 #battery,
@@ -125,19 +126,13 @@ tooltip {
 
 #backlight {
   color: @teal;
-  border-radius: 7px 0px 0px 7px;
-  background: #1e1e2e;
-  opacity: 1;
-  padding: 0px 7px;
-  margin-top: 5px;
-  margin-bottom: 6px;
+  border-radius: 7px;
+  margin-right: 5px;
 }
 
 #pulseaudio {
   color: @green;
-  border-radius: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-radius: 7px 0px 0px 7px;
 }
 
 #pulseaudio.microphone {
