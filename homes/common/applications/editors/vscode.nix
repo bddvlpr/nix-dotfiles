@@ -12,6 +12,7 @@ in
     enableExtensionUpdateCheck = false;
 
     userSettings = {
+      "git.autofetch"= true;
       "editor.formatOnSave" = true;
       "explorer.autoReveal" = false;
 
