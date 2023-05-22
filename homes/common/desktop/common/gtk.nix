@@ -12,9 +12,9 @@
       };
     };
 
-    #font = {
-    #  name = "RobotoMono Nerd Font";
-    #};
+    font = {
+      name = "RobotoMono Nerd Font";
+    };
   };
 
   dconf.enable = true;

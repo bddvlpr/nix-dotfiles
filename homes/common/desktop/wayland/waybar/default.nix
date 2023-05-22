@@ -10,7 +10,7 @@
         layer = "top";
         position = "top";
         modules-left = [ "custom/logo" "wlr/workspaces" /*"tray" "hyprland/window"*/ ];
-        modules-right = [ "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock" ];
+        modules-right = [ "tray" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock" ];
 
         # Modules
         "custom/logo" = {
@@ -43,27 +43,29 @@
         };
 
         cpu = {
-          interval = 1;
+          interval = 3;
           format = "  {usage}%";
         };
 
         memory = {
-          interval = 1;
+          interval = 3;
           format = "  {}%";
+          tooltip-format = "{used:0.1f}GiB/{total:0.1f}GiB total ({swapUsed:0.1f}GiB/{swapAvail:0.1f}GiB swap)";
         };
 
         network = {
+          interval = 3;
           format-wifi = "  {signalStrength}%";
           format-ethernet = "󰈀  {ipaddr}/{cidr}";
           format-linked = "󰌙 (No IP)";
           format-disconnected = "󰌙";
-          format-alt = "󰱓 {ifname}:{essid} {ipaddr}/{cidr}";
-          tooltip-format = "{essid} - {ifname} via {gwaddr}";
+          format-alt = "󰛴 {bandwidthDownBits} 󰛶 {bandwidthUpBits}";
+          tooltip-format = "{ifname} via {gwaddr}";
         };
 
         backlight = {
           format = "{icon} {percent}%";
-          format-icons = [ "" "" "" "" "" "" "" "" "" ];
+          format-icons = [ "󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨" ];
         };
 
         battery = {

@@ -33,6 +33,10 @@
       swaybg
       swayidle
 
+      fira-code
+      roboto-mono
+      twemoji-color-font
+
       (nerdfonts.override { fonts = [ "FiraCode" "RobotoMono" "NerdFontsSymbolsOnly" ]; })
     ];
 
