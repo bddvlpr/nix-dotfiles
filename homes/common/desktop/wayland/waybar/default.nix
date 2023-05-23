@@ -1,3 +1,5 @@
+{config, ...}:
+
 {
   programs.waybar = {
     enable = true;
@@ -9,6 +11,7 @@
         # Configuration & Setup
         layer = "top";
         position = "top";
+        output = builtins.map (m: m.name)(builtins.filter (m: !m.noBar) config.monitors);
         modules-left = [ "custom/logo" "wlr/workspaces" /*"tray" "hyprland/window"*/ ];
         modules-right = [ "tray" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock" ];
 

@@ -25,6 +25,7 @@
       x = 1920;
       refreshRate = 165;
       workspace = "2";
+      noBar = true;
     }
     {
       # Right monitor
@@ -34,6 +35,7 @@
       x = 3840;
       refreshRate = 75;
       workspace = "3";
+      noBar = true;
     }
   ];
 }
