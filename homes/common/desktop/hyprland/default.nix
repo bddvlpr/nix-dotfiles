@@ -51,11 +51,11 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    
+
     package = (inputs.hyprland.packages.${pkgs.system}.default.override {
       enableXWayland = true;
       hidpiXWayland = true;
-      
+
       nvidiaPatches = true;
     });
 
