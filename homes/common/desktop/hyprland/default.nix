@@ -1,5 +1,4 @@
 { inputs, lib, config, pkgs, ... }:
-
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
@@ -32,6 +31,7 @@
     packages = with pkgs; [
       swaybg
       swayidle
+      inputs.hyprwm-contrib.packages.${system}.grimblast
 
       fira-code
       roboto-mono
@@ -51,9 +51,27 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.default;
+    
+    package = (inputs.hyprland.packages.${pkgs.system}.default.override {
+      enableXWayland = true;
+      hidpiXWayland = true;
+      
+      nvidiaPatches = true;
+    });
+
+    nvidiaPatches = true;
+
+    xwayland = {
+      enable = true;
+      hidpi = true;
+    };
+
     extraConfig =
-      (import ./config.nix { inherit (config) home; }) +
-      (import ./monitors.nix { inherit lib; inherit (config) monitors; });
+      (import ./config.nix {
+        inherit (config) home;
+      }) +
+      (import ./monitors.nix {
+        inherit lib; inherit (config) monitors;
+      });
   };
 }

@@ -10,7 +10,7 @@
     };
 
     hyprland.url = "github:hyprwm/hyprland";
-    #hyprwm-contrib.url = "github:hyprwm/contrib";
+    hyprwm-contrib.url = "github:hyprwm/contrib";
     #hyprwm-hyprpaper.url = "github:hyprwm/hyprpaper";
 
     impermanence.url = "github:nix-community/impermanence";

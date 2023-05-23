@@ -123,6 +123,11 @@ in
   bind = SUPER, P, pseudo,
   bind = SUPER, S, togglesplit,
 
+  bind = SUPER SHIFT, S, exec, grimblast copy area
+  bind = ,Print, exec, grimblast copy active
+  bind = SHIFT, Print, exec, grimblast copy output
+  bind = SUPER SHIFT, Print, exec, grimblast copy screen
+
   bind = SUPER, h, movefocus, l
   bind = SUPER, l, movefocus, r
   bind = SUPER, k, movefocus, u
