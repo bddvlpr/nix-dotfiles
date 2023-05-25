@@ -31,6 +31,7 @@ in
         # Modules
         "custom/logo" = {
           format = "󱄅";
+          tooltip = false;
         };
 
         "hyprland/window" = {
@@ -137,6 +138,7 @@ in
           interval = 2;
           exec = playerExec;
           tooltip = false;
+          escape = true;
 
           on-click = "${pkgs.playerctl}/bin/playerctl play-pause";
           on-scroll-up = "${pkgs.playerctl}/bin/playerctl volume 0.1+";
