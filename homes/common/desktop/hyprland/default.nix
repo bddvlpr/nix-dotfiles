@@ -31,6 +31,7 @@
     packages = with pkgs; [
       swaybg
       swayidle
+      playerctl
       inputs.hyprwm-contrib.packages.${system}.grimblast
 
       fira-code

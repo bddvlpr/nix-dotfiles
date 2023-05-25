@@ -41,6 +41,10 @@ in
       # Nix(OS)
       bbenoist.nix
 
+      # Flutter
+      dart-code.flutter
+      dart-code.dart-code
+
       # Svelte(Kit)
       svelte.svelte-vscode
       bradlc.vscode-tailwindcss

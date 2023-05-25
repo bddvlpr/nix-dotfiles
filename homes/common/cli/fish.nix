@@ -9,9 +9,8 @@
       nb = "nix build";
       nbn = "nix build nixpkgs#";
       nf = "nix flake";
+      nr = "nix run";
 
-      nr = "nixos-rebuild --flake .";
-      nrs = "nixos-rebuild --flake . switch";
       snr = "sudo nixos-rebuild --flake .";
       snrs = "sudo nixos-rebuild --flake . switch";
       hm = "home-manager --flake .";

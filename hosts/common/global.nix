@@ -38,6 +38,8 @@
 
   programs.fuse.userAllowOther = true;
 
+  services.ntp.enable = true;
+
   security.polkit.enable = true;
   system.stateVersion = "22.11";
 }

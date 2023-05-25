@@ -108,7 +108,7 @@ tooltip {
 #custom-pomodoro,
 #cpu,
 #memory,
-#custom-spotify,
+#custom-player,
 #modbackground {
   background: #1e1e2e;
   opacity: 1;
@@ -200,7 +200,7 @@ tooltip {
   border-left: 0px;
 }
 
-#custom-spotify {
+#custom-player {
   border-radius: 7px;
   margin-right: 5px;
   border-right: 0px;

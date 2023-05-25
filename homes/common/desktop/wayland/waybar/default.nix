@@ -1,5 +1,17 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
+let
+  playerExec = ''
+    #!/bin/sh
+    current_song="$(${pkgs.playerctl}/bin/playerctl metadata --format '{{artist}} - {{title}}')"
+    if [ -n "$current_song" ]; then
+        echo " $current_song"
+    else
+        echo ""
+    fi
+  '';
+
+in
 {
   programs.waybar = {
     enable = true;
@@ -13,6 +25,7 @@
         position = "top";
         output = builtins.map (m: m.name) (builtins.filter (m: !m.noBar) config.monitors);
         modules-left = [ "custom/logo" "wlr/workspaces" /*"tray" "hyprland/window"*/ ];
+        modules-center = [ "custom/player" ];
         modules-right = [ "tray" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock" ];
 
         # Modules
@@ -39,9 +52,9 @@
             "7" = "";
             "8" = "";
             "9" = "";
-            "urgent" = "";
-            "focused" = "";
-            "default" = "";
+            "urgent" = "";
+            "focused" = "";
+            "default" = "";
           };
         };
 
@@ -118,6 +131,16 @@
           on-scroll-up = "pamixer --default-source -i 5";
           on-scroll-down = "pamixer --default-source -d 5";
           scroll-step = 5;
+        };
+
+        "custom/player" = {
+          interval = 2;
+          exec = playerExec;
+          tooltip = false;
+
+          on-click = "${pkgs.playerctl}/bin/playerctl play-pause";
+          on-scroll-up = "${pkgs.playerctl}/bin/playerctl volume 0.1+";
+          on-scroll-down = "${pkgs.playerctl}/bin/playerctl volume 0.1-";
         };
       };
     };

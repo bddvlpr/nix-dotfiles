@@ -133,6 +133,10 @@ in
   bind = SUPER, k, movefocus, u
   bind = SUPER, j, movefocus, d
 
+  bind = , code:172, exec, playerctl play-pause
+  bind = , code:173, exec, playerctl previous
+  bind = , code:171, exec, playerctl next
+
   bind = SUPER CTRL, left, resizeactive, -20 0
   bind = SUPER CTRL, right, resizeactive, 20 0
   bind = SUPER CTRL, up, resizeactive, 0 -20
