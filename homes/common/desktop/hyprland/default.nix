@@ -37,6 +37,7 @@
       fira-code
       roboto-mono
       twemoji-color-font
+      noto-fonts-cjk-sans
 
       (nerdfonts.override { fonts = [ "FiraCode" "RobotoMono" "NerdFontsSymbolsOnly" ]; })
     ];
