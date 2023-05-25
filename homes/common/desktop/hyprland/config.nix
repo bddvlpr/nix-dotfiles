@@ -133,6 +133,9 @@ in
   bind = SUPER, k, movefocus, u
   bind = SUPER, j, movefocus, d
 
+  bind = SUPER SHIFT, Left, movewindow, mon:+1
+  bind = SUPER SHIFT, Right, movewindow, mon:-1
+
   bind = , code:172, exec, playerctl play-pause
   bind = , code:173, exec, playerctl previous
   bind = , code:171, exec, playerctl next
