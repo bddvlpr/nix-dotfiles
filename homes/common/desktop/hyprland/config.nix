@@ -136,6 +136,16 @@ in
   bind = SUPER SHIFT, Left, movewindow, mon:+1
   bind = SUPER SHIFT, Right, movewindow, mon:-1
 
+  bind = , XF86MonBrightnessUp, exec, light -A 5
+  bind = , XF86MonBrightnessDown, exec, light -U 5
+
+  bind = , XF86AudioRaiseVolume, exec, pamixer -i 5
+  bind = , XF86AudioLowerVolume, exec, pamixer -d 5
+  bind = , XF86AudioMute, exec, pamixer -t
+  bind = SUPER SHIFT, XF86AudioRaiseVolume, exec, pamixer --default-source -i 5
+  bind = SUPER SHIFT, XF86AudioLowerVolume, exec, pamixer --default-source -d 5
+  bind = , XF86AudioMicMute, exec, pamixer --default-source -t
+
   bind = , code:172, exec, playerctl play-pause
   bind = , code:173, exec, playerctl previous
   bind = , code:171, exec, playerctl next

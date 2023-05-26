@@ -32,11 +32,13 @@
     };
   };
 
-  programs.dconf.enable = true;
+  programs = {
+    dconf.enable = true;
+    light.enable = true;
+    fuse.userAllowOther = true;
+  };
 
   console.keyMap = "be-latin1";
-
-  programs.fuse.userAllowOther = true;
 
   services.ntp.enable = true;
 
