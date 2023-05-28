@@ -128,10 +128,10 @@ in
   bind = SHIFT, Print, exec, grimblast copy output
   bind = SUPER SHIFT, Print, exec, grimblast copy screen
 
-  bind = SUPER, h, movefocus, l
-  bind = SUPER, l, movefocus, r
-  bind = SUPER, k, movefocus, u
-  bind = SUPER, j, movefocus, d
+  bind = SUPER, Left, movefocus, l
+  bind = SUPER, Right, movefocus, r
+  bind = SUPER, Up, movefocus, u
+  bind = SUPER, Down, movefocus, d
 
   bind = SUPER SHIFT, Left, movewindow, mon:+1
   bind = SUPER SHIFT, Right, movewindow, mon:-1
