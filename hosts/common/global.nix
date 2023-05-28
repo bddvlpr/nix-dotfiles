@@ -41,6 +41,7 @@
   console.keyMap = "be-latin1";
 
   services.ntp.enable = true;
+  time.timeZone = "Europe/Brussels";
 
   security.polkit.enable = true;
   system.stateVersion = "22.11";
