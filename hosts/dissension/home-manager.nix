@@ -35,7 +35,6 @@
       x = 3840;
       refreshRate = 75;
       workspace = "3";
-      noBar = true;
     }
   ];
 }
