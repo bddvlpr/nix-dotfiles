@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     # Shells
@@ -7,5 +9,10 @@
     # Tools
     ./ssh.nix
     ./git.nix
+
+    # Indexing
+    ./nix-index.nix
   ];
+
+  home.packages = with pkgs; [ comma ncdu htop neofetch ];
 }
