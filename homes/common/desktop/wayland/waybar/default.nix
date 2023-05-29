@@ -3,7 +3,7 @@
 let
   playerExec = ''
     #!/bin/sh
-    current_song="$(${pkgs.playerctl}/bin/playerctl metadata --format '{{artist}} - {{title}}')"
+    current_song="$(${pkgs.playerctl}/bin/playerctl metadata --player spotify --format '{{artist}} - {{title}}')"
     if [ -n "$current_song" ]; then
         echo " $current_song"
     else

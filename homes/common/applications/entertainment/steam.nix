@@ -5,6 +5,7 @@
     steam
     gamescope
     protontricks
+    mangohud
   ];
 
   home.persistence."/nix/persist/home/bddvlpr" = {
