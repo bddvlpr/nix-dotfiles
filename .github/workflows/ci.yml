@@ -1,0 +1,23 @@
+name: "NixOS CI"
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  nix-flake-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v20
+        with:
+          github_access_token: ${{secrets.GITHUB_TOKEN}}
+      - run: nix flake check
+  nixpkgs-fmt-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v20
+        with:
+          github_access_token: ${{secrets.GITHUB_TOKEN}}
+      - run: nix run nixpkgs#nixpkgs-fmt -- --check .
