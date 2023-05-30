@@ -20,6 +20,10 @@ in
       name = "RobotoMono Nerd Font";
     };
 
+    settings = {
+      window_padding_width = 4;
+    };
+
     theme = "Catppuccin-Macchiato";
   };
 }
