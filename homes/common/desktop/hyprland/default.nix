@@ -32,6 +32,7 @@
       swaybg
       swayidle
       playerctl
+      xdg-utils
       inputs.hyprwm-contrib.packages.${system}.grimblast
 
       fira-code
