@@ -6,7 +6,7 @@
 
     css = builtins.readFile (builtins.fetchurl {
       url = "https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css";
-      sha256 = "1dhisdhb1i4ngbrm549nvfabv5ff19k76n5x0amffxf9qxgfw9a0";
+      sha256 = "0z3sqirr4hccf743q2by0f6gii7d5lzq4zhc438s8jzkrn8sf3g7";
     });
   };
 
