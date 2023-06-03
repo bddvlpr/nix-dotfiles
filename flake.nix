@@ -31,6 +31,11 @@
         "aarch64-darwin"
         "x86_64-darwin"
       ];
+
+      mkSystem = modules: nixpkgs.lib.nixosSystem {
+        inherit modules;
+        specialArgs = { inherit inputs outputs; };
+      };
     in
     rec {
       packages = forAllSystems (system:
@@ -46,14 +51,8 @@
       homeManagerModules = import ./modules/home-manager;
 
       nixosConfigurations = {
-        dissension = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ ./hosts/dissension ];
-        };
-        solaris = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ ./hosts/solaris ];
-        };
+        dissension = mkSystem [ ./hosts/dissension ];
+        solaris = mkSystem [ ./hosts/solaris ];
       };
     };
 }

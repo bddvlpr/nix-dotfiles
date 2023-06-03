@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ blender ];
+  home = {
+    packages = with pkgs; [ blender ];
 
-  home.persistence."/nix/persist/home/bddvlpr".directories = [ ".config/blender" ];
+    persistence."/nix/persist/home/bddvlpr".directories = [ ".config/blender" ];
+  };
 }
