@@ -10,8 +10,8 @@
     };
 
     hyprland.url = "github:hyprwm/hyprland/v0.26.0";
-    hyprwm-contrib.url = "github:hyprwm/contrib";
-    #hyprwm-hyprpaper.url = "github:hyprwm/hyprpaper";
+    hyprwm-contrib.url = "github:hyprwm/contrib/v0.1";
+    #hyprwm-hyprpaper.url = "github:hyprwm/hyprpaper/v0.3.0";
 
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";
