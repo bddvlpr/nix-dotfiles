@@ -9,7 +9,7 @@
     nvidia.modesetting.enable = true;
   };
 
-  services.xserver.videoDrivers = [ "amd" "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   environment = {
     systemPackages = with pkgs; [ nvtop ];
