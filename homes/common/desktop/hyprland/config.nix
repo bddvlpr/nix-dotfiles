@@ -123,10 +123,10 @@ in
   bind = SUPER, P, pseudo,
   bind = SUPER, S, togglesplit,
 
-  bind = SUPER SHIFT, S, exec, grimblast copy area
-  bind = ,Print, exec, grimblast copy active
-  bind = SHIFT, Print, exec, grimblast copy output
-  bind = SUPER SHIFT, Print, exec, grimblast copy screen
+  bind = SUPER SHIFT, S, exec, grimblast --notify copy area
+  bind = ,Print, exec, grimblast --notify copy active
+  bind = SHIFT, Print, exec, grimblast --notify copy output
+  bind = SUPER SHIFT, Print, exec, grimblast --notify copy screen
 
   bind = SUPER, Left, movefocus, l
   bind = SUPER, Right, movefocus, r
