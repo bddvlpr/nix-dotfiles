@@ -1,7 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
-    ../common/global.nix
-    ../common/nvidia.nix
+    ../common
+    ../common/modules/nvidia.nix
     ./hardware.nix
     inputs.home-manager.nixosModules.home-manager
   ];
