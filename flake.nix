@@ -17,7 +17,6 @@
     hardware.url = "github:nixos/nixos-hardware";
 
     nix-spicetify.url = "github:the-argus/spicetify-nix";
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     nix-index-database.url = "github:mic92/nix-index-database";
   };
 

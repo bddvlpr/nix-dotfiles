@@ -1,12 +1,8 @@
-{ inputs, pkgs, ... }:
-let
-  openVsxExtensions = inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx;
-in
+{ inputs, pkgs, lib, ... }:
+
 {
   programs.vscode = {
     enable = true;
-
-    package = pkgs.vscode;
 
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
@@ -33,10 +29,9 @@ in
       "vscord.status.idle.check" = false;
     };
 
-    extensions = with openVsxExtensions; [
+    extensions = with pkgs.vscode-extensions; [
       # Theme & flair
       catppuccin.catppuccin-vsc
-      leonardssh.vscord
 
       # Nix(OS)
       bbenoist.nix
@@ -59,6 +54,13 @@ in
       usernamehw.errorlens
       eamodio.gitlens
       esbenp.prettier-vscode
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        publisher = "leonardssh";
+        name = "vscord";
+        version = "5.1.10";
+        sha256 = "1nw3zvlw0bx9yih4z3i20irdw02zz444ncf84xjvjn6h5hw47i3x";
+      }
     ];
   };
 }
