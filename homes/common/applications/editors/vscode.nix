@@ -36,6 +36,9 @@
       # Nix(OS)
       bbenoist.nix
 
+      # Rust
+      rust-lang.rust-analyzer
+
       # Flutter
       dart-code.flutter
       dart-code.dart-code
