@@ -106,6 +106,8 @@ in
   windowrule = fullscreen, wlogout
   windowrule = idleinhibit focus, mpv
   windowrule = idleinhibit fullscreen, firefox
+  windowrule = float, title:(Sharing Indicator)$
+  windowrule = size 300 300, title:(Sharing Indicator)$
   windowrule = float, title:^(Media viewer)$
   windowrule = float, title:^(Volume Control)$
   windowrule = float, title:^(Picture-in-Picture)$
