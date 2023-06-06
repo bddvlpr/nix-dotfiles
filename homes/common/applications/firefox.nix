@@ -15,7 +15,6 @@
     sessionVariables = {
       BROWSER = "firefox";
       MOZ_ENABLE_WAYLAND = 1;
-      XDG_CURRENT_DESKTOP = "sway";
     };
     persistence."/nix/persist/home/bddvlpr".directories = [ ".mozilla/firefox" ];
   };
