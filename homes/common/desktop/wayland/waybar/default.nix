@@ -143,9 +143,9 @@ in
           tooltip = false;
           escape = true;
 
-          on-click = "${pkgs.playerctl}/bin/playerctl play-pause";
-          on-scroll-up = "${pkgs.playerctl}/bin/playerctl volume 0.1+";
-          on-scroll-down = "${pkgs.playerctl}/bin/playerctl volume 0.1-";
+          on-click = "${pkgs.playerctl}/bin/playerctl --player spotify play-pause";
+          on-scroll-up = "${pkgs.playerctl}/bin/playerctl --player spotify volume 0.1+";
+          on-scroll-down = "${pkgs.playerctl}/bin/playerctl --player spotify volume 0.1-";
         };
       };
     };
