@@ -10,7 +10,7 @@
   monitors = [
     {
       # Left monitor
-      name = "HDMI-A-2";
+      name = "HDMI-A-1";
       width = 1920;
       height = 1080;
       x = 0;
@@ -19,7 +19,7 @@
     }
     {
       # Center monitor
-      name = "DP-6";
+      name = "DP-3";
       width = 1920;
       height = 1080;
       x = 1920;
@@ -28,7 +28,7 @@
     }
     {
       # Right monitor
-      name = "DP-4";
+      name = "DP-1";
       width = 1920;
       height = 1080;
       x = 3840;
