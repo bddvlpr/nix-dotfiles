@@ -57,6 +57,7 @@
       usernamehw.errorlens
       eamodio.gitlens
       esbenp.prettier-vscode
+      github.copilot
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         publisher = "leonardssh";
