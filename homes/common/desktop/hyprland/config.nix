@@ -192,4 +192,6 @@ in
   bindm = SUPER, mouse:273, resizewindow
   bind = SUPER, mouse_down, workspace, e+1
   bind = SUPER, mouse_up, workspace, e-1
+
+  monitor = , highrr, auto, 1
 ''
