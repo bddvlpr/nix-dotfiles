@@ -11,5 +11,8 @@ in
     colorScheme = "lavender";
   };
 
-  home.persistence."/nix/persist/home/bddvlpr".directories = [ ".config/spotify" ];
+  home.persistence."/nix/persist/home/bddvlpr".directories = [
+    ".config/spotify"
+    ".cache/spotify"
+  ];
 }
