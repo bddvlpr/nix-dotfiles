@@ -173,7 +173,7 @@ in
   bind = SUPER, egrave, workspace, 7
   bind = SUPER, exclam, workspace, 8
   bind = SUPER, ccedilla, workspace, 9
-  bind = SUPER, agrave, workspace, 10
+  #bind = SUPER, agrave, workspace, 10
   bind = SUPER ALT, up, workspace, e+1
   bind = SUPER ALT, down, workspace, e-1
 
