@@ -10,6 +10,7 @@
     userSettings = {
       "git.autofetch" = true;
       "editor.formatOnSave" = true;
+      "extensions.autoUpdate" = false;
       "explorer.autoReveal" = false;
 
       "workbench.startupEditor" = "none";
