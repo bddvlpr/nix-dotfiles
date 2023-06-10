@@ -10,6 +10,8 @@
     userSettings = {
       "git.autofetch" = true;
       "editor.formatOnSave" = true;
+      "editor.minimap.autohide" = true;
+      "editor.minimap.renderCharacters" = false;
       "extensions.autoUpdate" = false;
       "explorer.autoReveal" = false;
 
