@@ -5,8 +5,8 @@
     enable = true;
 
     css = builtins.readFile (builtins.fetchurl {
-      url = "https://web.archive.org/web/20230609102405id_/https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css";
-      sha256 = "6cbb7de09899074924f54f9ce567c545f150af19bce4dcdf2f19a4fdbe85d7f2";
+      url = "https://web.archive.org/web/20230610094926id_/https://catppuccin.github.io/discord/dist/catppuccin-macchiato-lavender.theme.css";
+      sha256 = "04jmv45ivrxdhapcglsnspm5wgm9f0zmnxrqimw4l74z9i8w668s";
     });
   };
 
