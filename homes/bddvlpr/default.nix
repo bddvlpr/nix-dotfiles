@@ -1,6 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ../common
+    ../../secrets
   ];
 
   nixpkgs = {

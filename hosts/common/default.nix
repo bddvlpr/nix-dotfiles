@@ -7,6 +7,7 @@
     ./impermanence.nix
     ./networking.nix
     ./users.nix
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   nix = {

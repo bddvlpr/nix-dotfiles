@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -14,5 +14,11 @@
     ./nix-index.nix
   ];
 
-  home.packages = with pkgs; [ comma ncdu htop neofetch ];
+  home.packages = with pkgs; [
+    comma
+    ncdu
+    htop
+    neofetch
+    inputs.agenix.packages.${system}.default
+  ];
 }

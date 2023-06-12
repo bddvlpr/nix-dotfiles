@@ -15,6 +15,7 @@
 
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";
+    agenix.url = "github:ryantm/agenix";
 
     nix-spicetify.url = "github:the-argus/spicetify-nix";
     nix-index-database.url = "github:mic92/nix-index-database";
