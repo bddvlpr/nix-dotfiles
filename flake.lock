@@ -133,8 +133,8 @@
       },
       "original": {
         "owner": "hyprwm",
-        "ref": "v0.26.0",
         "repo": "hyprland",
+        "rev": "51a930f802c71a0e67f05e7b176ded74e8e95f87",
         "type": "github"
       }
     },
@@ -173,8 +173,8 @@
       },
       "original": {
         "owner": "hyprwm",
-        "ref": "v0.1",
         "repo": "contrib",
+        "rev": "2e2ecbe931dd800ca7374642583fc98ce19c42c6",
         "type": "github"
       }
     },

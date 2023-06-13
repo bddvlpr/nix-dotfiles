@@ -9,9 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/hyprland/v0.26.0";
-    hyprwm-contrib.url = "github:hyprwm/contrib/v0.1";
-    #hyprwm-hyprpaper.url = "github:hyprwm/hyprpaper/v0.3.0";
+    hyprland.url = "github:hyprwm/hyprland/51a930f802c71a0e67f05e7b176ded74e8e95f87";
+    hyprwm-contrib.url = "github:hyprwm/contrib/2e2ecbe931dd800ca7374642583fc98ce19c42c6";
 
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";
