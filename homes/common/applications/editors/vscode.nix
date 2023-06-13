@@ -42,6 +42,7 @@
 
         # Nix(OS)
         bbenoist.nix
+        kamadorueda.alejandra
 
         # Rust
         rust-lang.rust-analyzer
