@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   playerExec = ''
     #!/bin/sh
     current_song="$(${pkgs.playerctl}/bin/playerctl metadata --player spotify --format '{{artist}} - {{title}}')"
@@ -10,9 +12,7 @@ let
         echo ""
     fi
   '';
-
-in
-{
+in {
   programs.waybar = {
     enable = true;
 
@@ -24,9 +24,15 @@ in
         layer = "top";
         position = "top";
         output = builtins.map (m: m.name) (builtins.filter (m: !m.noBar) config.monitors);
-        modules-left = [ "custom/logo" "wlr/workspaces" /*"tray" "hyprland/window"*/ ];
-        modules-center = [ "custom/player" ];
-        modules-right = [ "tray" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock" ];
+        modules-left = [
+          "custom/logo"
+          "wlr/workspaces"
+          /*
+          "tray" "hyprland/window"
+          */
+        ];
+        modules-center = ["custom/player"];
+        modules-right = ["tray" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock"];
 
         # Modules
         "custom/logo" = {
@@ -82,7 +88,7 @@ in
 
         backlight = {
           format = "{icon} {percent}%";
-          format-icons = [ "󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨" ];
+          format-icons = ["󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨"];
 
           on-scroll-up = "${pkgs.light}/bin/light -A 1";
           on-scroll-down = "${pkgs.light}/bin/light -U 1";
@@ -97,7 +103,7 @@ in
           format-charging = " {capacity}%";
           format-plugged = " {capacity}%";
           format-alt = "{time} {icon}";
-          format-icons = [ " " " " " " " " " " ];
+          format-icons = [" " " " " " " " " "];
         };
 
         clock = {
@@ -123,7 +129,7 @@ in
             phone = "";
             portable = "";
             car = "";
-            default = [ "" "" "" ];
+            default = ["" "" ""];
           };
         };
 

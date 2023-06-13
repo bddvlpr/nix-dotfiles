@@ -1,6 +1,8 @@
-{ inputs, config, ... }:
-
 {
+  inputs,
+  config,
+  ...
+}: {
   imports = [
     inputs.agenix.homeManagerModules.age
   ];

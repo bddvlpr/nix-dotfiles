@@ -1,13 +1,15 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   gtk = {
     enable = true;
 
     theme = {
       name = "Catppuccin-Macchiato-Standard-Rosewater-Dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "rosewater" ];
+        accents = ["rosewater"];
         variant = "macchiato";
       };
     };

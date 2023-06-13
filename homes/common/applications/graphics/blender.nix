@@ -1,9 +1,7 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home = {
-    packages = with pkgs; [ blender ];
+    packages = with pkgs; [blender];
 
-    persistence."/nix/persist/home/bddvlpr".directories = [ ".config/blender" ];
+    persistence."/nix/persist/home/bddvlpr".directories = [".config/blender"];
   };
 }

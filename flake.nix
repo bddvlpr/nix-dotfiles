@@ -20,38 +20,46 @@
     nix-index-database.url = "github:mic92/nix-index-database";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
-    let
-      inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
-        "aarch64-linux"
-        "i686-linux"
-        "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    forAllSystems = nixpkgs.lib.genAttrs [
+      "aarch64-linux"
+      "i686-linux"
+      "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
+    ];
 
-      mkSystem = modules: nixpkgs.lib.nixosSystem {
+    mkSystem = modules:
+      nixpkgs.lib.nixosSystem {
         inherit modules;
-        specialArgs = { inherit inputs outputs; };
+        specialArgs = {inherit inputs outputs;};
       };
+  in rec {
+    packages = forAllSystems (system: let
+      pkgs = nixpkgs.legacyPackages.${system};
     in
-    rec {
-      packages = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./pkgs { inherit pkgs; });
+      import ./pkgs {inherit pkgs;});
 
-      devShells = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./shell.nix { inherit pkgs; });
+    devShells = forAllSystems (system: let
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+      import ./shell.nix {inherit pkgs;});
 
-      overlays = import ./overlays { inherit inputs; };
-      nixosModules = import ./modules/nixos;
-      homeManagerModules = import ./modules/home-manager;
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
-      nixosConfigurations = {
-        dissension = mkSystem [ ./hosts/dissension ];
-        solaris = mkSystem [ ./hosts/solaris ];
-      };
+    overlays = import ./overlays {inherit inputs;};
+    nixosModules = import ./modules/nixos;
+    homeManagerModules = import ./modules/home-manager;
+
+    nixosConfigurations = {
+      dissension = mkSystem [./hosts/dissension];
+      solaris = mkSystem [./hosts/solaris];
     };
+  };
 }

@@ -1,5 +1,10 @@
-{ inputs, lib, config, pkgs, ... }:
 {
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.hyprland.homeManagerModules.default
 
@@ -40,7 +45,7 @@
       twemoji-color-font
       noto-fonts-cjk-sans
 
-      (nerdfonts.override { fonts = [ "FiraCode" "RobotoMono" "NerdFontsSymbolsOnly" ]; })
+      (nerdfonts.override {fonts = ["FiraCode" "RobotoMono" "NerdFontsSymbolsOnly"];})
     ];
 
     sessionVariables = {
@@ -49,18 +54,18 @@
   };
 
   programs.waybar.package = pkgs.waybar.overrideAttrs (oa: {
-    mesonFlags = (oa.mesonFlags or [ ]) ++ [ "-Dexperimental=true" ];
+    mesonFlags = (oa.mesonFlags or []) ++ ["-Dexperimental=true"];
   });
 
   wayland.windowManager.hyprland = {
     enable = true;
 
-    package = (inputs.hyprland.packages.${pkgs.system}.default.override {
+    package = inputs.hyprland.packages.${pkgs.system}.default.override {
       enableXWayland = true;
       hidpiXWayland = true;
 
       nvidiaPatches = true;
-    });
+    };
 
     nvidiaPatches = true;
 
@@ -72,9 +77,10 @@
     extraConfig =
       (import ./config.nix {
         inherit (config) home;
-      }) +
-      (import ./monitors.nix {
-        inherit lib; inherit (config) monitors;
+      })
+      + (import ./monitors.nix {
+        inherit lib;
+        inherit (config) monitors;
       });
   };
 }

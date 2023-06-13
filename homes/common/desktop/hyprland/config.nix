@@ -1,12 +1,10 @@
-{ home }:
-let
+{home}: let
   inherit (home.sessionVariables) TERMINAL BROWSER EDITOR;
   wallpaper = builtins.fetchurl {
     sha256 = "91e8142bad98b48ec6dcffe922a7167451a5a8de12d7fe3138e98e6e83f124a1";
     url = "https://raw.githubusercontent.com/yousifm/dotfiles/master/bg.png";
   };
-in
-''
+in ''
   input {
     kb_layout=be
     follow_mouse = 2

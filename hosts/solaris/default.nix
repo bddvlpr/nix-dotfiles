@@ -1,4 +1,11 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ../common
     ../common/modules/bluetooth.nix
@@ -8,7 +15,10 @@
   ];
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; nixosConfig = config; };
+    extraSpecialArgs = {
+      inherit inputs outputs;
+      nixosConfig = config;
+    };
     users.bddvlpr = import ./home-manager.nix;
   };
 

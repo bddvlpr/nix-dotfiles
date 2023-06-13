@@ -1,11 +1,12 @@
 # Author: Misterio77 (https://github.com/Misterio77)
-{ lib, config, ... }:
-
-let
+{
+  lib,
+  config,
+  ...
+}: let
   inherit (lib) mkOption types;
   cfg = config.monitors;
-in
-{
+in {
   options.monitors = mkOption {
     type = types.listOf (types.submodule {
       options = {

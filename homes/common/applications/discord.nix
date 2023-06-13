@@ -1,6 +1,8 @@
-{ pkgs, lib, ... }:
-
 {
+  pkgs,
+  lib,
+  ...
+}: {
   programs.discocss = {
     enable = true;
 
@@ -10,5 +12,5 @@
     });
   };
 
-  home.persistence."/nix/persist/home/bddvlpr".directories = [ ".config/discord" ];
+  home.persistence."/nix/persist/home/bddvlpr".directories = [".config/discord"];
 }

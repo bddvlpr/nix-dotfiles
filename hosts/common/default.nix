@@ -1,6 +1,11 @@
-{ inputs, outputs, config, lib, pkgs, ... }:
-
 {
+  inputs,
+  outputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./audio.nix
     ./boot.nix
@@ -11,7 +16,7 @@
   ];
 
   nix = {
-    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
+    registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
 
     settings = {
@@ -47,4 +52,3 @@
   security.polkit.enable = true;
   system.stateVersion = "22.11";
 }
-  

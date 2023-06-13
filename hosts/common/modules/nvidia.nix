@@ -1,4 +1,9 @@
-{ inputs, config, pkgs, ... }: {
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}: {
   hardware = {
     opengl = {
       enable = true;
@@ -9,10 +14,10 @@
     nvidia.modesetting.enable = true;
   };
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
 
   environment = {
-    systemPackages = with pkgs; [ nvtop ];
+    systemPackages = with pkgs; [nvtop];
     sessionVariables.NIXOS_OZONE_WL = "1"; # https://github.com/NixOS/nixpkgs/issues/224332#issuecomment-1528748548
   };
 }

@@ -1,6 +1,9 @@
-{ inputs, pkgs, lib, ... }:
-
 {
+  inputs,
+  pkgs,
+  lib,
+  ...
+}: {
   programs.vscode = {
     enable = true;
 
@@ -32,42 +35,44 @@
       "vscord.status.idle.check" = false;
     };
 
-    extensions = with pkgs.vscode-extensions; [
-      # Theme & flair
-      catppuccin.catppuccin-vsc
+    extensions = with pkgs.vscode-extensions;
+      [
+        # Theme & flair
+        catppuccin.catppuccin-vsc
 
-      # Nix(OS)
-      bbenoist.nix
+        # Nix(OS)
+        bbenoist.nix
 
-      # Rust
-      rust-lang.rust-analyzer
+        # Rust
+        rust-lang.rust-analyzer
 
-      # Flutter
-      dart-code.flutter
-      dart-code.dart-code
+        # Flutter
+        dart-code.flutter
+        dart-code.dart-code
 
-      # Svelte(Kit)
-      svelte.svelte-vscode
-      bradlc.vscode-tailwindcss
+        # Svelte(Kit)
+        svelte.svelte-vscode
+        bradlc.vscode-tailwindcss
 
-      # Databases
-      prisma.prisma
+        # Databases
+        prisma.prisma
 
-      # Misc
-      editorconfig.editorconfig
-      ms-azuretools.vscode-docker
-      ms-kubernetes-tools.vscode-kubernetes-tools
-      usernamehw.errorlens
-      eamodio.gitlens
-      esbenp.prettier-vscode
-      github.copilot
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        publisher = "leonardssh";
-        name = "vscord";
-        version = "5.1.10";
-        sha256 = "1nw3zvlw0bx9yih4z3i20irdw02zz444ncf84xjvjn6h5hw47i3x";
-      }
-    ];
+        # Misc
+        editorconfig.editorconfig
+        ms-azuretools.vscode-docker
+        ms-kubernetes-tools.vscode-kubernetes-tools
+        usernamehw.errorlens
+        eamodio.gitlens
+        esbenp.prettier-vscode
+        github.copilot
+      ]
+      ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          publisher = "leonardssh";
+          name = "vscord";
+          version = "5.1.10";
+          sha256 = "1nw3zvlw0bx9yih4z3i20irdw02zz444ncf84xjvjn6h5hw47i3x";
+        }
+      ];
   };
 }

@@ -1,4 +1,11 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ../common
     ../common/modules/nvidia.nix
@@ -7,7 +14,10 @@
   ];
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; nixosConfig = config; };
+    extraSpecialArgs = {
+      inherit inputs outputs;
+      nixosConfig = config;
+    };
     users.bddvlpr = import ./home-manager.nix;
   };
 

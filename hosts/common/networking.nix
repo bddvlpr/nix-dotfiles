@@ -1,5 +1,8 @@
-{ inputs, outputs, pkgs, ... }:
-
 {
+  inputs,
+  outputs,
+  pkgs,
+  ...
+}: {
   networking.networkmanager.enable = true;
 }

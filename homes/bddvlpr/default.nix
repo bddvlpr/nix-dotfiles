@@ -1,4 +1,11 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ../common
     ../../secrets
@@ -22,7 +29,7 @@
     homeDirectory = "/home/bddvlpr";
 
     persistence."/nix/persist/home/bddvlpr" = {
-      directories = [ "Documents" "Pictures" "Videos" "Music" "Desktop" "Downloads" ];
+      directories = ["Documents" "Pictures" "Videos" "Music" "Desktop" "Downloads"];
       allowOther = true;
     };
   };

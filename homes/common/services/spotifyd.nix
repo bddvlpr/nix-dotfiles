@@ -1,6 +1,8 @@
-{ pkgs, config, ... }:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   services.spotifyd = {
     enable = true;
 

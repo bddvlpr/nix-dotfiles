@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     # Shells
     ./fish.nix

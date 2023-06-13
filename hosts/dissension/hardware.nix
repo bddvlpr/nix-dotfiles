@@ -1,6 +1,11 @@
-{ config, inputs, lib, pkgs, modulesPath, ... }:
-
 {
+  config,
+  inputs,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
 
@@ -12,15 +17,15 @@
 
   boot = {
     initrd = {
-      availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
-      kernelModules = [ "dm-snapshot" "nvidia" ];
+      availableKernelModules = ["xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod"];
+      kernelModules = ["dm-snapshot" "nvidia"];
       luks.devices.crypted = {
         device = "/dev/disk/by-uuid/1c016456-1ccd-4cd3-8a5e-d5db9526060b";
         preLVM = true;
       };
     };
-    kernelModules = [ "kvm-amd" ];
-    extraModulePackages = [ ];
+    kernelModules = ["kvm-amd"];
+    extraModulePackages = [];
   };
 
   fileSystems = {
@@ -41,7 +46,7 @@
     };
   };
 
-  swapDevices = [{ device = "/dev/disk/by-label/swap"; }];
+  swapDevices = [{device = "/dev/disk/by-label/swap";}];
 
   networking.useDHCP = lib.mkDefault true;
 

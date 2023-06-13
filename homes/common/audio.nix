@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
-{
-  home.packages = with pkgs; [ pamixer ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [pamixer];
 }

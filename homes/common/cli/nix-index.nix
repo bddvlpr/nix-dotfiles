@@ -1,8 +1,10 @@
-{ inputs, pkgs, ... }:
-let
-  nix-index-database = inputs.nix-index-database.hmModules.nix-index;
-in
 {
+  inputs,
+  pkgs,
+  ...
+}: let
+  nix-index-database = inputs.nix-index-database.hmModules.nix-index;
+in {
   imports = [
     nix-index-database
   ];
