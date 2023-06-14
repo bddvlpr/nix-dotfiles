@@ -92,6 +92,7 @@ tooltip {
 /* #custom-weather, */
 
 #custom-logo,
+#custom-github,
 #backlight,
 #window,
 #clock,
@@ -204,6 +205,13 @@ tooltip {
   border-radius: 7px;
   margin-right: 5px;
   border-right: 0px;
+}
+
+#custom-github {
+  color: @blue;
+  border-radius: 7px;
+  margin-right: 5px;
+  border-left: 0px;
 }
 
 #mpris {

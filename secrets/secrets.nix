@@ -6,4 +6,5 @@ let
 in {
   "spotify-username.age".publicKeys = users ++ systems;
   "spotify-password.age".publicKeys = users ++ systems;
+  "github-notifications.age".publicKeys = users ++ systems;
 }

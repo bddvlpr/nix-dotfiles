@@ -3,13 +3,31 @@
   pkgs,
   ...
 }: let
+  playerctl = "${pkgs.playerctl}/bin/playerctl";
+  github-cli = "${pkgs.github-cli}/bin/gh";
+  jq = "${pkgs.jq}/bin/jq";
+  light = "${pkgs.light}/bin/light";
+  pamixer = "${pkgs.pamixer}/bin/pamixer";
+  pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
+  xdg-open = "${pkgs.xdg-utils}/bin/xdg-open";
+
   playerExec = ''
     #!/bin/sh
-    current_song="$(${pkgs.playerctl}/bin/playerctl metadata --player spotify --format '{{artist}} - {{title}}')"
+    current_song="$(${playerctl} metadata --player spotify --format '{{artist}} - {{title}}')"
     if [ -n "$current_song" ]; then
-        echo " $current_song"
+      echo " $current_song"
     else
-        echo ""
+      echo ""
+    fi
+  '';
+  githubExec = ''
+    #!/bin/sh
+    current_notifications="$(GH_TOKEN=$(cat ${config.age.secrets.github-notifications.path}) ${github-cli} api notifications)"
+    current_count="$(echo $current_notifications | ${jq} '. | map(select(.unread == true)) | length')"
+    if [[ !($current_count) || "$current_count" == "0" ]]; then
+      echo "󰂜"
+    else
+      echo "󰅸  $current_count"
     fi
   '';
 in {
@@ -32,7 +50,7 @@ in {
           */
         ];
         modules-center = ["custom/player"];
-        modules-right = ["tray" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock"];
+        modules-right = ["tray" "custom/github" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock"];
 
         # Modules
         "custom/logo" = {
@@ -90,8 +108,8 @@ in {
           format = "{icon} {percent}%";
           format-icons = ["󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨"];
 
-          on-scroll-up = "${pkgs.light}/bin/light -A 1";
-          on-scroll-down = "${pkgs.light}/bin/light -U 1";
+          on-scroll-up = "${light} -A 1";
+          on-scroll-down = "${light} -U 1";
         };
 
         battery = {
@@ -117,10 +135,10 @@ in {
           format = "{icon} {volume}%";
           tooltip = false;
           format-muted = " Muted";
-          on-click = "pamixer -t";
-          on-right-click = "exec pavucontrol";
-          on-scroll-up = "pamixer -i 5";
-          on-scroll-down = "pamixer -d 5";
+          on-click = "${pamixer} -t";
+          on-click-right = "${pavucontrol}";
+          on-scroll-up = "${pamixer} -i 5";
+          on-scroll-down = "${pamixer} -d 5";
           scroll-step = 5;
           format-icons = {
             headphone = "";
@@ -137,9 +155,10 @@ in {
           format = "{format_source}";
           format-source = " {volume}%";
           format-source-muted = " Muted";
-          on-click = "pamixer --default-source -t";
-          on-scroll-up = "pamixer --default-source -i 5";
-          on-scroll-down = "pamixer --default-source -d 5";
+          on-click = "${pamixer} --default-source -t";
+          on-click-right = "${pavucontrol}";
+          on-scroll-up = "${pamixer} --default-source -i 5";
+          on-scroll-down = "${pamixer} --default-source -d 5";
           scroll-step = 5;
         };
 
@@ -149,9 +168,18 @@ in {
           tooltip = false;
           escape = true;
 
-          on-click = "${pkgs.playerctl}/bin/playerctl --player spotify play-pause";
-          on-scroll-up = "${pkgs.playerctl}/bin/playerctl --player spotify volume 0.1+";
-          on-scroll-down = "${pkgs.playerctl}/bin/playerctl --player spotify volume 0.1-";
+          on-click = "${playerctl} --player spotify play-pause";
+          on-scroll-up = "${playerctl} --player spotify volume 0.1+";
+          on-scroll-down = "${playerctl} --player spotify volume 0.1-";
+        };
+
+        "custom/github" = {
+          interval = 60;
+          exec = githubExec;
+          tooltip = false;
+          escape = true;
+
+          on-click = "${xdg-open} https://github.com/notifications";
         };
       };
     };
