@@ -99,6 +99,7 @@ in ''
   windowrule = float, feh
   windowrule = float, pavucontrol-qt
   windowrule = float, pavocontrol
+  windowrule = float, qjackctl
   windowrule = float, file-roller
   windowrule = float, title:DevTools
   windowrule = fullscreen, wlogout

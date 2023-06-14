@@ -9,6 +9,7 @@
   light = "${pkgs.light}/bin/light";
   pamixer = "${pkgs.pamixer}/bin/pamixer";
   pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
+  qjackctl = "${pkgs.qjackctl}/bin/qjackctl";
   xdg-open = "${pkgs.xdg-utils}/bin/xdg-open";
 
   playerExec = ''
@@ -42,13 +43,7 @@ in {
         layer = "top";
         position = "top";
         output = builtins.map (m: m.name) (builtins.filter (m: !m.noBar) config.monitors);
-        modules-left = [
-          "custom/logo"
-          "wlr/workspaces"
-          /*
-          "tray" "hyprland/window"
-          */
-        ];
+        modules-left = ["custom/logo" "wlr/workspaces"];
         modules-center = ["custom/player"];
         modules-right = ["tray" "custom/github" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock"];
 
@@ -137,6 +132,7 @@ in {
           format-muted = " Muted";
           on-click = "${pamixer} -t";
           on-click-right = "${pavucontrol}";
+          on-click-middle = "${qjackctl}";
           on-scroll-up = "${pamixer} -i 5";
           on-scroll-down = "${pamixer} -d 5";
           scroll-step = 5;
@@ -157,6 +153,7 @@ in {
           format-source-muted = " Muted";
           on-click = "${pamixer} --default-source -t";
           on-click-right = "${pavucontrol}";
+          on-click-middle = "${qjackctl}";
           on-scroll-up = "${pamixer} --default-source -i 5";
           on-scroll-down = "${pamixer} --default-source -d 5";
           scroll-step = 5;
