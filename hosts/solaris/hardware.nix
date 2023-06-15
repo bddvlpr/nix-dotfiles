@@ -51,6 +51,8 @@
   networking.useDHCP = lib.mkDefault true;
 
   hardware.nvidia.prime = {
+    offload.enable = true;
+
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:109:0:0";
   };
