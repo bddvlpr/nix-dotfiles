@@ -13,6 +13,7 @@
     userSettings = {
       "git.autofetch" = true;
       "editor.formatOnSave" = true;
+      "editor.inlineSuggest.enabled" = true;
       "editor.minimap.autohide" = true;
       "editor.minimap.renderCharacters" = false;
       "extensions.autoUpdate" = false;
