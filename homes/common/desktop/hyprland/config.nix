@@ -1,9 +1,5 @@
 {home}: let
   inherit (home.sessionVariables) TERMINAL BROWSER EDITOR;
-  wallpaper = builtins.fetchurl {
-    sha256 = "91e8142bad98b48ec6dcffe922a7167451a5a8de12d7fe3138e98e6e83f124a1";
-    url = "https://raw.githubusercontent.com/yousifm/dotfiles/master/bg.png";
-  };
 in ''
   input {
     kb_layout=be
@@ -17,7 +13,7 @@ in ''
   env = XCURSOR_SIZE,24
 
   exec-once=waybar
-  exec=swaybg -i ${wallpaper} --mode fill
+  exec=swaybg -i ${./wallpapers/waves.png} --mode fill
   #exec-once=mako
   #exec-once=swayidle -w
 
