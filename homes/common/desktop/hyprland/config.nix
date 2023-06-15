@@ -10,8 +10,6 @@ in ''
     }
   }
 
-  env = XCURSOR_SIZE,24
-
   exec-once=waybar
   exec=swaybg -i ${./wallpapers/waves.png} --mode fill
   #exec-once=mako
