@@ -16,10 +16,11 @@ in ''
   #exec-once=swayidle -w
 
   general {
-    gaps_in = 3
-    gaps_out = 5
-    col.active_border = rgba(b4befeaa)
-    col.inactive_border = rgba(595959aa)
+    gaps_in = 4
+    gaps_out = 8
+    border_size = 2
+    col.active_border = rgb(c6a0f6) rgb(ed8796) rgb(ee99a0) rgb(f5a97f) rgb(eed49f) rgb(a6da95) rgb(91d7e3) rgb(7dc4e4) rgb(8aadf4) rgb(b7bdf8) 45deg
+    col.inactive_border = rgba(c6a0f699) rgba(ed879699) rgba(ee99a099) rgba(f5a97f99) rgba(eed49f99) rgba(a6da9599) rgba(91d7e399) rgba(7dc4e499) rgba(8aadf499) rgba(b7bdf899) 45deg
     layout = dwindle
     no_cursor_warps = true
   }
