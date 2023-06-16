@@ -9,6 +9,7 @@
       "/etc/nixos"
       "/etc/NetworkManager"
       "/var/log"
+      "/var/lib/bluetooth"
     ];
   };
 }
