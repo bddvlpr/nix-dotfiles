@@ -23,6 +23,7 @@ in {
 
     settings = {
       window_padding_width = 4;
+      background_opacity = "0.9";
     };
 
     theme = "Catppuccin-Macchiato";
