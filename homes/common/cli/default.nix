@@ -4,6 +4,8 @@
   ...
 }: {
   imports = [
+    ./media/cava.nix
+
     # Shells
     ./fish.nix
     ./zsh.nix

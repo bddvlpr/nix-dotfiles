@@ -4,8 +4,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Temporary: PR in progress
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:bddvlpr/home-manager/programs/cava-add";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
