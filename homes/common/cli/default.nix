@@ -5,17 +5,11 @@
 }: {
   imports = [
     ./media/cava.nix
-
-    # Shells
-    ./fish.nix
-    ./zsh.nix
-
-    # Tools
-    ./ssh.nix
-    ./git.nix
-
-    # Indexing
-    ./nix-index.nix
+    ./shells/fish.nix
+    ./shells/zsh.nix
+    ./dev/git.nix
+    ./dev/ssh.nix
+    inputs.nix-index-database.hmModules.nix-index
   ];
 
   home.packages = with pkgs; [
@@ -25,4 +19,10 @@
     neofetch
     inputs.agenix.packages.${system}.default
   ];
+
+  programs.nix-index = {
+    enable = true;
+    enableFishIntegration = true;
+    enableZshIntegration = true;
+  };
 }
