@@ -67,6 +67,7 @@
         eamodio.gitlens
         esbenp.prettier-vscode
         github.copilot
+        github.vscode-github-actions
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
