@@ -10,6 +10,7 @@
       "/etc/NetworkManager"
       "/var/log"
       "/var/lib/bluetooth"
+      "/var/lib/docker"
     ];
   };
 }
