@@ -62,7 +62,6 @@
         # Misc
         editorconfig.editorconfig
         ms-azuretools.vscode-docker
-        ms-kubernetes-tools.vscode-kubernetes-tools
         usernamehw.errorlens
         eamodio.gitlens
         esbenp.prettier-vscode
