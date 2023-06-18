@@ -18,6 +18,7 @@
 
     shellInit = ''
       set fish_greeting
+      export TERM=xterm-256color
     '';
   };
 }
