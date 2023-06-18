@@ -81,11 +81,15 @@ in {
         cpu = {
           interval = 3;
           format = "  {usage}%";
+          format-alt = "  {icon}";
+          format-icons = ["󰋙" "󰫃" "󰫄" "󰫅" "󰫆" "󰫇" "󰫈"];
         };
 
         memory = {
           interval = 3;
           format = "  {}%";
+          format-alt = "  {icon}";
+          format-icons = ["󰋙" "󰫃" "󰫄" "󰫅" "󰫆" "󰫇" "󰫈"];
           tooltip-format = "{used:0.1f}GiB/{total:0.1f}GiB total ({swapUsed:0.1f}GiB/{swapAvail:0.1f}GiB swap)";
         };
 
@@ -101,6 +105,7 @@ in {
 
         backlight = {
           format = "{icon} {percent}%";
+          format-alt = "{icon}";
           format-icons = ["󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨"];
 
           on-scroll-up = "${light} -A 1";
@@ -113,10 +118,11 @@ in {
             critical = 15;
           };
           format = "{icon} {capacity}%";
-          format-charging = " {capacity}%";
-          format-plugged = " {capacity}%";
-          format-alt = "{time} {icon}";
-          format-icons = [" " " " " " " " " "];
+          format-alt = "{icon}";
+          format-icons = {
+            default = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+            charging = ["󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅"];
+          };
         };
 
         clock = {
