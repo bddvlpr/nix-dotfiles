@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./media/cava.nix
+    ./media/spotify-tui.nix
     ./shells/fish.nix
     ./shells/zsh.nix
     ./dev/git.nix
