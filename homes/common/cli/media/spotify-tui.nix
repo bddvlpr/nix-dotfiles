@@ -8,13 +8,16 @@
   home = {
     packages = with pkgs; [spotify-tui];
 
-    file."${config.xdg.configHome}/spotify-tui/client.yml".text = ''
-      ---
-      client_id: @client_id@
-      client_secret: @client_secret@
-      device_id: ~
-      port: 8888
-    '';
+    file."${config.xdg.configHome}/spotify-tui/client.yml" = {
+      text = ''
+        ---
+        client_id: @client_id@
+        client_secret: @client_secret@
+        device_id: ~
+        port: 8888
+      '';
+      force = true;
+    };
 
     activation = {
       "spotify-tui-secrets" = let
