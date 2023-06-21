@@ -112,8 +112,8 @@ in ''
   windowrule = float, title:^(Media viewer)$
   windowrule = float, title:^(Volume Control)$
   windowrule = float, title:^(Picture-in-Picture)$
-  windowrule = size 800 600, title:^(Volume Control)$
-  windowrule = move 75 44%, title:^(Volume Control)$
+  windowrule = size 40% 40%, title:^(Volume Control)$
+  windowrule = move 100%-41% 6%, title:^(Volume Control)$
   windowrule = opacity 0.92, Thunar
 
   bind = SUPER, Return, exec, ${TERMINAL}
