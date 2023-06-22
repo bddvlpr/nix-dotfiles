@@ -8,6 +8,7 @@
 }: {
   imports = [
     ../common
+    ../common/modules/aagl.nix
     ../common/modules/docker.nix
     ../common/modules/nvidia.nix
     ../common/modules/xdg.nix
