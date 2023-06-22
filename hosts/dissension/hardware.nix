@@ -19,8 +19,8 @@
     initrd = {
       availableKernelModules = ["xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod"];
       kernelModules = ["dm-snapshot" "nvidia"];
-      luks.devices.crypted = {
-        device = "/dev/disk/by-uuid/1c016456-1ccd-4cd3-8a5e-d5db9526060b";
+      luks.devices.crypt = {
+        device = "/dev/disk/by-uuid/4633f762-11c7-4793-95b4-204d67327068";
         preLVM = true;
       };
     };
@@ -51,6 +51,6 @@
   networking.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
