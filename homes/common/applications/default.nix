@@ -2,6 +2,7 @@
   imports = [
     ./editors/nvim.nix
     ./editors/vscode.nix
+    ./entertainment/genshin.nix
     ./entertainment/runelite.nix
     ./entertainment/steam.nix
     ./graphics/blender.nix
