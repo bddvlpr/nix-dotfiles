@@ -74,6 +74,12 @@
           version = "5.1.10";
           sha256 = "1nw3zvlw0bx9yih4z3i20irdw02zz444ncf84xjvjn6h5hw47i3x";
         }
+        {
+          publisher = "vunguyentuan";
+          name = "vscode-postcss";
+          version = "2.0.2";
+          sha256 = "1f1m3245714481mdskxz6qslhzd7p1x59rljdcpwqx1p371w5nxn";
+        }
       ];
   };
 }
