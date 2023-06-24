@@ -71,8 +71,8 @@
         {
           publisher = "leonardssh";
           name = "vscord";
-          version = "5.1.10";
-          sha256 = "1nw3zvlw0bx9yih4z3i20irdw02zz444ncf84xjvjn6h5hw47i3x";
+          version = "5.1.11";
+          sha256 = "1c9037ca15f2006mkc2skvv70zvp29ys7askir1xg8mrjglissiq";
         }
         {
           publisher = "vunguyentuan";
