@@ -7,9 +7,9 @@
     enable = true;
 
     theme = {
-      name = "Catppuccin-Macchiato-Standard-Rosewater-Dark";
+      name = "Catppuccin-Macchiato-Standard-Lavender-dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = ["rosewater"];
+        accents = ["lavender"];
         variant = "macchiato";
       };
     };
