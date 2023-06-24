@@ -44,6 +44,11 @@
       fsType = "ext4";
       neededForBoot = true;
     };
+
+    "/mnt/drive0" = {
+      device = "/dev/disk/by-label/drive0";
+      fsType = "ext4";
+    };
   };
 
   swapDevices = [{device = "/dev/disk/by-label/swap";}];
