@@ -47,6 +47,7 @@
 
         # Rust
         rust-lang.rust-analyzer
+        bungcip.better-toml
 
         # Flutter
         dart-code.flutter
