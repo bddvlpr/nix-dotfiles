@@ -10,6 +10,7 @@
     ./shells/zsh.nix
     ./dev/git.nix
     ./dev/ssh.nix
+    ./dev/tools.nix
     inputs.nix-index-database.hmModules.nix-index
   ];
 
