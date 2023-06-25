@@ -1,5 +1,4 @@
-# Custom packages, that can be defined similarly to ones from nixpkgs
-# You can build them using 'nix build .#example' or (legacy) 'nix-build -A example'
 {pkgs ? (import ../nixpkgs.nix) {}}: {
-  # example = pkgs.callPackage ./example { };
+  # While https://github.com/NixOS/nixpkgs/pull/234279 is in PR...
+  vrc-get = pkgs.callPackage ./vrc-get.nix {};
 }
