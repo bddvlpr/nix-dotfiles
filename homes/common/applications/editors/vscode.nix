@@ -43,6 +43,7 @@
 
         # Nix(OS)
         bbenoist.nix
+        arrterian.nix-env-selector
         kamadorueda.alejandra
 
         # Rust
@@ -80,6 +81,12 @@
           name = "vscode-postcss";
           version = "2.0.2";
           sha256 = "1f1m3245714481mdskxz6qslhzd7p1x59rljdcpwqx1p371w5nxn";
+        }
+        {
+          publisher = "tauri-apps";
+          name = "tauri-vscode";
+          version = "0.2.6";
+          sha256 = "03nfyiac562kpndy90j7vc49njmf81rhdyhjk9bxz0llx4ap3lrv";
         }
       ];
   };

@@ -3,6 +3,8 @@
     # Rust
     rustc
     cargo
+    cargo-tauri
+    rustfmt
 
     # NodeJS
     nodejs
