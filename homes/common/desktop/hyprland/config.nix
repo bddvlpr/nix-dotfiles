@@ -10,7 +10,7 @@ in ''
     }
   }
 
-  exec-once=waybar
+  exec=waybar
   exec=swaybg -i ${./wallpapers/starrynight.png} --mode fill
   #exec-once=mako
   #exec-once=swayidle -w
