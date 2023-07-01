@@ -8,6 +8,7 @@
 }: {
   imports = [
     ../common
+    ../common/modules/audio.nix
     ../common/modules/bluetooth.nix
     ../common/modules/docker.nix
     ../common/modules/nvidia.nix

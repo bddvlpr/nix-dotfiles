@@ -7,7 +7,6 @@
   ...
 }: {
   imports = [
-    ./audio.nix
     ./boot.nix
     ./impermanence.nix
     ./networking.nix
