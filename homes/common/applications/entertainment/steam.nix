@@ -1,7 +1,10 @@
 {pkgs, ...}: {
   home = {
     packages = with pkgs; [
-      steam
+      (steam.override
+        {
+          extraProfile = "export STEAM_EXTRA_COMPAT_TOOLS_PATHS='${pkgs.proton-ge-custom}'";
+        })
       gamescope
       protontricks
       mangohud
