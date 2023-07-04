@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/release-23.05";
 
-    # Temporary: PR in progress
+    # TODO: Temporary: PR in progress
     home-manager = {
       url = "github:bddvlpr/home-manager/programs/cava-add";
       inputs.nixpkgs.follows = "nixpkgs";
