@@ -1,15 +1,7 @@
 {pkgs, ...}: {
   home = {
     packages = with pkgs; [
-      # https://github.com/NixOS/nixpkgs/pull/239850
-      (unityhub.override {
-        extraLibs = pkgs: [
-          xorg.libXi
-          xorg.libXrender
-          gnome2.GConf
-          libcap
-        ];
-      })
+      unityhub
       vrc-get
     ];
 
