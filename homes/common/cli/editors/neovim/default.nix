@@ -39,6 +39,20 @@
       telescope-nvim
       vim-svelte
       which-key-nvim
+     
+      # Treesitter parsers
+      nvim-treesitter-parsers.css
+      nvim-treesitter-parsers.scss
+      nvim-treesitter-parsers.sql
+      nvim-treesitter-parsers.lua
+      nvim-treesitter-parsers.nix
+      nvim-treesitter-parsers.yaml
+      nvim-treesitter-parsers.javascript
+      nvim-treesitter-parsers.typescript
+      nvim-treesitter-parsers.rust
+      nvim-treesitter-parsers.svelte
+      nvim-treesitter-parsers.json
+      nvim-treesitter-parsers.json5
     ];
 
     extraLuaConfig = ''
@@ -46,8 +60,10 @@
       vim.wo.relativenumber = true
       vim.cmd.colorscheme "catppuccin"
 
+      ${builtins.readFile ./config/nvim-cmp.lua}
       ${builtins.readFile ./config/lualine.lua}
       ${builtins.readFile ./config/lspconfig.lua}
+      ${builtins.readFile ./config/treesitter.lua}
     '';
   };
 
