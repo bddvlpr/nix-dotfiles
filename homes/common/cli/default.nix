@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./editors/neovim
     ./media/cava.nix
     ./media/spotify-tui.nix
     ./shells/fish.nix
