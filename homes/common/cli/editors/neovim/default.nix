@@ -28,6 +28,7 @@
     plugins = with pkgs.vimPlugins; [
       catppuccin-nvim
       presence-nvim
+      cmp-nvim-lsp
       nvim-autopairs
       nvim-cmp
       nvim-code-action-menu
@@ -39,7 +40,7 @@
       telescope-nvim
       vim-svelte
       which-key-nvim
-     
+
       # Treesitter parsers
       nvim-treesitter-parsers.css
       nvim-treesitter-parsers.scss
@@ -59,6 +60,10 @@
       vim.wo.number = true
       vim.wo.relativenumber = true
       vim.cmd.colorscheme "catppuccin"
+      vim.o.cursorline = true
+      vim.o.tabstop = 2
+      vim.o.shiftwidth = 2
+      vim.o.autoindent = "smartindent"
 
       ${builtins.readFile ./config/nvim-cmp.lua}
       ${builtins.readFile ./config/lualine.lua}
