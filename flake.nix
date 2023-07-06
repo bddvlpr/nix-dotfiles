@@ -67,6 +67,7 @@
     nixosConfigurations = {
       dissension = mkSystem [./hosts/dissension];
       solaris = mkSystem [./hosts/solaris];
+      aurora = mkSystem [./hosts/aurora];
     };
   };
 }
