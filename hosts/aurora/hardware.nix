@@ -1,6 +1,7 @@
 {
   config,
   inputs,
+  outputs,
   lib,
   pkgs,
   modulesPath,
@@ -12,6 +13,8 @@
     inputs.hardware.nixosModules.common-cpu-intel
     inputs.hardware.nixosModules.common-pc-laptop-ssd
     inputs.hardware.nixosModules.common-gpu-amd
+
+    outputs.nixosModules.t2-linux
   ];
 
   boot = {
@@ -24,7 +27,7 @@
       };
     };
     kernelModules = ["kvm-intel"];
-    extraModulePackages = [];
+    extraModulePackages = [config.boot.kernelPackages.broadcom_sta];
   };
 
   fileSystems = {
