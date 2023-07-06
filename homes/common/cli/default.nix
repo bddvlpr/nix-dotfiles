@@ -9,6 +9,7 @@
     ./media/spotify-tui.nix
     ./shells/fish.nix
     ./shells/zsh.nix
+    ./dev/direnv.nix
     ./dev/git.nix
     ./dev/ssh.nix
     ./dev/tools.nix
