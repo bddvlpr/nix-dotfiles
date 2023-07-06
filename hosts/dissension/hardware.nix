@@ -18,7 +18,7 @@
   boot = {
     initrd = {
       availableKernelModules = ["xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod"];
-      kernelModules = ["dm-snapshot" "nvidia"];
+      kernelModules = ["dm-snapshot"];
       luks.devices.crypt = {
         device = "/dev/disk/by-uuid/4633f762-11c7-4793-95b4-204d67327068";
         preLVM = true;
