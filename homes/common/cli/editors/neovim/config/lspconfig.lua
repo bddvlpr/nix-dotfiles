@@ -4,7 +4,7 @@ local cmpcapabilities = require("cmp_nvim_lsp").default_capabilities()
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
-    capabilities = cmpcapabilities
+		capabilities = cmpcapabilities,
 	}
 end
 
@@ -59,3 +59,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		end, opts)
 	end,
 })
+
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+	vim.lsp.diagnostic.on_publish_diagnostics,
+	{
+		underline = true,
+		virtual_text = {
+			spacing = 5,
+			severity_limit = 'Warning',
+		},
+		update_in_insert = true,
+	}
+)

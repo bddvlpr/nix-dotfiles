@@ -40,6 +40,8 @@
       telescope-nvim
       vim-svelte
       which-key-nvim
+      nvim-tree-lua
+      nvim-ts-autotag
 
       # Treesitter parsers
       nvim-treesitter-parsers.css
@@ -68,7 +70,9 @@
       ${builtins.readFile ./config/nvim-cmp.lua}
       ${builtins.readFile ./config/lualine.lua}
       ${builtins.readFile ./config/lspconfig.lua}
+			${builtins.readFile ./config/nvim-autopairs.lua}
       ${builtins.readFile ./config/treesitter.lua}
+      ${builtins.readFile ./config/nvim-tree.lua}
     '';
   };
 
