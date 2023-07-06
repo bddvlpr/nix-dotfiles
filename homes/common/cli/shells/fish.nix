@@ -10,8 +10,8 @@
       nf = "nix flake";
       nr = "nix run";
 
-      snr = "sudo nixos-rebuild --flake .";
-      snrs = "sudo nixos-rebuild --flake . switch";
+      snr = "sudo nixos-rebuild --flake /etc/nixos";
+      snrs = "sudo nixos-rebuild --flake /etc/nixos switch";
       hm = "home-manager --flake .";
       hms = "home-manager --flake . switch";
     };
