@@ -42,6 +42,7 @@
       which-key-nvim
       nvim-tree-lua
       nvim-ts-autotag
+      luasnip
 
       # Treesitter parsers
       nvim-treesitter-parsers.css
