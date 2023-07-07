@@ -26,25 +26,25 @@
     ];
 
     plugins = with pkgs.vimPlugins; [
-      catppuccin-nvim
-      presence-nvim
       cmp-nvim-lsp
+      gitsigns-nvim
+      lualine-nvim
+      luasnip
       nvim-autopairs
       nvim-cmp
       nvim-code-action-menu
       nvim-lspconfig
       nvim-surround
       nvim-tree-lua
+      nvim-tree-lua
       nvim-treesitter
-      lualine-nvim
+      nvim-ts-autotag
+      presence-nvim
       telescope-nvim
       vim-svelte
       which-key-nvim
-      nvim-tree-lua
-      nvim-ts-autotag
-      luasnip
+      catppuccin-nvim
 
-      # Treesitter parsers
       nvim-treesitter-parsers.css
       nvim-treesitter-parsers.scss
       nvim-treesitter-parsers.sql
@@ -61,12 +61,13 @@
 
     extraLuaConfig = ''
       ${builtins.readFile ./config/general.lua}
-      ${builtins.readFile ./config/nvim-cmp.lua}
-      ${builtins.readFile ./config/lualine.lua}
+      ${builtins.readFile ./config/gitsigns.lua}
       ${builtins.readFile ./config/lspconfig.lua}
+      ${builtins.readFile ./config/lualine.lua}
       ${builtins.readFile ./config/nvim-autopairs.lua}
-      ${builtins.readFile ./config/treesitter.lua}
+      ${builtins.readFile ./config/nvim-cmp.lua}
       ${builtins.readFile ./config/nvim-tree.lua}
+      ${builtins.readFile ./config/treesitter.lua}
     '';
   };
 
