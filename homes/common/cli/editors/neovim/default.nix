@@ -60,14 +60,7 @@
     ];
 
     extraLuaConfig = ''
-      vim.wo.number = true
-      vim.wo.relativenumber = true
-      vim.cmd.colorscheme "catppuccin"
-      vim.o.cursorline = true
-      vim.o.tabstop = 2
-      vim.o.shiftwidth = 2
-      vim.o.autoindent = "smartindent"
-
+      ${builtins.readFile ./config/general.lua}
       ${builtins.readFile ./config/nvim-cmp.lua}
       ${builtins.readFile ./config/lualine.lua}
       ${builtins.readFile ./config/lspconfig.lua}

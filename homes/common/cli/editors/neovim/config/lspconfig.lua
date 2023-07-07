@@ -34,6 +34,12 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
+vim.api.nvim_create_autocmd('BufWritePre', {
+	callback = function()
+		vim.lsp.buf.format { async = false }
+	end
+})
+
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
 	callback = function(ev)
@@ -71,3 +77,9 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 		update_in_insert = true,
 	}
 )
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
