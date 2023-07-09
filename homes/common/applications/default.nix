@@ -1,6 +1,6 @@
 {
   imports = [
-    #./editors/vscode.nix
+    ./editors/vscode.nix
     ./entertainment/genshin.nix
     ./entertainment/runelite.nix
     ./entertainment/steam.nix
