@@ -6,7 +6,6 @@
   imports = [
     ./editors/neovim
     ./media/cava.nix
-    ./media/spotify-tui.nix
     ./shells/fish.nix
     ./shells/zsh.nix
     ./dev/direnv.nix
