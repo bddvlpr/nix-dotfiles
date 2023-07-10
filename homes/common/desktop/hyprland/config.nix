@@ -10,7 +10,7 @@ in ''
     }
   }
 
-  exec=waybar
+  exec-once=waybar
   exec=swaybg -i ${./wallpapers/starrynight.png} --mode fill
   #exec-once=mako
   #exec-once=swayidle -w
@@ -117,7 +117,7 @@ in ''
   windowrule = opacity 0.92, Thunar
 
   bind = SUPER, Return, exec, ${TERMINAL}
-  bind = SUPER, Space, exec, rofi -show drun -I -m -i
+  bind = SUPER, Space, exec, wofi -S drun -x 10 -y 10 -W 25% -H 60%
 
   bind = SUPER, Q, killactive,
   bind = SUPER SHIFT, Escape, exit,

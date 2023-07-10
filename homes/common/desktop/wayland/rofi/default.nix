@@ -9,7 +9,6 @@
       show-icons = true;
       terminal = "kitty";
       drun-display-format = "{icon} {name}";
-      location = 0;
       hide-scrollbar = true;
       display-drun = "   Apps ";
       display-run = "   Run ";

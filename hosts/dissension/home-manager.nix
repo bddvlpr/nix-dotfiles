@@ -12,28 +12,28 @@
   monitors = [
     {
       # Left monitor
-      name = "HDMI-A-2";
-      width = 1920;
-      height = 1080;
+      name = "HDMI-A-1";
+      width = 3440;
+      height = 1440;
       x = 0;
-      refreshRate = 75;
+      refreshRate = 100;
       workspace = "1";
     }
     {
       # Center monitor
-      name = "DP-6";
+      name = "DP-3";
       width = 1920;
       height = 1080;
-      x = 1920;
+      x = 3440;
       refreshRate = 165;
       workspace = "2";
     }
     {
       # Right monitor
-      name = "DP-4";
+      name = "DP-1";
       width = 1920;
       height = 1080;
-      x = 3840;
+      x = 5360;
       refreshRate = 75;
       workspace = "3";
     }

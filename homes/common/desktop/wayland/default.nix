@@ -4,6 +4,7 @@
     ./mako
     ./rofi
     ./waybar
+    ./wofi
   ];
 
   home = {
