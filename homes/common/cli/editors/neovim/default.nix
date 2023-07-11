@@ -55,6 +55,7 @@
       nvim-treesitter-parsers.typescript
       nvim-treesitter-parsers.rust
       nvim-treesitter-parsers.svelte
+      nvim-treesitter-parsers.prisma
       nvim-treesitter-parsers.json
       nvim-treesitter-parsers.json5
     ];

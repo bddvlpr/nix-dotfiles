@@ -194,5 +194,5 @@ in ''
   bind = SUPER, mouse_down, workspace, e+1
   bind = SUPER, mouse_up, workspace, e-1
 
-  monitor = , highres, auto, 1
+  monitor = , highrr, auto, 1
 ''
