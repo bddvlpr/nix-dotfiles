@@ -1,7 +1,10 @@
 {
   imports = [
+    ./communication/discord.nix
+    ./communication/nheko.nix
     ./editors/vscode.nix
     ./entertainment/genshin.nix
+    ./entertainment/r2modman.nix
     ./entertainment/runelite.nix
     ./entertainment/steam.nix
     ./graphics/blender.nix
@@ -10,7 +13,6 @@
     ./media/obs.nix
     ./media/spotify.nix
     ./productivity/libreoffice.nix
-    ./discord.nix
     ./firefox.nix
   ];
 }
