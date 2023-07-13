@@ -68,6 +68,7 @@
       ${builtins.readFile ./config/nvim-autopairs.lua}
       ${builtins.readFile ./config/nvim-cmp.lua}
       ${builtins.readFile ./config/nvim-tree.lua}
+      ${builtins.readFile ./config/telescope.lua}
       ${builtins.readFile ./config/treesitter.lua}
     '';
   };
