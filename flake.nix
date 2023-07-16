@@ -18,11 +18,6 @@
     hardware.url = "github:nixos/nixos-hardware";
     agenix.url = "github:ryantm/agenix";
 
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-spicetify.url = "github:the-argus/spicetify-nix";
     nix-index-database.url = "github:mic92/nix-index-database";
   };
@@ -47,7 +42,7 @@
         inherit modules;
         specialArgs = {inherit inputs outputs;};
       };
-  in rec {
+  in {
     packages = forAllSystems (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in

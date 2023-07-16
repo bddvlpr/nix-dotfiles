@@ -1,14 +1,11 @@
 {
   inputs,
   outputs,
-  lib,
   config,
-  pkgs,
   ...
 }: {
   imports = [
     ../common
-    ../common/modules/aagl.nix
     ../common/modules/audio.nix
     ../common/modules/docker.nix
     ../common/modules/nvidia.nix
