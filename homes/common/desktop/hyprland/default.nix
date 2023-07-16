@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    inputs.hyprland.homeManagerModules.default
+    inputs.hyprwm-hyprland.homeManagerModules.default
 
     ../common
     ../wayland
@@ -60,7 +60,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
-    package = inputs.hyprland.packages.${pkgs.system}.default.override {
+    package = inputs.hyprwm-hyprland.packages.${pkgs.system}.default.override {
       enableXWayland = true;
       hidpiXWayland = true;
 
