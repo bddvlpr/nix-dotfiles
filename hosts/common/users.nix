@@ -5,7 +5,7 @@
       bddvlpr = {
         passwordFile = "/nix/persist/passwd";
         isNormalUser = true;
-        extraGroups = ["wheel" "networkmanager" "docker" "video"];
+        extraGroups = ["wheel" "networkmanager" "docker" "libvirtd" "video"];
       };
     };
   };
