@@ -1,6 +1,6 @@
 {
   imports = [
-		./browsers/firefox.nix
+    ./browsers/firefox.nix
     ./communication/discord.nix
     ./communication/nheko.nix
     ./editors/vscode.nix

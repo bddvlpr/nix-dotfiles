@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   users = {
     defaultUserShell = pkgs.fish;
     users = {
