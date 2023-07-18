@@ -11,7 +11,7 @@ in ''
   }
 
   exec-once=waybar
-  exec=swaybg -i ${./wallpapers/starrynight.png} --mode fill
+  exec=swaybg -i ${./wallpapers/waves.png} --mode fill
   #exec-once=mako
   #exec-once=swayidle -w
 
