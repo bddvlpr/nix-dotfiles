@@ -1,5 +1,5 @@
 local lspconfig = require("lspconfig")
-local servers = { "tsserver", "rust_analyzer", "svelte", "nil_ls" }
+local servers = { "rust_analyzer", "svelte", "nil_ls" }
 local cmpcapabilities = require("cmp_nvim_lsp").default_capabilities()
 
 for _, lsp in ipairs(servers) do
@@ -7,6 +7,18 @@ for _, lsp in ipairs(servers) do
 		capabilities = cmpcapabilities,
 	}
 end
+
+lspconfig.tsserver.setup {
+	on_attach = function(client)
+		client.server_capabilities.documentFormattingProvider = false
+	end
+}
+
+lspconfig.eslint.setup {
+	on_attach = function(client)
+		client.server_capabilities.documentFormattingProvider = true
+	end
+}
 
 lspconfig.lua_ls.setup {
 	capabilities = cmpcapabilities,
@@ -36,7 +48,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
 vim.api.nvim_create_autocmd('BufWritePre', {
 	callback = function()
-		vim.lsp.buf.format { async = false }
+		vim.lsp.buf.format { async = true }
 	end
 })
 

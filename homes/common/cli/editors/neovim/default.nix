@@ -20,6 +20,7 @@
       # LSP
       nodePackages_latest.typescript-language-server
       nodePackages_latest.svelte-language-server
+			nodePackages_latest.vscode-langservers-extracted
       nil
       sumneko-lua-language-server
       rust-analyzer
