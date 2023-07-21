@@ -11,7 +11,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprwm-hyprland.url = "github:hyprwm/hyprland/5e577acf516b80173f695a458c2cc188a4d64560";
+    hyprwm-hyprland.url = "github:hyprwm/hyprland/b08b72358ad549fd066e5be0fc3aa4c9df367607";
     hyprwm-contrib.url = "github:hyprwm/contrib/3126196e7ed609e7c427a39dc126ea067de62a65";
 
     impermanence.url = "github:nix-community/impermanence";
