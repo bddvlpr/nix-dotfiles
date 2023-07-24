@@ -62,11 +62,11 @@
     },
     "hardware": {
       "locked": {
-        "lastModified": 1689320556,
-        "narHash": "sha256-vODUkZLWFVCvo1KPK3dC2CbXjxa9antEn5ozwlcTr48=",
+        "lastModified": 1690200740,
+        "narHash": "sha256-aRkEXGmCbAGcvDcdh/HB3YN+EvoPoxmJMOaqRZmf6vM=",
         "owner": "nixos",
         "repo": "nixos-hardware",
-        "rev": "d4ea64f2063820120c05f6ba93ee02e6d4671d6b",
+        "rev": "ba9650b14e83b365fb9e731f7d7c803f22d2aecf",
         "type": "github"
       },
       "original": {
@@ -103,16 +103,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1687683331,
-        "narHash": "sha256-Ar2Q1acfoNRN+tTHRUV1tsKVADT0rD1/VJqevatN2Qk=",
-        "owner": "bddvlpr",
+        "lastModified": 1690208251,
+        "narHash": "sha256-eb/KANeuQADVl5j4wVid4jyPCOMTorSI2+gqoXp3LME=",
+        "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "2f2540d8a240378743a607ef4133221647fe129f",
+        "rev": "d309a62ee81faec56dd31a263a0184b0e3227e36",
         "type": "github"
       },
       "original": {
-        "owner": "bddvlpr",
-        "ref": "programs/cava-add",
+        "owner": "nix-community",
         "repo": "home-manager",
         "type": "github"
       }
@@ -249,11 +248,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1690098390,
-        "narHash": "sha256-FuwrAaX87i4VaAvBxtodzW9MC4gWZfr0nyOucs9+H5s=",
+        "lastModified": 1690211102,
+        "narHash": "sha256-tm/FlpFAmAa1q8qM8ibxg154d61wlf2X/YV8fSaz20w=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5bf3314c488cdc926ea2f6f3136cc6a319c2ec09",
+        "rev": "0d1a998fd04203c84c95b794c0c594785777017f",
         "type": "github"
       },
       "original": {

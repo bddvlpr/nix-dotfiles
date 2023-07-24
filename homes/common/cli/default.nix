@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./editors/neovim
-    ./media/cava.nix
     ./shells/fish.nix
     ./shells/zsh.nix
     ./dev/direnv.nix

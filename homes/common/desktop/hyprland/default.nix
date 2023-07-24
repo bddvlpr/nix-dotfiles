@@ -4,10 +4,11 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  hyprwm-hyprland = inputs.hyprwm-hyprland.packages.${pkgs.system};
+  hyprwm-contrib = inputs.hyprwm-contrib.packages.${pkgs.system};
+in {
   imports = [
-    inputs.hyprwm-hyprland.homeManagerModules.default
-
     ../common
     ../wayland
   ];
@@ -38,7 +39,7 @@
       swayidle
       playerctl
       xdg-utils
-      inputs.hyprwm-contrib.packages.${system}.grimblast
+      hyprwm-contrib.grimblast
 
       fira-code
       roboto-mono
@@ -60,14 +61,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
-    package = inputs.hyprwm-hyprland.packages.${pkgs.system}.default.override {
-      enableXWayland = true;
-      hidpiXWayland = true;
+    package = hyprwm-hyprland.default;
 
-      nvidiaPatches = true;
-    };
-
-    nvidiaPatches = true;
+    enableNvidiaPatches = true;
 
     xwayland = {
       enable = true;
