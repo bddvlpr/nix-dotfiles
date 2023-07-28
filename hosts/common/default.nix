@@ -36,11 +36,7 @@
     };
   };
 
-  programs = {
-    dconf.enable = true;
-    light.enable = true;
-    fuse.userAllowOther = true;
-  };
+  programs.fuse.userAllowOther = true;
 
   console.keyMap = "be-latin1";
 

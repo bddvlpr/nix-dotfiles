@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hyprwm-hyprland.url = "github:hyprwm/hyprland/b08b72358ad549fd066e5be0fc3aa4c9df367607";
     hyprwm-contrib.url = "github:hyprwm/contrib/3126196e7ed609e7c427a39dc126ea067de62a65";
 
@@ -59,9 +64,11 @@
     homeManagerModules = import ./modules/home-manager;
 
     nixosConfigurations = {
-      dissension = mkSystem [./hosts/dissension];
-      solaris = mkSystem [./hosts/solaris];
-      aurora = mkSystem [./hosts/aurora];
+      dissension = mkSystem [./hosts/clients/dissension];
+      solaris = mkSystem [./hosts/clients/solaris];
+      aurora = mkSystem [./hosts/clients/aurora];
+
+      alpha = mkSystem [./hosts/servers/alpha];
     };
   };
 }
