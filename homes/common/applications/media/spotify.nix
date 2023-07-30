@@ -1,8 +1,6 @@
 {
   inputs,
   pkgs,
-  config,
-  lib,
   ...
 }: let
   spicePkgs = inputs.nix-spicetify.packages.${pkgs.system}.default;

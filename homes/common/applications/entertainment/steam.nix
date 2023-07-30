@@ -1,9 +1,11 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  proton-ge-custom = pkgs.callPackage ./proton-ge-custom.nix {};
+in {
   home = {
     packages = with pkgs; [
       (steam.override
         {
-          extraProfile = "export STEAM_EXTRA_COMPAT_TOOLS_PATHS='${pkgs.proton-ge-custom}'";
+          extraProfile = "export STEAM_EXTRA_COMPAT_TOOLS_PATHS='${proton-ge-custom}'";
         })
       steam-run
       gamescope

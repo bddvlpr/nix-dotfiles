@@ -6,14 +6,16 @@
 }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+    (modulesPath + "/profiles/qemu-guest.nix")
   ];
 
   boot = {
     initrd = {
       availableKernelModules = ["ahci" "xhci_pci" "virtio_pci" "sd_mod" "sr_mod"];
-      kernelModules = [];
+      kernelModules = ["virtio_gpu"];
     };
     kernelModules = [];
+    kernelParams = ["console=tty"];
     extraModulePackages = [];
   };
 
