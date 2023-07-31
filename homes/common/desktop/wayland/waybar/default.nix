@@ -117,6 +117,7 @@ in {
             warning = 30;
             critical = 15;
           };
+					interval = 15;
           format = "{icon} {capacity}%";
           format-alt = "{icon}";
           format-icons = {
