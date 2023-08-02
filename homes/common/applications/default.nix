@@ -3,7 +3,6 @@
     ./browsers/firefox.nix
     ./communication/discord.nix
     ./communication/nheko.nix
-    ./editors/tableplus.nix
     ./editors/vscode.nix
     ./entertainment/r2modman.nix
     ./entertainment/runelite.nix

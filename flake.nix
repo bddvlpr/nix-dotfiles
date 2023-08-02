@@ -15,6 +15,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    deploy-rs.url = "github:serokell/deploy-rs";
+
     hyprwm-hyprland.url = "github:hyprwm/hyprland/b08b72358ad549fd066e5be0fc3aa4c9df367607";
     hyprwm-contrib.url = "github:hyprwm/contrib/3126196e7ed609e7c427a39dc126ea067de62a65";
 
@@ -30,6 +32,7 @@
     self,
     nixpkgs,
     home-manager,
+    deploy-rs,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -70,5 +73,13 @@
 
       alpha = mkSystem [./hosts/servers/alpha];
     };
+
+    deploy.nodes = {
+      alpha = {
+        path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.alpha;
+      };
+    };
+
+    checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
   };
 }

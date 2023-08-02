@@ -24,6 +24,7 @@
       nil
       sumneko-lua-language-server
       rust-analyzer
+      docker-compose-language-service
     ];
 
     plugins = with pkgs.vimPlugins; [

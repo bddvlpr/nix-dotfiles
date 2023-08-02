@@ -3,10 +3,11 @@
 in ''
   input {
     kb_layout=be
+  kb_options = caps:swapescape
     follow_mouse = 2
     sensitivity = 0
     touchpad {
-      disable_while_typing=false
+      disable_while_typing = false
     }
   }
 
