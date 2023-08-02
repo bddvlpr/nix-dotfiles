@@ -1,5 +1,5 @@
 local lspconfig = require("lspconfig")
-local servers = { "rust_analyzer", "svelte", "nil_ls" }
+local servers = { "rust_analyzer", "svelte", "nil_ls", "docker_compose_language_service" }
 local cmpcapabilities = require("cmp_nvim_lsp").default_capabilities()
 
 for _, lsp in ipairs(servers) do
