@@ -48,7 +48,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
 vim.api.nvim_create_autocmd('BufWritePre', {
 	callback = function()
-		vim.lsp.buf.format { async = true }
+		vim.lsp.buf.format { async = false }
 	end
 })
 
