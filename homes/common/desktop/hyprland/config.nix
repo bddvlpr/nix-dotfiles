@@ -3,7 +3,7 @@
 in ''
   input {
     kb_layout=be
-  kb_options = caps:swapescape
+    kb_options = caps:swapescape
     follow_mouse = 2
     sensitivity = 0
     touchpad {

@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  identity = import ../../identities/bddvlpr.nix;
+in {
   users = {
     defaultUserShell = pkgs.fish;
     users = {
@@ -6,6 +8,7 @@
         passwordFile = "/nix/persist/passwd";
         isNormalUser = true;
         extraGroups = ["wheel" "networkmanager" "docker" "libvirtd" "video"];
+        openssh.authorizedKeys.keys = identity.userKeys;
       };
     };
   };

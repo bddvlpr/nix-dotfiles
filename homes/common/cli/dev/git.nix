@@ -2,11 +2,13 @@
   pkgs,
   config,
   ...
-}: {
+}: let
+  identity = import ../../../../identities/bddvlpr.nix;
+in {
   programs.git = {
     enable = true;
-    userName = "Luna Simons";
-    userEmail = "luna@bddvlpr.com";
+    userName = identity.fullName;
+    userEmail = identity.email;
 
     package = pkgs.git.override {withLibsecret = true;};
 
