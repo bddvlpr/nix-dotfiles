@@ -75,7 +75,7 @@
     };
 
     deploy.nodes = {
-      alpha = {
+      alpha.profiles.system = {
         path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.alpha;
       };
     };
