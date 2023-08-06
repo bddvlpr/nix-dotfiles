@@ -163,16 +163,21 @@ in {
         "float, splash"
         "float, confirmreset"
         "float, title: Open File"
+        "float, title:^(Media viewer)$"
+        "float, title:^(Volume Control)$"
+        "float, title:^(Picture-in-Picture)$"
+        "size 40% 40%, title:^(Volume Control)$"
+        "move 100%-41% 6%, title:^(Volume Control)$"
       ];
 
       bind = let
         inherit (config.home.sessionVariables) TERMINAL;
 
-				wofi = "${pkgs.wofi}/bin/wofi";
-				grimblast = "${hyprwm-contrib.grimblast}/bin/grimblast";
-				light = "${pkgs.light}/bin/light";
-				pamixer = "${pkgs.pamixer}/bin/pamixer";
-				playerctl = "${pkgs.playerctl}/bin/playerctl";
+        wofi = "${pkgs.wofi}/bin/wofi";
+        grimblast = "${hyprwm-contrib.grimblast}/bin/grimblast";
+        light = "${pkgs.light}/bin/light";
+        pamixer = "${pkgs.pamixer}/bin/pamixer";
+        playerctl = "${pkgs.playerctl}/bin/playerctl";
       in [
         "SUPER, Return, exec, ${TERMINAL}"
         "SUPER, Space, exec, ${wofi} -S drun -x 10 -y 10 -W 25% -H 60%"
