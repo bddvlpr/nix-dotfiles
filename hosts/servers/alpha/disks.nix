@@ -5,6 +5,7 @@
   disko.devices = {
     nodev."/" = {
       fsType = "tmpfs";
+      mountOptions = ["mode=775"];
     };
     disk.sda = {
       device = "/dev/sda";
@@ -22,7 +23,6 @@
               type = "filesystem";
               format = "vfat";
               mountpoint = "/boot";
-              mountOptions = ["mode=775"];
             };
           }
           {
