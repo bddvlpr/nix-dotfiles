@@ -22,6 +22,7 @@
               type = "filesystem";
               format = "vfat";
               mountpoint = "/boot";
+              mountOptions = ["mode=775"];
             };
           }
           {

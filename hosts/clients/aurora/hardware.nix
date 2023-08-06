@@ -33,6 +33,9 @@
     "/" = {
       device = "none";
       fsType = "tmpfs";
+      options = [
+        "mode=755"
+      ];
     };
 
     "/boot" = {
