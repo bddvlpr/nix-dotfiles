@@ -74,10 +74,15 @@
       alpha = mkSystem [./hosts/servers/alpha];
     };
 
-    deploy.nodes = {
-      alpha.profiles.system = {
-        path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.alpha;
+    deploy.nodes = let
+      mkNode = hostname: path: {
+        inherit hostname;
+        profiles = {
+          system = {inherit path;};
+        };
       };
+    in {
+      alpha = mkNode "alpha" (deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.alpha);
     };
 
     checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
