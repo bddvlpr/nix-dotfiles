@@ -12,18 +12,16 @@
   qjackctl = "${pkgs.qjackctl}/bin/qjackctl";
   xdg-open = "${pkgs.xdg-utils}/bin/xdg-open";
 
-  playerExec = ''
-    #!/bin/sh
-    current_song="$(${playerctl} metadata --player spotify --format '{{artist}} - {{title}}')"
+  playerExec = pkgs.writeShellScriptBin "player-exec" ''
+    current_song="$(${playerctl} metadata --player spotify --format '{{artist}} - {{title}}' 2> /dev/null)"
     if [ -n "$current_song" ]; then
       echo " $current_song"
     else
       echo ""
     fi
   '';
-  githubExec = ''
-    #!/bin/sh
-    current_notifications="$(GH_TOKEN=$(cat ${config.age.secrets.github-notifications.path}) ${github-cli} api notifications)"
+  githubExec = pkgs.writeShellScriptBin "github-exec" ''
+    current_notifications="$(GH_TOKEN=$(${pkgs.toybox}/bin/cat ${config.age.secrets.github-notifications.path}) ${github-cli} api notifications)"
     current_count="$(echo $current_notifications | ${jq} '. | map(select(.unread == true)) | length')"
     if [[ !($current_count) || "$current_count" == "0" ]]; then
       echo "󰂜"
@@ -36,6 +34,8 @@ in {
     enable = true;
 
     style = ./style.css;
+
+    systemd.enable = true;
 
     settings = {
       bar = {
@@ -168,7 +168,7 @@ in {
 
         "custom/player" = {
           interval = 2;
-          exec = playerExec;
+          exec = "${playerExec}/bin/player-exec";
           tooltip = false;
           escape = true;
 
@@ -179,7 +179,7 @@ in {
 
         "custom/github" = {
           interval = 60;
-          exec = githubExec;
+          exec = "${githubExec}/bin/github-exec";
           tooltip = false;
           escape = true;
 
