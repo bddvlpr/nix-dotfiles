@@ -5,7 +5,7 @@
   disko.devices = {
     nodev."/" = {
       fsType = "tmpfs";
-      mountOptions = ["mode=775"];
+      mountOptions = ["mode=755"];
     };
     disk.sda = {
       device = "/dev/sda";
