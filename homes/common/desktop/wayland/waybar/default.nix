@@ -10,7 +10,6 @@
   pamixer = "${pkgs.pamixer}/bin/pamixer";
   pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
   qjackctl = "${pkgs.qjackctl}/bin/qjackctl";
-  xdg-open = "${pkgs.xdg-utils}/bin/xdg-open";
 
   playerExec = pkgs.writeShellScriptBin "player-exec" ''
     current_song="$(${playerctl} metadata --player spotify --format '{{artist}} - {{title}}' 2> /dev/null)"
@@ -182,8 +181,6 @@ in {
           exec = "${githubExec}/bin/github-exec";
           tooltip = false;
           escape = true;
-
-          on-click = "${xdg-open} https://github.com/notifications";
         };
       };
     };
