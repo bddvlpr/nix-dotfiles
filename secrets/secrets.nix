@@ -1,5 +1,5 @@
 let
-  identity = import ../identities/bddvlpr;
+  identity = import ../identities/bddvlpr.nix;
 
   keys = identity.systemKeys ++ identity.agenixKeys;
 in {
