@@ -77,12 +77,16 @@
     deploy.nodes = let
       mkNode = hostname: path: {
         inherit hostname;
+
+        sshUser = "root";
+        magicRollback = false;
+
         profiles = {
           system = {inherit path;};
         };
       };
     in {
-      alpha = mkNode "alpha" (deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.alpha);
+      alpha = mkNode "alpha.bddvlpr.com" (deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.alpha);
     };
 
     checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
