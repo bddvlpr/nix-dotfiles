@@ -16,8 +16,8 @@
     };
   };
 
-	environment.persistence."/nix/persist".directories = [
-	"/var/lib/postgresql"
-	"/var/lib/hydra"
-	];
+  environment.persistence."/nix/persist".directories = [
+    "/var/lib/postgresql"
+    "/var/lib/hydra"
+  ];
 }

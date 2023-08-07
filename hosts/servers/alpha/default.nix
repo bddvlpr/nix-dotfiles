@@ -10,8 +10,8 @@
     ./hardware.nix
     ../common/firewall.nix
 
-    ./modules/hydra.nix
     ./modules/nginx.nix
+    ./modules/synapse.nix
   ];
 
   home-manager = {
