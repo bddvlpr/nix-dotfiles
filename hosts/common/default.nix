@@ -39,6 +39,7 @@
     };
   };
 
+  documentation.man.generateCaches = false;
   programs.fuse.userAllowOther = true;
 
   console.keyMap = "be-latin1";

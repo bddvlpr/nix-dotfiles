@@ -8,6 +8,10 @@
     ../../common
     ./disks.nix
     ./hardware.nix
+    ../common/firewall.nix
+
+    ./modules/hydra.nix
+    ./modules/nginx.nix
   ];
 
   home-manager = {
