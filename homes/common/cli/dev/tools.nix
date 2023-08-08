@@ -10,5 +10,8 @@
     nodejs
     yarn
     nodePackages.pnpm
+
+    # Misc
+    gnupg
   ];
 }

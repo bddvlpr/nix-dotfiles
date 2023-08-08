@@ -12,6 +12,11 @@ in {
 
     package = pkgs.git.override {withLibsecret = true;};
 
+    signing = {
+      key = identity.gpgKey;
+      signByDefault = true;
+    };
+
     extraConfig = {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;

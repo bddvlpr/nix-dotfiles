@@ -9,6 +9,7 @@
     ./shells/zsh.nix
     ./dev/direnv.nix
     ./dev/git.nix
+    ./dev/gpg.nix
     ./dev/ssh.nix
     ./dev/tools.nix
     inputs.nix-index-database.hmModules.nix-index

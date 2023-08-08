@@ -6,9 +6,11 @@
 }: {
   imports = [
     ../../common
+    ../common/firewall.nix
+    ../common/logging.nix
+
     ./disks.nix
     ./hardware.nix
-    ../common/firewall.nix
 
     ./modules/nginx.nix
     ./modules/synapse.nix
