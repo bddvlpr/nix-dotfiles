@@ -6,6 +6,7 @@
   imports = [
     ./editors/neovim
     ./shells/fish.nix
+    ./shells/starship.nix
     ./shells/zsh.nix
     ./dev/direnv.nix
     ./dev/git.nix

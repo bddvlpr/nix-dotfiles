@@ -22,7 +22,7 @@ in {
     };
 
     settings = {
-      window_padding_width = 4;
+      window_padding_width = 8;
       background_opacity = "0.9";
     };
 

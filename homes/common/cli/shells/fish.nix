@@ -1,4 +1,6 @@
-{
+{pkgs, ...}: {
+  home.packages = with pkgs; [exa];
+
   programs.fish = {
     enable = true;
     shellAbbrs = {
@@ -14,6 +16,10 @@
       snrs = "sudo nixos-rebuild --flake /etc/nixos switch";
       hm = "home-manager --flake .";
       hms = "home-manager --flake . switch";
+    };
+
+    shellAliases = {
+      ls = "exa --icons -F -H --group-directories-first --git";
     };
 
     shellInit = ''
