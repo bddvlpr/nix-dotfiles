@@ -9,7 +9,6 @@
       {
         format = "$all";
         palette = "catppuccin_macchiato";
-        add_newline = false;
 
         character = {
           success_symbol = "[❯](bold mauve)";
