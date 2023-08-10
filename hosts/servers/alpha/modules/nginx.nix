@@ -10,10 +10,7 @@
 
   security.acme = {
     acceptTerms = true;
-    defaults = {
-      email = "admin@bddvlpr.com";
-      server = "https://acme-staging-v02.api.letsencrypt.org/directory";
-    };
+    defaults.email = "admin@bddvlpr.com";
   };
 
   networking.firewall.allowedTCPPorts = [80 443];
