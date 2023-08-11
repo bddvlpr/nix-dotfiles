@@ -19,7 +19,12 @@
     extraModulePackages = [];
   };
 
-  swapDevices = [];
+  swapDevices = [
+    {
+      device = "/nix/swapfile";
+      size = 8 * 1024;
+    }
+  ];
 
   networking.useDHCP = lib.mkDefault true;
 
