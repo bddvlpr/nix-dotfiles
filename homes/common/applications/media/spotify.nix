@@ -11,6 +11,13 @@ in {
     enable = true;
     theme = spicePkgs.themes.catppuccin-macchiato;
     colorScheme = "lavender";
+
+    enabledExtensions = with spicePkgs.extensions; [
+      fullAppDisplay
+      hidePodcasts
+			lastfm
+			powerBar
+    ];
   };
 
   home.persistence."/nix/persist/home/bddvlpr".directories = [
