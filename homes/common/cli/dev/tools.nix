@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   home.packages = with pkgs; [
     # Rust
     rustc
@@ -13,5 +13,6 @@
 
     # Misc
     gnupg
+		inputs.deploy-rs.packages.${pkgs.system}.default
   ];
 }
