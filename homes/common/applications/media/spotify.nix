@@ -15,8 +15,8 @@ in {
     enabledExtensions = with spicePkgs.extensions; [
       fullAppDisplay
       hidePodcasts
-			lastfm
-			powerBar
+      lastfm
+      powerBar
     ];
   };
 
