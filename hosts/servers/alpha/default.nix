@@ -13,8 +13,7 @@
     ./hardware.nix
 
     ./modules/nginx.nix
-    ./modules/postgres.nix
-    ./modules/synapse.nix
+    ../../../containers/synapse.nix
   ];
 
   home-manager = {
