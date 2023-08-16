@@ -4,6 +4,7 @@
     ./communication/discord.nix
     ./communication/nheko.nix
     ./editors/vscode.nix
+    ./entertainment/osu.nix
     ./entertainment/r2modman.nix
     ./entertainment/runelite.nix
     ./entertainment/steam.nix
