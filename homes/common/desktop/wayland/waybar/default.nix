@@ -97,11 +97,19 @@ in {
         network = {
           interval = 3;
           format-wifi = "  {signalStrength}%";
-          format-ethernet = "󰈀  {ipaddr}/{cidr}";
+          format-ethernet = "󰈀  {ifname}";
           format-linked = "󰌙 (No IP)";
-          format-disconnected = "󰌙";
+          format-disconnected = "";
           format-alt = "󰛴 {bandwidthDownBits} 󰛶 {bandwidthUpBits}";
-          tooltip-format = "{ifname} via {gwaddr}";
+          tooltip-format = ''
+            Address: {ipaddr}/{cidr}
+            Gateway: {gwaddr} ({netmask})
+            Interface: {ifname}'';
+          tooltip-format-wifi = ''
+            Address: {ipaddr}/{cidr}
+            Gateway: {gwaddr} ({netmask})
+            Interface: {ifname}
+            ESSID: {essid} ({signalStrength}% [{signaldBm}dBm])'';
         };
 
         backlight = {
