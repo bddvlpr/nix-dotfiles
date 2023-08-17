@@ -24,5 +24,13 @@
     users.bddvlpr = import ./home-manager.nix;
   };
 
-  networking.hostName = "alpha";
+  networking = {
+    hostName = "alpha";
+
+    nat = {
+      enable = true;
+      internalInterfaces = ["ve-+"];
+      externalInterface = "enp1s0";
+    };
+  };
 }
