@@ -3,7 +3,7 @@
     ./browsers/firefox.nix
     ./communication/discord.nix
     ./communication/nheko.nix
-		./communication/quaternion.nix
+    ./communication/quaternion.nix
     ./editors/vscode.nix
     ./entertainment/osu.nix
     ./entertainment/r2modman.nix
