@@ -17,8 +17,8 @@
 
     deploy-rs.url = "github:serokell/deploy-rs";
 
-    hyprwm-hyprland.url = "github:hyprwm/hyprland/9654749244117f7f150c6f2a2ce4dede6e8cbb25";
-    hyprwm-contrib.url = "github:hyprwm/contrib/bef073cff65917ba2d888aa4dc39bd9868e2b0a4";
+    hyprwm-hyprland.url = "github:hyprwm/hyprland";
+    hyprwm-contrib.url = "github:hyprwm/contrib";
 
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";

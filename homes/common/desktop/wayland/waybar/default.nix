@@ -34,9 +34,7 @@ in {
 
     style = ./style.css;
     systemd.enable = true;
-    package = pkgs.waybar.overrideAttrs (oa: {
-      mesonFlags = (oa.mesonFlags or []) ++ ["-Dexperimental=true"];
-    });
+    package = pkgs.waybar-hyprland;
 
     settings = {
       bar = {

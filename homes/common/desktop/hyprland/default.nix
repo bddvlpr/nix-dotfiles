@@ -56,15 +56,10 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
-
     package = hyprwm-hyprland.default;
 
     enableNvidiaPatches = true;
-
-    xwayland = {
-      enable = true;
-      hidpi = true;
-    };
+    xwayland.enable = true;
 
     settings = {
       input = {
