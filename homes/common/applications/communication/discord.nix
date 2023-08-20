@@ -3,7 +3,7 @@
     enable = true;
 
     package = pkgs.discocss.overrideAttrs (old: rec {
-		  version = "0.3.0";
+      version = "0.3.0";
       src = pkgs.fetchFromGitHub {
         owner = "bddvlpr";
         repo = "discocss";
