@@ -13,6 +13,7 @@
     ./hardware.nix
 
     ./modules/nginx.nix
+    ../../../containers/owncast.nix
     ../../../containers/synapse.nix
   ];
 
