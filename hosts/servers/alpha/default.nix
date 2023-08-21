@@ -13,7 +13,6 @@
     ./hardware.nix
 
     ./modules/nginx.nix
-    ../../../containers/mediamtx.nix
     ../../../containers/synapse.nix
   ];
 
