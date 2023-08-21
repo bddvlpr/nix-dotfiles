@@ -1,18 +1,11 @@
 {
-  containers.owncast = {
+  containers.mediamtx = {
     autoStart = true;
     ephemeral = true;
 
     privateNetwork = true;
     hostAddress = "192.168.100.1";
-    localAddress = "192.168.101.2";
-
-    bindMounts = {
-      "/var/lib/owncast" = {
-        hostPath = "/opt/owncast-data";
-        isReadOnly = false;
-      };
-    };
+    localAddress = "192.168.101.3";
 
     forwardPorts = [
       {
@@ -27,14 +20,20 @@
       ...
     }: {
       services = {
-        owncast = {
+        mediamtx = {
           enable = true;
-          port = 8080;
-          listen = "0.0.0.0";
+          settings = {
+            rtmpAddress = "0.0.0.0:1935";
+            hlsAddress = "0.0.0.0:8080";
+
+            paths.live = {
+              overridePublisher = false;
+            };
+          };
         };
       };
 
-      networking.firewall.allowedTCPPorts = [8080];
+      networking.firewall.allowedTCPPorts = [8080 1935];
       system.stateVersion = "23.11";
     };
   };
@@ -42,8 +41,6 @@
   services.nginx.virtualHosts."cast.bddvlpr.com" = {
     forceSSL = true;
     enableACME = true;
-    locations."/".proxyPass = "http://192.168.101.2:8080";
+    locations."/".proxyPass = "http://192.168.101.3:8080";
   };
-
-  environment.persistence."/nix/persist".directories = ["/opt/owncast-data"];
 }
