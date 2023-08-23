@@ -4,6 +4,7 @@
     ./communication/discord.nix
     ./communication/nheko.nix
     ./communication/quaternion.nix
+    ./communication/teams.nix
     ./editors/vscode.nix
     ./entertainment/osu.nix
     ./entertainment/r2modman.nix
