@@ -2,7 +2,6 @@
   imports = [
     ./kitty
     ./mako
-    ./rofi
     ./waybar
     ./wofi
   ];
