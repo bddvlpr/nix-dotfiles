@@ -7,6 +7,7 @@
     ./communication/teams.nix
     ./editors/vscode.nix
     ./entertainment/osu.nix
+    ./entertainment/prism.nix
     ./entertainment/r2modman.nix
     ./entertainment/runelite.nix
     ./entertainment/steam.nix
