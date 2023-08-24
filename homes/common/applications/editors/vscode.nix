@@ -1,9 +1,4 @@
-{
-  inputs,
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
 
@@ -21,19 +16,6 @@
 
       "workbench.startupEditor" = "none";
       "workbench.colorTheme" = "Catppuccin Macchiato";
-
-      "vscord.status.problems.text" = "{problems_count} issues";
-
-      "vscord.status.state.text.viewing" = "{folder_and_file} [{current_line}:{line_count}]";
-      "vscord.status.state.text.editing" = "{folder_and_file} [{current_line}:{line_count}]";
-      "vscord.status.state.text.debugging" = "{folder_and_file} [{current_line}:{line_count}]";
-
-      "vscord.status.details.idle.enabled" = false;
-      "vscord.status.details.text.idle" = "Idling 💤";
-      "vscord.status.details.text.editing" = "{workspace} ({problems})";
-      "vscord.status.details.text.debugging" = "{workspace} ({problems})";
-
-      "vscord.status.idle.check" = false;
     };
 
     extensions = with pkgs.vscode-extensions;
@@ -48,7 +30,7 @@
 
         # Rust
         rust-lang.rust-analyzer
-        bungcip.better-toml
+        tamasfe.even-better-toml
 
         # Flutter
         dart-code.flutter
@@ -57,6 +39,9 @@
         # Svelte(Kit)
         svelte.svelte-vscode
         bradlc.vscode-tailwindcss
+
+        # C# (.NET)
+        ms-dotnettools.csharp
 
         # Databases
         prisma.prisma
@@ -70,12 +55,6 @@
         github.copilot
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          publisher = "leonardssh";
-          name = "vscord";
-          version = "5.1.11";
-          sha256 = "1c9037ca15f2006mkc2skvv70zvp29ys7askir1xg8mrjglissiq";
-        }
         {
           publisher = "vunguyentuan";
           name = "vscode-postcss";
