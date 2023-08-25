@@ -34,7 +34,6 @@ in {
 
     style = ./style.css;
     systemd.enable = true;
-    package = pkgs.waybar-hyprland;
 
     settings = {
       bar = {
