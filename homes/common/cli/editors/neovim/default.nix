@@ -25,6 +25,7 @@
       sumneko-lua-language-server
       rust-analyzer
       docker-compose-language-service
+      omnisharp-roslyn
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -48,6 +49,7 @@
       catppuccin-nvim
 
       nvim-treesitter-parsers.css
+      nvim-treesitter-parsers.c_sharp
       nvim-treesitter-parsers.scss
       nvim-treesitter-parsers.sql
       nvim-treesitter-parsers.lua

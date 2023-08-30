@@ -20,6 +20,10 @@ lspconfig.eslint.setup {
 	end
 }
 
+lspconfig.omnisharp.setup {
+	cmd = { "OmniSharp" }
+}
+
 lspconfig.lua_ls.setup {
 	capabilities = cmpcapabilities,
 	settings = {
