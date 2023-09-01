@@ -14,7 +14,7 @@
     discordPackage = pkgs.discord.override {withVencord = true;};
 
     css = builtins.readFile (builtins.fetchurl {
-      url = "http://web.archive.org/web/20230813135259id_/https://catppuccin.github.io/discord/dist/catppuccin-macchiato-lavender.theme.css";
+      url = "https://web.archive.org/web/20230901100827id_/https://catppuccin.github.io/discord/dist/catppuccin-macchiato-lavender.theme.css";
       sha256 = "0kys50cz7z1y32xx332l3xq3lp4ybfls6njslp3xqjdwnhzvg16v";
     });
   };
