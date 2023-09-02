@@ -3,12 +3,12 @@
     enable = true;
 
     package = pkgs.discocss.overrideAttrs (old: rec {
-      version = "0.3.0";
+      version = "0.3.1";
       src = pkgs.fetchFromGitHub {
         owner = "bddvlpr";
         repo = "discocss";
         rev = "v${version}";
-        hash = "sha256-2K7SPTvORzgZ1ZiCtS5TOShuAnmtI5NYkdQPRXIBP/I=";
+        hash = "sha256-BFTxgUy2H/T92XikCsUMQ4arPbxf/7a7JPRewGqvqZQ=";
       };
     });
     discordPackage = pkgs.discord.override {withVencord = true;};
