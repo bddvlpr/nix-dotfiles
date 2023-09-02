@@ -15,7 +15,7 @@
 
     css = builtins.readFile (builtins.fetchurl {
       url = "https://web.archive.org/web/20230901100827id_/https://catppuccin.github.io/discord/dist/catppuccin-macchiato-lavender.theme.css";
-      sha256 = "0kys50cz7z1y32xx332l3xq3lp4ybfls6njslp3xqjdwnhzvg16v";
+      sha256 = "064y0fr0m3c1z760ii9silkk9mcr98kf68s9a3yfsdkw3641ignv";
     });
   };
 
