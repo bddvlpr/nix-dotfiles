@@ -16,6 +16,8 @@
 
       "workbench.startupEditor" = "none";
       "workbench.colorTheme" = "Catppuccin Macchiato";
+
+      "omnisharp.useModernNet" = false;
     };
 
     extensions = with pkgs.vscode-extensions;
@@ -31,6 +33,9 @@
         # Rust
         rust-lang.rust-analyzer
         tamasfe.even-better-toml
+
+        # Angular
+        angular.ng-template
 
         # Flutter
         dart-code.flutter
@@ -52,6 +57,7 @@
         usernamehw.errorlens
         eamodio.gitlens
         esbenp.prettier-vscode
+        dbaeumer.vscode-eslint
         github.copilot
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
