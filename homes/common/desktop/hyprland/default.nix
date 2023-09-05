@@ -172,7 +172,7 @@ in {
         "SUPER, Space, exec, ${wofi} -S drun -x 10 -y 10 -W 25% -H 60%"
 
         "SUPER, Q, killactive,"
-        "SUPER SHIFT, Escape, exit,"
+        "SUPER SHIFT, Q, exit,"
         "SUPER, F, fullscreen,"
         "SUPER SHIFT, Space, togglefloating,"
         "SUPER, P, pseudo,"

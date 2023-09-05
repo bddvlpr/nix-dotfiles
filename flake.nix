@@ -17,7 +17,7 @@
 
     deploy-rs.url = "github:serokell/deploy-rs";
 
-    hyprwm-hyprland.url = "github:hyprwm/hyprland/v0.29.0";
+    hyprwm-hyprland.url = "github:hyprwm/hyprland";
     hyprwm-contrib.url = "github:hyprwm/contrib";
 
     impermanence.url = "github:nix-community/impermanence";
