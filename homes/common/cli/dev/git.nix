@@ -10,7 +10,7 @@ in {
     userName = identity.fullName;
     userEmail = identity.email;
 
-    package = pkgs.git.override {withLibsecret = true;};
+    package = pkgs.gitFull;
 
     signing = {
       key = identity.gpgKey;
