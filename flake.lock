@@ -417,6 +417,21 @@
         "type": "github"
       }
     },
+    "nixpkgs_8": {
+      "locked": {
+        "lastModified": 1693654884,
+        "narHash": "sha256-EqKKEl+IOS8TSjkt+xn1qGpsjnx5/ag33YNQ1+c7OuM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e7f35e03abd06a2faef6684d0de813370e13bda8",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixpkgs-unstable",
+        "type": "indirect"
+      }
+    },
     "root": {
       "inputs": {
         "agenix": "agenix",
@@ -430,7 +445,8 @@
         "nix-index-database": "nix-index-database",
         "nix-spicetify": "nix-spicetify",
         "nixpkgs": "nixpkgs_7",
-        "nixpkgs-stable": "nixpkgs-stable"
+        "nixpkgs-stable": "nixpkgs-stable",
+        "untis-ics-sync": "untis-ics-sync"
       }
     },
     "systems": {
@@ -460,6 +476,24 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "untis-ics-sync": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_8"
+      },
+      "locked": {
+        "lastModified": 1694340989,
+        "narHash": "sha256-wQBxtcY74KZ7Dd8lLTg1KXLI9WP/mfw9qYp0qD3G4+Y=",
+        "owner": "bddvlpr",
+        "repo": "untis-ics-sync",
+        "rev": "d5c6e0034c5e7cd02966897fc64e24786275f014",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bddvlpr",
+        "repo": "untis-ics-sync",
         "type": "github"
       }
     },

@@ -14,6 +14,7 @@
 
     ./modules/nginx.nix
     ../../../containers/synapse.nix
+    ../../../containers/untis-ics-sync.nix
   ];
 
   home-manager = {

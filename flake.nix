@@ -24,6 +24,8 @@
     hardware.url = "github:nixos/nixos-hardware";
     agenix.url = "github:ryantm/agenix";
 
+    untis-ics-sync.url = "github:bddvlpr/untis-ics-sync";
+
     nix-spicetify.url = "github:the-argus/spicetify-nix";
     nix-index-database.url = "github:mic92/nix-index-database";
   };
