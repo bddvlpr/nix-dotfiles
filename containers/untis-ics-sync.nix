@@ -35,6 +35,8 @@
           UNTIS_USERNAME = "student.em.s.ap";
           UNTIS_PASSWORD = "12345678"; # Not my account lol.
           UNTIS_BASEURL = "arche.webuntis.com";
+
+          CORS_ORIGIN = "https://uis-ap.bddvlpr.com";
         };
 
         serviceConfig = {
