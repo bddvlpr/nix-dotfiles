@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [exa];
+  home.packages = with pkgs; [eza];
 
   programs.fish = {
     enable = true;
@@ -19,7 +19,7 @@
     };
 
     shellAliases = {
-      ls = "exa --icons -F -H --group-directories-first --git";
+      ls = "eza --icons -F -H --group-directories-first --git";
     };
 
     shellInit = ''
