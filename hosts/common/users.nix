@@ -6,7 +6,7 @@ in {
     users = {
       root.openssh.authorizedKeys.keys = identity.userKeys;
       bddvlpr = {
-        passwordFile = "/nix/persist/passwd";
+        hashedPasswordFile = "/nix/persist/passwd";
         isNormalUser = true;
         extraGroups = ["wheel" "networkmanager" "docker" "libvirtd" "video"];
         openssh.authorizedKeys.keys = identity.userKeys;
