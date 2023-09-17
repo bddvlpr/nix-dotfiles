@@ -69,7 +69,7 @@ in {
       };
 
       exec = [
-        "${pkgs.swaybg}/bin/swaybg -i ${./wallpapers/waves.png} --mode fill"
+        "${pkgs.swaybg}/bin/swaybg -i ${./wallpapers/nix.png} --mode fill"
       ];
 
       general = {
