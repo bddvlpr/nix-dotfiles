@@ -37,7 +37,6 @@
 @define-color rosewater #f4dbd6;
 
 * {
-  /* border: none; */
   border-radius: 0px;
   font-family: "Symbols Nerd Font Mono", "Roboto Nerd Font Mono";
   font-weight: 500;
@@ -47,7 +46,6 @@
 
 window#waybar {
   background: transparent;
-  color: #cdd6f4;
   opacity: 1;
 }
 
@@ -60,188 +58,82 @@ tooltip {
 }
 
 #workspaces button {
-  padding: 5px;
-  color: #313244;
-  margin-right: 5px;
-  /* margin-left: 10px; */
+  color: @surface1;
 }
 
 #workspaces button.active {
-  color: @lavender;
+  color: @text;
 }
 
 #workspaces button.focused {
-  color: #707880;
-  background: #eba0ac;
-  border-radius: 7px;
+  color: @subtext0;
 }
 
 #workspaces button.urgent {
-  color: #11111b;
-  background: #f28fad;
-  border-radius: 7px;
+  color: @red;
 }
 
 #workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
-  border-radius: 17px;
+  color: @subtext0;
 }
 
-/* #custom-power_profile, */
-/* #custom-weather, */
-
-#custom-logo,
-#custom-github,
 #backlight,
 #window,
 #clock,
 #battery,
-#mpris,
 #pulseaudio,
-#custom-pacman,
 #network,
 #bluetooth,
 #temperature,
 #workspaces,
 #tray,
-#mpd,
-#custom-pomodoro,
 #cpu,
 #memory,
+#custom-logo,
 #custom-player,
+#custom-github,
 #modbackground {
-  background: #1e1e2e;
+  color: @text;
+  background: @base;
   opacity: 1;
   padding: 0px 7px;
-  margin-top: 5px;
-  margin-bottom: 6px;
+  margin: 4px;
+  border-radius: 7px;
   /* border: 1px solid #b5b0a7; */
 }
 
 #custom-logo {
-  color: @lavender;
   border-radius: 7px 0px 0px 7px;
-  margin-left: 7px;
-}
-
-#backlight {
-  color: @teal;
-  border-radius: 7px;
-  margin-right: 5px;
-}
-
-#pulseaudio {
-  color: @green;
-  border-radius: 7px 0px 0px 7px;
-}
-
-#pulseaudio.microphone {
-  color: @yellow;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px 7px 7px 0px;
-  margin-right: 5px;
-}
-
-#cpu {
-  color: @sapphire;
-  border-radius: 7px 0px 0px 7px;
-}
-
-#memory {
-  color: @sky;
-  border-radius: 0px 7px 7px 0px;
-  margin-right: 5px;
-}
-
-#tray {
-  border-radius: 7px;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin: 4px 0px 4px 8px;
 }
 
 #workspaces {
   border-radius: 0px 7px 7px 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-#window {
-  border-radius: 7px;
-  margin-left: 10px;
-  margin-right: 60px;
+  padding: 0px;
+  margin: 4px 4px 4px 0px;
 }
 
 #clock {
-  color: @red;
-  border-radius: 7px;
-  /* margin-left: 10px; */
-  margin-right: 5px;
+  margin: 4px 8px 4px 4px;
 }
 
-#network {
-  color: @peach;
-  border-radius: 7px;
-  margin-right: 5px;
-  border-left: 0px;
-  border-right: 0px;
+#pulseaudio {
+  border-radius: 7px 0px 0px 7px;
+  margin: 4px 0px 4px 4px;
 }
 
-#bluetooth {
-  color: @teal;
-  border-radius: 7px;
-  margin-right: 5px;
+#pulseaudio.microphone {
+  border-radius: 0px 7px 7px 0px;
+  margin: 4px 4px 4px 0px;
 }
 
-#battery {
-  color: @maroon;
-  border-radius: 7px;
-  margin-right: 5px;
-  border-left: 0px;
+#cpu {
+  border-radius: 7px 0px 0px 7px;
+  margin: 4px 0px 4px 4px;
 }
 
-#custom-player {
-  border-radius: 7px;
-  margin-right: 5px;
-  border-right: 0px;
+#memory {
+  border-radius: 0px 7px 7px 0px;
+  margin: 4px 4px 4px 0px;
 }
 
-#custom-github {
-  color: @blue;
-  border-radius: 7px;
-  margin-right: 5px;
-  border-left: 0px;
-}
-
-#mpris {
-  border-radius: 7px;
-  margin-right: 5px;
-  border-right: 0px;
-}
-
-#mpris.paused {
-  border-bottom: 2px solid @yellow;
-}
-
-#mpd {
-  border-radius: 7px;
-  margin-right: 5px;
-  border-right: 0px;
-}
-
-#custom-pomodoro {
-  color: #cdd6e1;
-  border-radius: 7px;
-  margin-right: 5px;
-}
-
-#custom-pomodoro.paused {
-  border-bottom: 2px solid @yellow;
-}
-/**/
-/* #custom-weather { */
-/*   border-radius: 0px 10px 10px 0px; */
-/*   border-right: 0px; */
-/*   margin-left: 0px; */
-/* } */
