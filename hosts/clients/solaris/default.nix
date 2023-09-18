@@ -11,6 +11,7 @@
     ../../common/modules/client.nix
     ../../common/modules/docker.nix
     ../../common/modules/nvidia.nix
+    ../../common/modules/thunar.nix
     ../../common/modules/xdg.nix
     ./hardware.nix
   ];

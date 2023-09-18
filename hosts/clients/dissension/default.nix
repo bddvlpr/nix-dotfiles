@@ -13,6 +13,7 @@
     ../../common/modules/libvirtd.nix
     ../../common/modules/nvidia.nix
     ../../common/modules/opentabletdriver.nix
+    ../../common/modules/thunar.nix
     ../../common/modules/xdg.nix
     ./hardware.nix
   ];

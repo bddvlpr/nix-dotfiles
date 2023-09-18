@@ -14,6 +14,7 @@
       mimeo
       waypipe
       slurp
+      xfce.thunar
       wf-recorder
       wl-clipboard
       wl-mirror

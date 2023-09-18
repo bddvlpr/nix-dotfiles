@@ -162,6 +162,7 @@ in {
       bind = let
         inherit (config.home.sessionVariables) TERMINAL;
 
+        thunar = "${pkgs.xfce.thunar}/bin/thunar";
         wofi = "${pkgs.wofi}/bin/wofi";
         grimblast = "${hyprwm-contrib.grimblast}/bin/grimblast";
         light = "${pkgs.light}/bin/light";
@@ -169,6 +170,7 @@ in {
         playerctl = "${pkgs.playerctl}/bin/playerctl";
       in [
         "SUPER, Return, exec, ${TERMINAL}"
+        "SUPER SHIFT, Return, exec, ${thunar}"
         "SUPER, Space, exec, ${wofi} -S drun -x 10 -y 10 -W 25% -H 60%"
 
         "SUPER, Q, killactive,"
