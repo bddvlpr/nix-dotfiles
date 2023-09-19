@@ -71,6 +71,7 @@
 
       alpha = mkSystem [./hosts/servers/alpha];
       bravo = mkSystem [./hosts/servers/bravo];
+      charlie = mkSystem [./hosts/servers/charlie];
     };
 
     deploy.nodes = let
@@ -87,6 +88,7 @@
     in {
       alpha = mkNode "alpha.bddvlpr.com" (deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.alpha);
       bravo = mkNode "bravo.bddvlpr.com" (deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.bravo);
+      charlie = mkNode "charlie.bddvlpr.com" (deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.charlie);
     };
 
     checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
