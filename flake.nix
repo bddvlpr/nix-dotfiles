@@ -70,6 +70,7 @@
       aurora = mkSystem [./hosts/clients/aurora];
 
       alpha = mkSystem [./hosts/servers/alpha];
+      bravo = mkSystem [./hosts/servers/bravo];
     };
 
     deploy.nodes = let
@@ -85,6 +86,7 @@
       };
     in {
       alpha = mkNode "alpha.bddvlpr.com" (deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.alpha);
+      bravo = mkNode "bravo.bddvlpr.com" (deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.bravo);
     };
 
     checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;

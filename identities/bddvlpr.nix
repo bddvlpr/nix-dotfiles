@@ -25,6 +25,12 @@ rec {
       sshSystemKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEpYYd0Fdb9g3VwELNoUkIBzNlN00H6hUVGSq85yAdb0 root@alpha";
       sshAgenixKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICSd2RQXyAzJdAyq4e+fUmVwuFoHlPx0D2gWghdfK6nN bddvlpr@alpha[agenix]";
     };
+
+    bravo = {
+      sshUserKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC0svvdhLwCk1F4pXA3y9w1284D3YNFj8oDnBF3k2mNa bddvlpr@bravo";
+      sshSystemKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJcSG0hMBdVxcKA3Fy9ovL3KKMwMRl0Qs2SvmpsxvbWN root@bravo";
+      sshAgenixKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEbO8LWTVC8aDSJCbNbkAvUIWmGas2FBhNlSScd/caNo bddvlpr@bravo[agenix]";
+    };
   };
 
   userKeys = builtins.attrValues (builtins.mapAttrs (host: config: config.sshUserKey) hosts);
