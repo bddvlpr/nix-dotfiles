@@ -12,6 +12,7 @@
     ./entertainment/prism.nix
     ./entertainment/r2modman.nix
     ./entertainment/runelite.nix
+    ./entertainment/runescape.nix
     ./entertainment/steam.nix
     ./graphics/blender.nix
     ./graphics/cura.nix

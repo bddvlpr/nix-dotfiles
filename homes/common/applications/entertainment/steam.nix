@@ -1,6 +1,4 @@
-{pkgs, ...}: let
-  proton-ge-custom = pkgs.callPackage ./proton-ge-custom.nix {};
-in {
+{pkgs, ...}: {
   home = {
     packages = with pkgs; [
       (steam.override
