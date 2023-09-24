@@ -3,8 +3,8 @@
     packages = [pkgs.nextcloud-client];
 
     persistence."/nix/persist/home/bddvlpr".directories = [
-     ".config/Nextcloud"
-     "Nextcloud"
+      ".config/Nextcloud"
+      "Nextcloud"
     ];
   };
 }
