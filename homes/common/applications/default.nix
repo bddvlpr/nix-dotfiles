@@ -20,5 +20,7 @@
     ./media/obs.nix
     ./media/spotify.nix
     ./productivity/libreoffice.nix
+    ./utility/nextcloud.nix
+    ./utility/qbittorrent.nix
   ];
 }

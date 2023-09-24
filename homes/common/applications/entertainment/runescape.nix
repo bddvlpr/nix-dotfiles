@@ -14,7 +14,7 @@
       (old.buildCommand or "")
       + ''
         wrapProgram "$out/bin/RuneScape" \
-          --set PULSE_LATENCY_MSEC 100 \
+          --set PULSE_LATENCY_MSEC 5000 \
           --run 'echo $PULSE_LATENCY_MSEC'
       '';
   });
@@ -28,5 +28,6 @@ in {
       directories = ["Jagex"];
     };
   };
+
   nixpkgs.config.permittedInsecurePackages = [openssl.name];
 }
