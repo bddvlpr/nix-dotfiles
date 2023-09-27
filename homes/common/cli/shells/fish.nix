@@ -20,6 +20,7 @@
 
     shellAliases = {
       ls = "eza --icons -F -H --group-directories-first --git";
+      code = "codium";
     };
 
     shellInit = ''
