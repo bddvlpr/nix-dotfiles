@@ -3,7 +3,7 @@
     enable = true;
 
     theme = {
-      name = "Catppuccin-Macchiato-Standard-Lavender-dark";
+      name = "Catppuccin-Macchiato-Standard-Lavender-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = ["lavender"];
         variant = "macchiato";
