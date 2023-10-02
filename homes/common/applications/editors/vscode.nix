@@ -59,6 +59,11 @@
       # Databases
       prisma.prisma
 
+      # Python
+      ms-toolsai.jupyter
+      ms-toolsai.jupyter-keymap
+      ms-toolsai.jupyter-renderers
+
       # Misc
       editorconfig.editorconfig
       ms-azuretools.vscode-docker

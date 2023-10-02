@@ -70,6 +70,7 @@ in {
 
       exec = [
         "${pkgs.swaybg}/bin/swaybg -i ${./wallpapers/nix.png} --mode fill"
+        "${pkgs.nextcloud-client}/bin/nextcloud --background"
       ];
 
       general = {
