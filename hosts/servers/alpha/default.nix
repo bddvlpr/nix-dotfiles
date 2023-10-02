@@ -6,12 +6,11 @@
 }: {
   imports = [
     ../../common
-    ../common/firewall.nix
-    ../common/logging.nix
 
     ./disks.nix
     ./hardware.nix
 
+    ./modules/logging.nix
     ./modules/nginx.nix
     ../../../containers/synapse.nix
     ../../../containers/untis-ics-sync.nix
@@ -32,6 +31,11 @@
       enable = true;
       internalInterfaces = ["ve-+"];
       externalInterface = "enp1s0";
+    };
+
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [22];
     };
   };
 }
