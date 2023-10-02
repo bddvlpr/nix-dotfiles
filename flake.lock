@@ -120,11 +120,8 @@
       "locked": {
         "lastModified": 1696161939,
         "narHash": "sha256-HI1DxS//s46/qv9dcW06TzXaBjxL2DVTQP8R1QsnHzM=",
-        "lastModified": 1696161939,
-        "narHash": "sha256-HI1DxS//s46/qv9dcW06TzXaBjxL2DVTQP8R1QsnHzM=",
         "owner": "nixos",
         "repo": "nixos-hardware",
-        "rev": "0ab3ee718e964fb42dc57ace6170f19cb0b66532",
         "rev": "0ab3ee718e964fb42dc57ace6170f19cb0b66532",
         "type": "github"
       },
@@ -470,16 +467,16 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1695285852,
-        "narHash": "sha256-7GD+OBJsx9xhAIBn4Z6hb4BvoBVHJyPqnZHC4qorYNU=",
+        "lastModified": 1696226686,
+        "narHash": "sha256-8slLB2hFJUO5P9MD9QE60tUxjY4u4mfETjW6lm9YENA=",
         "owner": "bddvlpr",
         "repo": "untis-ics-sync",
-        "rev": "f3ea3e279a44598f1d189564dc94d9b0ce4a34f8",
+        "rev": "f2c0cffa1579ca4bc5771bc5517ab3a238212383",
         "type": "github"
       },
       "original": {
         "owner": "bddvlpr",
-        "ref": "v0.5.1",
+        "ref": "v0.5.2",
         "repo": "untis-ics-sync",
         "type": "github"
       }
