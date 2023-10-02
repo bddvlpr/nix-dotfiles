@@ -91,7 +91,6 @@ in {
 
       decoration = {
         rounding = 3;
-        multisample_edges = true;
 
         active_opacity = 1.0;
         inactive_opacity = 1.0;
