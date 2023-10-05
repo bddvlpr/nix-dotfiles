@@ -19,6 +19,7 @@
     ./graphics/unity.nix
     ./media/obs.nix
     ./media/spotify.nix
+    ./productivity/freecad.nix
     ./productivity/libreoffice.nix
     ./utility/nextcloud.nix
     ./utility/qbittorrent.nix
