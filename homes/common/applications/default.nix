@@ -5,7 +5,6 @@
     ./communication/nheko.nix
     ./communication/quaternion.nix
     ./communication/teams.nix
-    ./editors/android-studio.nix
     ./editors/openlens.nix
     ./editors/vscode.nix
     ./entertainment/osu.nix
