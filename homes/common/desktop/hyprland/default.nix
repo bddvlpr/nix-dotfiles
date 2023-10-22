@@ -90,7 +90,7 @@ in {
         "col.border_inactive" = "rgb(181926)";
         "col.border_active" = "rgb(c6a0f6) rgb(ed8796) rgb(ee99a0) rgb(f5a97f) rgb(eed49f) rgb(a6da95) rgb(91d7e3) rgb(7dc4e4) rgb(8aadf4) rgb(b7bdf8) 45deg";
         groupbar = {
-        "col.inactive" = "rgb(181926)";
+          "col.inactive" = "rgb(181926)";
           "col.active" = "rgb(c6a0f6) rgb(ed8796) rgb(ee99a0) rgb(f5a97f) rgb(eed49f) rgb(a6da95) rgb(91d7e3) rgb(7dc4e4) rgb(8aadf4) rgb(b7bdf8) 45deg";
         };
       };
