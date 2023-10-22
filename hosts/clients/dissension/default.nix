@@ -12,6 +12,7 @@
     ../../common/modules/docker.nix
     ../../common/modules/gamemode.nix
     ../../common/modules/libvirtd.nix
+    ../../common/modules/mullvad.nix
     ../../common/modules/nvidia.nix
     ../../common/modules/opentabletdriver.nix
     ../../common/modules/thunar.nix
