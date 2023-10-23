@@ -14,7 +14,7 @@
     prometheus = {
       enable = true;
       port = 9001;
-      retentionTime = "2m";
+      retentionTime = "62d";
       exporters = {
         node = {
           enable = true;
