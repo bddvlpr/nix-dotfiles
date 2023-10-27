@@ -9,8 +9,14 @@ in {
 
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.catppuccin-macchiato;
-    colorScheme = "lavender";
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "macchiato";
+    
+    enabledCustomApps = with spicePkgs.apps; [
+      new-releases
+      lyrics-plus
+      marketplace
+    ];
 
     enabledExtensions = with spicePkgs.extensions; [
       fullAppDisplay
