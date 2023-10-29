@@ -11,11 +11,12 @@
         hash = "sha256-BFTxgUy2H/T92XikCsUMQ4arPbxf/7a7JPRewGqvqZQ=";
       };
     });
-    discordPackage = pkgs.discord.override {withVencord = true;};
+
+    #discordPackage = pkgs.discord.override {withVencord = false;};
 
     css = builtins.readFile (builtins.fetchurl {
-      url = "https://web.archive.org/web/20230901100827id_/https://catppuccin.github.io/discord/dist/catppuccin-macchiato-lavender.theme.css";
-      sha256 = "064y0fr0m3c1z760ii9silkk9mcr98kf68s9a3yfsdkw3641ignv";
+      url = "https://web.archive.org/web/20231029105359id_/https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css";
+      sha256 = "156x9vb3as1rsd2b3ajnf71w1ign1l8i147x4g5a9rbn4v6n2y1p";
     });
   };
 
