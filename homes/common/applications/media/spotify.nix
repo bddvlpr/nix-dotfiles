@@ -11,7 +11,7 @@ in {
     enable = true;
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "macchiato";
-    
+
     enabledCustomApps = with spicePkgs.apps; [
       new-releases
       lyrics-plus
