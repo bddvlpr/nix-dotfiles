@@ -12,11 +12,11 @@
       };
     });
 
-    #discordPackage = pkgs.discord.override {withVencord = false;};
+    discordPackage = pkgs.discord.override {withVencord = true;};
 
     css = builtins.readFile (builtins.fetchurl {
-      url = "https://web.archive.org/web/20231029105359id_/https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css";
-      sha256 = "156x9vb3as1rsd2b3ajnf71w1ign1l8i147x4g5a9rbn4v6n2y1p";
+      url = "https://web.archive.org/web/20231102191925id_/https://catppuccin.github.io/discord/dist/catppuccin-macchiato-lavender.theme.css";
+      sha256 = "0z1pwfq5w2f2l2p5bry81sldrl8hpc5yn5q6xcyg3kq1fp9nbq3d";
     });
   };
 
