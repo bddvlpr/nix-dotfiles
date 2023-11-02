@@ -16,6 +16,7 @@
     nodePackages.pnpm
 
     # Misc
+    bluetuith
     gnupg
     inputs.deploy-rs.packages.${pkgs.system}.default
   ];
