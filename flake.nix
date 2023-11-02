@@ -14,6 +14,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    attic.url = "github:zhaofengli/attic";
+
     deploy-rs.url = "github:serokell/deploy-rs";
 
     hyprwm-hyprland.url = "github:hyprwm/hyprland";
