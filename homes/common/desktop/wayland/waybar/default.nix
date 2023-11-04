@@ -9,7 +9,7 @@
   light = "${pkgs.light}/bin/light";
   pamixer = "${pkgs.pamixer}/bin/pamixer";
   pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
-  qjackctl = "${pkgs.qjackctl}/bin/qjackctl";
+  helvum = "${pkgs.helvum}/bin/helvum";
 
   playerExec = pkgs.writeShellScriptBin "player-exec" ''
     current_song="$(${playerctl} metadata --player spotify --format '{{artist}} - {{title}}' 2> /dev/null)"
@@ -145,7 +145,7 @@ in {
           format-muted = " Muted";
           on-click = "${pamixer} -t";
           on-click-right = "${pavucontrol}";
-          on-click-middle = "${qjackctl}";
+          on-click-middle = "${helvum}";
           on-scroll-up = "${pamixer} -i 5";
           on-scroll-down = "${pamixer} -d 5";
           scroll-step = 5;
@@ -166,7 +166,7 @@ in {
           format-source-muted = " Muted";
           on-click = "${pamixer} --default-source -t";
           on-click-right = "${pavucontrol}";
-          on-click-middle = "${qjackctl}";
+          on-click-middle = "${helvum}";
           on-scroll-up = "${pamixer} --default-source -i 5";
           on-scroll-down = "${pamixer} --default-source -d 5";
           scroll-step = 5;
