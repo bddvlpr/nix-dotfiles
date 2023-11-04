@@ -30,6 +30,7 @@
 
     plugins = with pkgs.vimPlugins; [
       cmp-nvim-lsp
+      copilot-vim
       gitsigns-nvim
       lualine-nvim
       luasnip
@@ -77,5 +78,9 @@
     '';
   };
 
-  home.sessionVariables.EDITOR = "nvim";
+  home = {
+    sessionVariables.EDITOR = "nvim";
+
+    persistence."/nix/persist/home/bddvlpr".directories = [".config/github-copilot"];
+  };
 }
