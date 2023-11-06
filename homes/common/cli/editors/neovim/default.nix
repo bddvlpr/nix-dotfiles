@@ -43,8 +43,10 @@
       nvim-tree-lua
       nvim-treesitter
       nvim-ts-autotag
+      nvim-web-devicons
       presence-nvim
       telescope-nvim
+      trouble-nvim
       vim-svelte
       which-key-nvim
       catppuccin-nvim
