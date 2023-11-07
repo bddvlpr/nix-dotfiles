@@ -10,6 +10,7 @@
       nb = "nix build";
       nbn = "nix build nixpkgs#";
       nf = "nix flake";
+      nfu = "nix flake update";
       nr = "nix run";
 
       snr = "sudo nixos-rebuild --flake /etc/nixos";
