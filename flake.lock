@@ -610,16 +610,16 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1697788489,
-        "narHash": "sha256-1pgwJIR0tuMOh42GgGsyqQqgKQzl9LPooSN9Ixw8+rU=",
+        "lastModified": 1699459344,
+        "narHash": "sha256-YsNQEcO555uJExMg2e384Syl10x9d7yhuJtZvwKvIS8=",
         "owner": "bddvlpr",
         "repo": "untis-ics-sync",
-        "rev": "5218bb9dc1c6aaf842b6ef4ccc51dd2df7d43a80",
+        "rev": "078d795b65a9b664e1515ad39cde5170fa3555c3",
         "type": "github"
       },
       "original": {
         "owner": "bddvlpr",
-        "ref": "v0.5.4",
+        "ref": "v0.5.6",
         "repo": "untis-ics-sync",
         "type": "github"
       }
