@@ -2,13 +2,16 @@
   programs.vscode = {
     enable = true;
 
-    package = pkgs.vscodium.overrideAttrs (old: {
-      preFixup = ''
-        gappsWrapperArgs+=(
-          --prefix PATH : ${pkgs.glib.bin}/bin
-        )
-      '';
-    });
+    package = let
+      vscode = pkgs.vscodium.overrideAttrs (old: {
+        preFixup = ''
+          gappsWrapperArgs+=(
+            --prefix PATH : ${pkgs.glib.bin}/bin
+          )
+        '';
+      });
+    in
+      vscode.fhsWithPackages (ps: with ps; [dotnet-sdk dotnet-aspnetcore]);
 
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
@@ -19,15 +22,17 @@
       "editor.inlineSuggest.enabled" = true;
       "editor.minimap.autohide" = true;
       "editor.minimap.renderCharacters" = false;
+      "terminal.integrated.fontFamily" = "RobotoMono Nerd Font";
       "extensions.autoUpdate" = false;
       "explorer.autoReveal" = false;
+      "explorer.excludeGitIgnore" = true;
 
       "security.workspace.trust.enabled" = false;
 
       "workbench.startupEditor" = "none";
       "workbench.colorTheme" = "Catppuccin Macchiato";
 
-      "omnisharp.useModernNet" = false;
+      "omnisharp.useModernNet" = true;
     };
 
     extensions = with pkgs.vscode-extensions; [
@@ -73,5 +78,15 @@
       dbaeumer.vscode-eslint
       github.copilot
     ];
+  };
+
+  home.file.".vscode-oss/argv.json" = {
+    force = true;
+    text = ''
+      {
+         "enable-crash-reporter": false,
+         "password-store": "gnome"
+      }
+    '';
   };
 }
