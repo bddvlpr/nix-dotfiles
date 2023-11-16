@@ -307,11 +307,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1699992480,
-        "narHash": "sha256-bUcX6JznypVU4cciylePg5x1tP0xHx7j1ibwxYDNU+8=",
+        "lastModified": 1700051522,
+        "narHash": "sha256-u9k9O8oN5udH3ReAjJKribuJD8jHGHu5MDkJAXpqplo=",
         "owner": "hyprwm",
         "repo": "hyprland",
-        "rev": "81598b3dbdf3c01bb04fa377e65cfde91e6b2ab1",
+        "rev": "9e3dccca76ca3af4e96ac80c2ddef4774dc1354b",
         "type": "github"
       },
       "original": {
@@ -610,16 +610,16 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1699806165,
-        "narHash": "sha256-9fOfivkDmQvXiPoV31GiNpBaQSqCEy6eNO6hTO8LciM=",
+        "lastModified": 1700056052,
+        "narHash": "sha256-z2kMHqhmN89jb9cBUWK5xbW0LjBSKhgqFxjjk4ar8BQ=",
         "owner": "bddvlpr",
         "repo": "untis-ics-sync",
-        "rev": "76d83ff2bfed7cca704488a8d42d9b99e4bfd0ac",
+        "rev": "c2a2eb625b9d160b3d7b1382083eae0966421c2e",
         "type": "github"
       },
       "original": {
         "owner": "bddvlpr",
-        "ref": "v0.5.7",
+        "ref": "v0.5.8",
         "repo": "untis-ics-sync",
         "type": "github"
       }
