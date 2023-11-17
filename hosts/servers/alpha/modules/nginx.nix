@@ -23,7 +23,7 @@
         sha256 = "1ad09hijignj6zlqvdjxv7rjj8567z357zfavv201b9vx3ikk7cy";
       });
     in ''
-         ${realIpsFromList cfipv4}
+      ${realIpsFromList cfipv4}
       ${realIpsFromList cfipv6}
       real_ip_header CF-Connecting-IP;
     '';
