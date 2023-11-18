@@ -21,5 +21,5 @@
     inputs.deploy-rs.packages.${pkgs.system}.default
   ];
 
-  home.persistence."/nix/persist/home/bddvlpr".directories = [".cargo"];
+  home.persistence."/nix/persist/home/bddvlpr".directories = [".cargo" ".nuget"];
 }

@@ -31,6 +31,7 @@
 
       "workbench.startupEditor" = "none";
       "workbench.colorTheme" = "Catppuccin Macchiato";
+      "workbench.tree.indent" = 16;
 
       "omnisharp.useModernNet" = true;
     };
