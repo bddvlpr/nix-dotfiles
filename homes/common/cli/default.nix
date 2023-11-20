@@ -6,6 +6,7 @@
   imports = [
     ./cloud/hetzner.nix
     ./cloud/talosctl.nix
+    ./editors/helix
     ./editors/neovim
     ./shells/fish.nix
     ./shells/starship.nix
