@@ -14,7 +14,6 @@
     ];
 
     settings = {
-      theme = "catppuccin_macchiato";
       editor = {
         line-number = "relative";
         cursorline = true;

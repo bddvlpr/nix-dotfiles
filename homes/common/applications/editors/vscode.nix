@@ -22,7 +22,6 @@
       "editor.inlineSuggest.enabled" = true;
       "editor.minimap.autohide" = true;
       "editor.minimap.renderCharacters" = false;
-      "terminal.integrated.fontFamily" = "RobotoMono Nerd Font";
       "extensions.autoUpdate" = false;
       "explorer.autoReveal" = false;
       "explorer.excludeGitIgnore" = true;
