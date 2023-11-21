@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: let
+  scheme = config.lib.stylix.colors {template = builtins.readFile ./style.colors.mustache;};
+
   playerctl = "${pkgs.playerctl}/bin/playerctl";
   github-cli = "${pkgs.github-cli}/bin/gh";
   jq = "${pkgs.jq}/bin/jq";
@@ -32,7 +34,11 @@ in {
   programs.waybar = {
     enable = true;
 
-    #style = ./style.css;
+    style = ''
+      @import "${scheme}";
+      ${builtins.readFile ./style.css}
+    '';
+
     systemd.enable = true;
 
     settings = {

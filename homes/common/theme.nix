@@ -9,8 +9,8 @@
 
   stylix = {
     image = pkgs.fetchurl {
-      url = "https://cdnb.artstation.com/p/assets/images/images/028/971/403/large/jeremy-anninos-ahrifinal.jpg";
-      hash = "sha256-kQf83oV/UjZXTxVVnTrgGeU2xM4+rDqYlQa7r2BnPEc=";
+      url = "https://safebooru.org//images/4204/6839ae09e9ace9744c28aa7108889d04390ad58b.png";
+      hash = "sha256-qmKrYB5sarCBUeaBpQT3D4Xe8wHPu6lZ9WL35lDmNIA=";
     };
 
     polarity = "dark";
@@ -43,12 +43,9 @@
       };
     };
 
-    targets = {
-      waybar = {
-        enableLeftBackColors = true;
-        enableCenterBackColors = true;
-        enableRightBackColors = true;
-      };
+    cursor = {
+      package = pkgs.capitaine-cursors;
+      name = "capitaine-cursors";
     };
   };
 }
