@@ -1,21 +1,13 @@
-* {
-  border-radius: 0px;
-  font-family: "Symbols Nerd Font Mono", "Roboto Nerd Font Mono";
-  font-weight: 500;
-  font-size: 14px;
-  min-height: 20px;
-}
-
 window#waybar {
   background: transparent;
 }
 
 #workspaces button {
-  color: @base08;
+  color: @base04;
 }
 
 #workspaces button.active {
-  color: @base02;
+  color: @base08;
 }
 
 #workspaces button.focused {
@@ -42,27 +34,21 @@ window#waybar {
 #tray,
 #cpu,
 #memory,
-#custom-logo,
 #custom-player,
 #custom-github,
 #modbackground {
-  background: alpha(@base00, 0.8);
-  color: @base08;
+  background: alpha(@base00, 0.7);
+  color: @base04;
   opacity: 1;
   padding: 0px 7px;
   margin: 4px;
   border-radius: 7px;
 }
 
-#custom-logo {
-  border-radius: 7px 0px 0px 7px;
-  margin: 4px 0px 4px 8px;
-}
-
 #workspaces {
-  border-radius: 0px 7px 7px 0px;
+  border-radius: 7px;
   padding: 0px;
-  margin: 4px 4px 4px 0px;
+  margin: 4px;
 }
 
 #clock {
@@ -88,4 +74,3 @@ window#waybar {
   border-radius: 0px 7px 7px 0px;
   margin: 4px 4px 4px 0px;
 }
-

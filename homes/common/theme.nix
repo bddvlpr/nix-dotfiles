@@ -9,8 +9,8 @@
 
   stylix = {
     image = pkgs.fetchurl {
-      url = "https://safebooru.org//images/4204/6839ae09e9ace9744c28aa7108889d04390ad58b.png";
-      hash = "sha256-qmKrYB5sarCBUeaBpQT3D4Xe8wHPu6lZ9WL35lDmNIA=";
+      url = "https://cdn.donmai.us/original/8a/0d/__yae_miko_genshin_impact_drawn_by_morimori_14292311__8a0db0479881a0e8f9744a9d49207739.jpg";
+      hash = "sha256-eT6DBwDrtWgMmQzWnTS8DY5XcT7EJqoK3iBtC7CXb4Y=";
     };
 
     polarity = "dark";
@@ -46,6 +46,10 @@
     cursor = {
       package = pkgs.capitaine-cursors;
       name = "capitaine-cursors";
+    };
+
+    targets = {
+      waybar.enable = false;
     };
   };
 }

@@ -31,11 +31,22 @@
     fi
   '';
 in {
+  home.packages = [(pkgs.nerdfonts.override {fonts = ["NerdFontsSymbolsOnly"];})];
+
   programs.waybar = {
     enable = true;
 
-    style = ''
+    style = with config.stylix.fonts; ''
       @import "${scheme}";
+
+      * {
+        border-radius: 0px;
+        min-height: 20px;
+        font-weight: 500;
+        font-family: ${sansSerif.name}, "Symbols Nerd Font";
+        font-size: 14px;
+      }
+
       ${builtins.readFile ./style.css}
     '';
 
@@ -47,16 +58,11 @@ in {
         layer = "top";
         position = "top";
         output = builtins.map (m: m.name) (builtins.filter (m: !m.noBar) config.monitors);
-        modules-left = ["custom/logo" "hyprland/workspaces"];
+        modules-left = ["hyprland/workspaces"];
         modules-center = ["custom/player"];
         modules-right = ["tray" "custom/github" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock"];
 
         # Modules
-        "custom/logo" = {
-          format = "󱄅";
-          tooltip = false;
-        };
-
         "hyprland/window" = {
           format = "{}";
         };

@@ -18,6 +18,7 @@ stdenvNoCC.mkDerivation rec {
     runHook preInstall
 
     install -Dm644 *.woff2 -t $out/share/fonts/woff2
+    install -Dm644 *.otf -t $out/share/fonts/opentype
 
     runHook postInstall
   '';
