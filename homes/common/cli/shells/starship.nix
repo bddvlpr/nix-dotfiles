@@ -8,7 +8,6 @@
     settings =
       {
         format = "$all";
-        palette = "catppuccin_macchiato";
 
         character = {
           success_symbol = "[❯](bold mauve)";
@@ -36,13 +35,5 @@
           symbol = " ";
           style = "bold cyan";
         };
-      }
-      // builtins.fromTOML (builtins.readFile (pkgs.fetchFromGitHub {
-          owner = "catppuccin";
-          repo = "starship";
-          rev = "5629d2356f62a9f2f8efad3ff37476c19969bd4f";
-          hash = "sha256-nsRuxQFKbQkyEI4TXgvAjcroVdG+heKX5Pauq/4Ota0=";
-        }
-        + "/palettes/macchiato.toml"));
-  };
+      };  };
 }

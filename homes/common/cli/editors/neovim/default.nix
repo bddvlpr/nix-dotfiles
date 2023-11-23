@@ -49,7 +49,6 @@
       trouble-nvim
       vim-svelte
       which-key-nvim
-      catppuccin-nvim
 
       nvim-treesitter-parsers.css
       nvim-treesitter-parsers.c_sharp
