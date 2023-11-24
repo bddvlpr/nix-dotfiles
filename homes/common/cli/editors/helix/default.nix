@@ -1,6 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.helix = {
     enable = true;
+
+    defaultEditor = true;
 
     extraPackages = with pkgs; [
       # LSP
@@ -14,6 +20,7 @@
     ];
 
     settings = {
+      theme = lib.mkForce "base16_transparent";
       editor = {
         line-number = "relative";
         cursorline = true;
@@ -27,6 +34,19 @@
           render = true;
         };
       };
+    };
+
+    languages = {
+      language = [
+        {
+          name = "svelte";
+          auto-format = true;
+        }
+        {
+          name = "typescript";
+          auto-format = true;
+        }
+      ];
     };
   };
 }

@@ -80,8 +80,6 @@
   };
 
   home = {
-    sessionVariables.EDITOR = "nvim";
-
     persistence."/nix/persist/home/bddvlpr".directories = [".config/github-copilot"];
   };
 }

@@ -52,4 +52,6 @@
       waybar.enable = false;
     };
   };
+
+  home.packages = [pkgs.noto-fonts-cjk-sans];
 }
