@@ -48,7 +48,6 @@ in {
     enable = true;
     package = hyprwm-hyprland.default;
 
-    enableNvidiaPatches = true;
     xwayland.enable = true;
 
     settings = {
