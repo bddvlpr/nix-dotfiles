@@ -6,6 +6,7 @@
   imports =
     [
       inputs.impermanence.nixosModules.home-manager.impermanence
+      ./theme.nix
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 

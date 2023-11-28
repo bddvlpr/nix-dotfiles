@@ -9,7 +9,6 @@
   hyprwm-contrib = inputs.hyprwm-contrib.packages.${pkgs.system};
 in {
   imports = [
-    ../common
     ../wayland
   ];
 
@@ -31,8 +30,6 @@ in {
     '';
   };
 
-  fonts.fontconfig.enable = true;
-
   home = {
     packages = with pkgs; [
       swaybg
@@ -40,13 +37,6 @@ in {
       playerctl
       xdg-utils
       hyprwm-contrib.grimblast
-
-      fira-code
-      roboto-mono
-      twemoji-color-font
-      noto-fonts-cjk-sans
-
-      (nerdfonts.override {fonts = ["FiraCode" "RobotoMono" "NerdFontsSymbolsOnly"];})
     ];
 
     sessionVariables = {
@@ -69,8 +59,7 @@ in {
       };
 
       exec = [
-        "${pkgs.swaybg}/bin/swaybg -i ${./wallpapers/nix.png} --mode fill"
-        "${pkgs.nextcloud-client}/bin/nextcloud --background"
+        "${pkgs.swaybg}/bin/swaybg -i ${config.stylix.image} --mode fill"
       ];
 
       general = {
@@ -81,18 +70,6 @@ in {
 
         layout = "dwindle";
         no_cursor_warps = true;
-
-        "col.active_border" = "rgb(c6a0f6) rgb(ed8796) rgb(ee99a0) rgb(f5a97f) rgb(eed49f) rgb(a6da95) rgb(91d7e3) rgb(7dc4e4) rgb(8aadf4) rgb(b7bdf8) 45deg";
-        "col.inactive_border" = "rgb(181926)";
-      };
-
-      group = {
-        "col.border_inactive" = "rgb(181926)";
-        "col.border_active" = "rgb(c6a0f6) rgb(ed8796) rgb(ee99a0) rgb(f5a97f) rgb(eed49f) rgb(a6da95) rgb(91d7e3) rgb(7dc4e4) rgb(8aadf4) rgb(b7bdf8) 45deg";
-        groupbar = {
-          "col.inactive" = "rgb(181926)";
-          "col.active" = "rgb(c6a0f6) rgb(ed8796) rgb(ee99a0) rgb(f5a97f) rgb(eed49f) rgb(a6da95) rgb(91d7e3) rgb(7dc4e4) rgb(8aadf4) rgb(b7bdf8) 45deg";
-        };
       };
 
       decoration = {
@@ -104,7 +81,6 @@ in {
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
 
         blur = {
           enabled = false;

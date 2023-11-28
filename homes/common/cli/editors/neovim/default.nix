@@ -49,7 +49,6 @@
       trouble-nvim
       vim-svelte
       which-key-nvim
-      catppuccin-nvim
 
       nvim-treesitter-parsers.css
       nvim-treesitter-parsers.c_sharp
@@ -81,8 +80,6 @@
   };
 
   home = {
-    sessionVariables.EDITOR = "nvim";
-
     persistence."/nix/persist/home/bddvlpr".directories = [".config/github-copilot"];
   };
 }

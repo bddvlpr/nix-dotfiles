@@ -7,6 +7,16 @@
         ExtensionSettings = {};
       };
     };
+    profiles = {
+      Default = {
+        userChrome = ''
+          .titlebar-color {
+            background-color: var(--toolbar-bgcolor) !important;
+            color: var(--toolbar-color) !important;
+          }
+        '';
+      };
+    };
   };
 
   home = {

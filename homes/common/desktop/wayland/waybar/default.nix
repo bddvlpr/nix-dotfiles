@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: let
+  scheme = config.lib.stylix.colors {template = builtins.readFile ./style.colors.mustache;};
+
   playerctl = "${pkgs.playerctl}/bin/playerctl";
   github-cli = "${pkgs.github-cli}/bin/gh";
   jq = "${pkgs.jq}/bin/jq";
@@ -29,10 +31,25 @@
     fi
   '';
 in {
+  home.packages = [(pkgs.nerdfonts.override {fonts = ["NerdFontsSymbolsOnly"];})];
+
   programs.waybar = {
     enable = true;
 
-    style = ./style.css;
+    style = with config.stylix.fonts; ''
+      @import "${scheme}";
+
+      * {
+        border-radius: 0px;
+        min-height: 20px;
+        font-weight: 500;
+        font-family: ${sansSerif.name}, "Symbols Nerd Font";
+        font-size: 14px;
+      }
+
+      ${builtins.readFile ./style.css}
+    '';
+
     systemd.enable = true;
 
     settings = {
@@ -41,16 +58,11 @@ in {
         layer = "top";
         position = "top";
         output = builtins.map (m: m.name) (builtins.filter (m: !m.noBar) config.monitors);
-        modules-left = ["custom/logo" "hyprland/workspaces"];
+        modules-left = ["hyprland/workspaces"];
         modules-center = ["custom/player"];
         modules-right = ["tray" "custom/github" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock"];
 
         # Modules
-        "custom/logo" = {
-          format = "󱄅";
-          tooltip = false;
-        };
-
         "hyprland/window" = {
           format = "{}";
         };
