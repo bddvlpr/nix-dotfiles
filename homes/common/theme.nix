@@ -8,9 +8,11 @@
   ];
 
   stylix = {
+    base16Scheme = ./theme.yml;
+
     image = pkgs.fetchurl {
-      url = "https://cdn.donmai.us/original/8a/0d/__yae_miko_genshin_impact_drawn_by_morimori_14292311__8a0db0479881a0e8f9744a9d49207739.jpg";
-      hash = "sha256-eT6DBwDrtWgMmQzWnTS8DY5XcT7EJqoK3iBtC7CXb4Y=";
+      url = "https://github.com/NixOS/nixos-artwork/blob/ac0b0737b2fa81536e32f3498659f8c60884d93d/wallpapers/nix-wallpaper-dracula.png?raw=true";
+      hash = "sha256-SykeFJXCzkeaxw06np0QkJCK28e0k30PdY8ZDVcQnh4=";
     };
 
     polarity = "dark";

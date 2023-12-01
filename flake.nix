@@ -26,7 +26,7 @@
     agenix.url = "github:ryantm/agenix";
     stylix.url = "github:bluskript/stylix";
 
-    untis-ics-sync.url = "github:bddvlpr/untis-ics-sync/v0.5.8";
+    untis-ics-sync.url = "github:bddvlpr/untis-ics-sync/v0.5.9";
 
     nix-spicetify.url = "github:the-argus/spicetify-nix";
     nix-index-database.url = "github:mic92/nix-index-database";

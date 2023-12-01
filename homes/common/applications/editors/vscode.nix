@@ -33,6 +33,10 @@
       "workbench.tree.indent" = 16;
 
       "omnisharp.useModernNet" = true;
+
+      "[aspnetcorerazor]" = {
+        "editor.formatOnSave" = false;
+      };
     };
 
     extensions = with pkgs.vscode-extensions; [

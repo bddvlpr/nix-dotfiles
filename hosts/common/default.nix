@@ -48,6 +48,7 @@
 
   documentation.man.generateCaches = false;
   programs.fuse.userAllowOther = true;
+  programs.dconf.enable = true;
 
   services.ntp.enable = true;
   time.timeZone = "Europe/Brussels";
