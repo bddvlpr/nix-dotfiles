@@ -29,7 +29,6 @@
       "security.workspace.trust.enabled" = false;
 
       "workbench.startupEditor" = "none";
-      "workbench.colorTheme" = "Catppuccin Macchiato";
       "workbench.tree.indent" = 16;
 
       "omnisharp.useModernNet" = true;
@@ -40,9 +39,6 @@
     };
 
     extensions = with pkgs.vscode-extensions; [
-      # Theme & flair
-      catppuccin.catppuccin-vsc
-
       # Nix(OS)
       bbenoist.nix
       kamadorueda.alejandra

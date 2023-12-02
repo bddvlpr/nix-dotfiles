@@ -60,7 +60,7 @@ in {
         output = builtins.map (m: m.name) (builtins.filter (m: !m.noBar) config.monitors);
         modules-left = ["hyprland/workspaces"];
         modules-center = ["custom/player"];
-        modules-right = ["tray" "custom/github" "cpu" "memory" "backlight" "pulseaudio" "pulseaudio#microphone" "network" "battery" "clock"];
+        modules-right = ["tray" "custom/github" "cpu" "memory" "backlight" "pulseaudio" "network" "battery" "clock"];
 
         # Modules
         "hyprland/window" = {
@@ -154,7 +154,7 @@ in {
         pulseaudio = {
           format = "{icon} {volume}%";
           tooltip = false;
-          format-muted = " Muted";
+          format-muted = "󰖁";
           on-click = "${pamixer} -t";
           on-click-right = "${pavucontrol}";
           on-click-middle = "${helvum}";
@@ -170,18 +170,6 @@ in {
             car = "";
             default = ["" "" ""];
           };
-        };
-
-        "pulseaudio#microphone" = {
-          format = "{format_source}";
-          format-source = " {volume}%";
-          format-source-muted = " Muted";
-          on-click = "${pamixer} --default-source -t";
-          on-click-right = "${pavucontrol}";
-          on-click-middle = "${helvum}";
-          on-scroll-up = "${pamixer} --default-source -i 5";
-          on-scroll-down = "${pamixer} --default-source -d 5";
-          scroll-step = 5;
         };
 
         "custom/player" = {
