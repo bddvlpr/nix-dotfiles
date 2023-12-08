@@ -59,6 +59,6 @@
     name = "Papirus";
     package = pkgs.papirus-icon-theme;
   };
-  
+
   home.packages = [pkgs.noto-fonts-cjk-sans];
 }
