@@ -28,7 +28,7 @@
       systemd.services.untis-ics-sync = {
         description = "Untis ICal Service";
         wantedBy = ["multi-user.target"];
-        after = ["networking.target"];
+        after = ["network-online.target"];
 
         environment = {
           UNTIS_SCHOOLNAME = "ap-hogeschool-antwerpen";
