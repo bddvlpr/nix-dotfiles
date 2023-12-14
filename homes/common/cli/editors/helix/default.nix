@@ -15,6 +15,7 @@
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
       nodePackages.vscode-langservers-extracted
+      nodePackages."@prisma/language-server"
       omnisharp-roslyn
       rust-analyzer
     ];
@@ -33,17 +34,28 @@
         indent-guides = {
           render = true;
         };
+        file-picker = {
+          hidden = false;
+        };
       };
     };
 
     languages = {
       language = [
         {
+          name = "prisma";
+          auto-format = true;
+        }
+        {
           name = "svelte";
           auto-format = true;
         }
         {
           name = "typescript";
+          formatter = {
+            command = "${pkgs.nodePackages.prettier}/bin/prettier";
+            args = ["--stdin-filepath" "file.ts"];
+          };
           auto-format = true;
         }
       ];
