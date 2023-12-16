@@ -36,6 +36,9 @@
       "[aspnetcorerazor]" = {
         "editor.formatOnSave" = false;
       };
+      "[typescript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
     };
 
     extensions = with pkgs.vscode-extensions; [
