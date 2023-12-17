@@ -8,11 +8,9 @@
   ];
 
   stylix = {
-    base16Scheme = ./theme.yml;
-
     image = pkgs.fetchurl {
-      url = "https://github.com/NixOS/nixos-artwork/blob/ac0b0737b2fa81536e32f3498659f8c60884d93d/wallpapers/nix-wallpaper-dracula.png?raw=true";
-      hash = "sha256-SykeFJXCzkeaxw06np0QkJCK28e0k30PdY8ZDVcQnh4=";
+      url = "https://i.imgur.com/SdRfC2S.jpeg";
+      hash = "sha256-W053xG3oPYYftrvHUndwvrFzkuK3RXj6s2JjgJwW3bk=";
     };
 
     polarity = "dark";
