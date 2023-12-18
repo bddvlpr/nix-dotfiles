@@ -3,7 +3,7 @@ window#waybar {
 }
 
 #workspaces button {
-  color: @base04;
+  color: @base05;
 }
 
 #workspaces button.active {
