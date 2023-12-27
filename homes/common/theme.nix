@@ -8,10 +8,7 @@
   ];
 
   stylix = {
-    image = pkgs.fetchurl {
-      url = "https://i.imgur.com/SdRfC2S.jpeg";
-      hash = "sha256-W053xG3oPYYftrvHUndwvrFzkuK3RXj6s2JjgJwW3bk=";
-    };
+    image = ./wallpaper.jpeg;
 
     polarity = "dark";
 
