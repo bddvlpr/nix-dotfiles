@@ -12,6 +12,7 @@
       nf = "nix flake";
       nfu = "nix flake update";
       nr = "nix run";
+      nfmt = "nix fmt";
 
       snr = "sudo nixos-rebuild --flake /etc/nixos";
       snrs = "sudo nixos-rebuild --flake /etc/nixos switch";
