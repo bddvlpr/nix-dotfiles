@@ -12,7 +12,6 @@
     ./networking.nix
     ./openssh.nix
     ./users.nix
-    ../../secrets/system.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 

@@ -21,7 +21,6 @@
 
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";
-    agenix.url = "github:ryantm/agenix";
     stylix.url = "github:bluskript/stylix";
 
     untis-ics-sync.url = "github:bddvlpr/untis-ics-sync/v0.5.9";

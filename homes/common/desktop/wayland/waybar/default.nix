@@ -6,8 +6,6 @@
   scheme = config.lib.stylix.colors {template = builtins.readFile ./style.colors.mustache;};
 
   playerctl = "${pkgs.playerctl}/bin/playerctl";
-  github-cli = "${pkgs.github-cli}/bin/gh";
-  jq = "${pkgs.jq}/bin/jq";
   light = "${pkgs.light}/bin/light";
   pamixer = "${pkgs.pamixer}/bin/pamixer";
   pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
@@ -19,15 +17,6 @@
       echo " $current_song"
     else
       echo ""
-    fi
-  '';
-  githubExec = pkgs.writeShellScriptBin "github-exec" ''
-    current_notifications="$(GH_TOKEN=$(${pkgs.toybox}/bin/cat ${config.age.secrets.github-notifications.path}) ${github-cli} api notifications)"
-    current_count="$(echo $current_notifications | ${jq} '. | map(select(.unread == true)) | length')"
-    if [[ !($current_count) || "$current_count" == "0" ]]; then
-      echo "󰂜"
-    else
-      echo "󰅸  $current_count"
     fi
   '';
 in {
@@ -60,7 +49,7 @@ in {
         output = builtins.map (m: m.name) (builtins.filter (m: !m.noBar) config.monitors);
         modules-left = ["hyprland/workspaces"];
         modules-center = ["custom/player"];
-        modules-right = ["tray" "custom/github" "cpu" "memory" "backlight" "pulseaudio" "network" "battery" "clock"];
+        modules-right = ["tray" "cpu" "memory" "backlight" "pulseaudio" "network" "battery" "clock"];
 
         # Modules
         "hyprland/window" = {
@@ -181,13 +170,6 @@ in {
           on-click = "${playerctl} --player spotify play-pause";
           on-scroll-up = "${playerctl} --player spotify volume 0.1+";
           on-scroll-down = "${playerctl} --player spotify volume 0.1-";
-        };
-
-        "custom/github" = {
-          interval = 60;
-          exec = "${githubExec}/bin/github-exec";
-          tooltip = false;
-          escape = true;
         };
       };
     };

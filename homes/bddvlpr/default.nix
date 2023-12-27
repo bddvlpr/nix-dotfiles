@@ -1,7 +1,6 @@
 {outputs, ...}: {
   imports = [
     ../common
-    ../../secrets/user.nix
   ];
 
   nixpkgs = {

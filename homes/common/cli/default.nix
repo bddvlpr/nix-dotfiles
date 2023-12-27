@@ -24,7 +24,6 @@
     ncdu
     htop
     neofetch
-    inputs.agenix.packages.${system}.default
   ];
 
   programs.nix-index = {
