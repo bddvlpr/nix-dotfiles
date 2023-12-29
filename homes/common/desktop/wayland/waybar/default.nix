@@ -47,7 +47,7 @@ in {
         layer = "top";
         position = "top";
         output = builtins.map (m: m.name) (builtins.filter (m: !m.noBar) config.monitors);
-        modules-left = ["hyprland/workspaces"];
+        modules-left = ["hyprland/workspaces" "hyprland/window"];
         modules-center = ["custom/player"];
         modules-right = ["tray" "cpu" "memory" "backlight" "pulseaudio" "network" "battery" "clock"];
 
@@ -58,8 +58,6 @@ in {
 
         "hyprland/workspaces" = {
           all-outputs = true;
-          on-scroll-up = "hyprctl dispatch workspace e-1";
-          on-scroll-down = "hyprctl dispatch workspace e+1";
           format = "{icon}";
           format-icons = {
             "1" = "󰎤";
