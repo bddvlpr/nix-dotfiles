@@ -47,6 +47,14 @@ window#waybar {
   margin: 4px;
 }
 
+window#waybar.empty {
+  background-color: transparent;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
 #clock {
   margin: 4px 8px 4px 4px;
 }
