@@ -166,13 +166,13 @@ in {
         "SHIFT, Print, exec, ${grimblast} --notify copy output"
         "SUPER SHIFT, Print, exec, ${grimblast} --notify copy screen"
 
-        "SUPER, Left, movefocus, l"
-        "SUPER, Right, movefocus, r"
-        "SUPER, Up, movefocus, u"
-        "SUPER, Down, movefocus, d"
+        "SUPER, H, movefocus, l"
+        "SUPER, L, movefocus, r"
+        "SUPER, K, movefocus, u"
+        "SUPER, J, movefocus, d"
 
-        "SUPER SHIFT, Left, movewindow, mon:+1"
-        "SUPER SHIFT, Right, movewindow, mon:-1"
+        "SUPER SHIFT, L, movewindow, mon:+1"
+        "SUPER SHIFT, H, movewindow, mon:-1"
 
         ", XF86MonBrightnessUp, exec, ${light} -A 5"
         ", XF86MonBrightnessDown, exec, ${light} -U 5"
