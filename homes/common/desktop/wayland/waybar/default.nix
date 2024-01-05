@@ -41,7 +41,9 @@ in {
 
     systemd.enable = true;
 
-    settings = {
+    settings = let
+      colors = config.lib.stylix.colors.withHashtag;
+    in {
       bar = {
         # Configuration & Setup
         layer = "top";
@@ -77,26 +79,26 @@ in {
 
         cpu = {
           interval = 3;
-          format = "  {usage}%";
-          format-alt = "  {icon}";
+          format = "<span color='${colors.base0B}'>  </span>{usage}%";
+          format-alt = "<span color='${colors.base0B}'>  </span>{icon}";
           format-icons = ["󰋙" "󰫃" "󰫄" "󰫅" "󰫆" "󰫇" "󰫈"];
         };
 
         memory = {
           interval = 3;
-          format = "  {}%";
-          format-alt = "  {icon}";
+          format = "<span color='${colors.base0B}'>  </span>{}%";
+          format-alt = "<span color='${colors.base0B}'>  </span>{icon}";
           format-icons = ["󰋙" "󰫃" "󰫄" "󰫅" "󰫆" "󰫇" "󰫈"];
           tooltip-format = "{used:0.1f}GiB/{total:0.1f}GiB total ({swapUsed:0.1f}GiB/{swapAvail:0.1f}GiB swap)";
         };
 
         network = {
           interval = 3;
-          format-wifi = "  {signalStrength}%";
-          format-ethernet = "󰈀  {ifname}";
-          format-linked = "󰌙 (No IP)";
+          format-wifi = "<span color='${colors.base0B}'>  </span>{signalStrength}%";
+          format-ethernet = "<span color='${colors.base0B}'>󰈀  </span>{ifname}";
+          format-linked = "<span color='${colors.base0B}'>󰌙 </span>(No IP)";
           format-disconnected = "";
-          format-alt = "󰛴 {bandwidthDownBits} 󰛶 {bandwidthUpBits}";
+          format-alt = "<span color='${colors.base0B}'>󰛴 </span>{bandwidthDownBits} <span color='${colors.base0B}'>󰛶 </span>{bandwidthUpBits}";
           tooltip-format = ''
             Address: {ipaddr}/{cidr}
             Gateway: {gwaddr} ({netmask})
@@ -109,8 +111,8 @@ in {
         };
 
         backlight = {
-          format = "{icon} {percent}%";
-          format-alt = "{icon}";
+          format = "<span color='${colors.base0B}'>{icon} </span>{percent}%";
+          format-alt = "<span color='${colors.base0B}'>{icon}</span>";
           format-icons = ["󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨"];
 
           on-scroll-up = "${light} -A 1";
@@ -123,8 +125,8 @@ in {
             critical = 15;
           };
           interval = 15;
-          format = "{icon} {capacity}%";
-          format-alt = "{icon}";
+          format = "<span color='${colors.base0B}'>{icon} </span>{capacity}%";
+          format-alt = "<span color='${colors.base0B}'>{icon}</span>";
           format-icons = {
             default = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
             charging = ["󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅"];
@@ -132,14 +134,14 @@ in {
         };
 
         clock = {
-          format = " {:%I:%M%p}";
-          format-alt = "{: %a, %b %e}";
+          format = "<span color='${colors.base0B}'> </span>{:%I:%M%p}";
+          format-alt = "<span color='${colors.base0B}'> </span>{:%a, %b %e}";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           timezone = "Europe/Brussels";
         };
 
         pulseaudio = {
-          format = "{icon} {volume}%";
+          format = "<span color='${colors.base0B}'>{icon} </span>{volume}%";
           tooltip = false;
           format-muted = "󰖁";
           on-click = "${pamixer} -t";
