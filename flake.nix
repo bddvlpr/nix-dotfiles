@@ -4,29 +4,34 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
 
     deploy-rs.url = "github:serokell/deploy-rs";
+    deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprwm-hyprland.url = "github:hyprwm/hyprland";
+    hyprwm-hyprland.inputs.nixpkgs.follows = "nixpkgs";
     hyprwm-contrib.url = "github:hyprwm/contrib";
+    hyprwm-contrib.inputs.nixpkgs.follows = "nixpkgs";
 
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";
+
     stylix.url = "github:bluskript/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
 
     untis-ics-sync.url = "github:bddvlpr/untis-ics-sync/v0.5.9";
+    untis-ics-sync.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-spicetify.url = "github:the-argus/spicetify-nix";
+    nix-spicetify.inputs.nixpkgs.follows = "nixpkgs";
+
     nix-index-database.url = "github:mic92/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
