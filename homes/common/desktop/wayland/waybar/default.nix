@@ -143,7 +143,7 @@ in {
         pulseaudio = {
           format = "<span color='${colors.base0B}'>{icon} </span>{volume}%";
           tooltip = false;
-          format-muted = "󰖁";
+          format-muted = "<span color='${colors.base0B}'>󰖁</span>";
           on-click = "${pamixer} -t";
           on-click-right = "${pavucontrol}";
           on-click-middle = "${helvum}";
