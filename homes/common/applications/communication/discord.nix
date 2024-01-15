@@ -1,7 +1,11 @@
 {pkgs, ...}: {
   home = {
-    packages = [(pkgs.discord.override {withVencord = true;})];
+    packages = [pkgs.vesktop];
 
-    persistence."/nix/persist/home/bddvlpr".directories = [".config/discord" ".config/Vencord"];
+    persistence."/nix/persist/home/bddvlpr".directories = [
+      ".config/discord"
+      ".config/Vencord"
+      ".config/VencordDesktop"
+    ];
   };
 }
