@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   home = {
-    # TODO: https://github.com/NixOS/nixpkgs/pull/273455
-    # packages = with pkgs; [r2modman];
+    packages = with pkgs; [r2modman];
 
     persistence."/nix/persist/home/bddvlpr".directories = [".config/r2modman" ".config/r2modmanPlus-local"];
   };

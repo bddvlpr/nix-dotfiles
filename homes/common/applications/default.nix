@@ -16,6 +16,7 @@
     ./graphics/blender.nix
     ./graphics/cura.nix
     ./graphics/unity.nix
+    ./media/mpv.nix
     ./media/obs.nix
     ./media/spotify.nix
     ./productivity/freecad.nix

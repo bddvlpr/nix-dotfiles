@@ -10,7 +10,6 @@
     packages = with pkgs; [
       grim
       imv
-      mpv
       mimeo
       waypipe
       slurp
