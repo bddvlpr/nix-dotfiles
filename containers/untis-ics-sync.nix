@@ -28,6 +28,7 @@
       systemd.services.untis-ics-sync = {
         description = "Untis ICal Service";
         wantedBy = ["multi-user.target"];
+        wants = ["network-online.target"];
         after = ["network-online.target"];
 
         environment = {
