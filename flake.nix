@@ -35,7 +35,6 @@
     self,
     nixpkgs,
     home-manager,
-    deploy-rs,
     ...
   } @ inputs: let
     inherit (self) outputs;
