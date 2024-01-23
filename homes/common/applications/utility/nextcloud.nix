@@ -7,4 +7,8 @@
       "Nextcloud"
     ];
   };
+
+  wayland.windowManager.hyprland.settings.exec = [
+    "${pkgs.nextcloud-client}/bin/nextcloud --background"
+  ];
 }

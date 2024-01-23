@@ -10,9 +10,6 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
-    deploy-rs.url = "github:serokell/deploy-rs";
-    deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
-
     hyprwm-hyprland.url = "github:hyprwm/hyprland";
     hyprwm-hyprland.inputs.nixpkgs.follows = "nixpkgs";
     hyprwm-contrib.url = "github:hyprwm/contrib";
@@ -70,27 +67,8 @@
     homeManagerModules = import ./modules/home-manager;
 
     nixosConfigurations = {
-      dissension = mkSystem [./hosts/clients/dissension];
-      solaris = mkSystem [./hosts/clients/solaris];
-
-      alpha = mkSystem [./hosts/servers/alpha];
+      dissension = mkSystem [./hosts/dissension];
+      solaris = mkSystem [./hosts/solaris];
     };
-
-    deploy.nodes = let
-      mkNode = hostname: path: {
-        inherit hostname;
-
-        sshUser = "root";
-        magicRollback = false;
-
-        profiles = {
-          system = {inherit path;};
-        };
-      };
-    in {
-      alpha = mkNode "alpha.bddvlpr.com" (deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.alpha);
-    };
-
-    checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
   };
 }
