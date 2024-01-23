@@ -10,6 +10,7 @@
     # TODO: Separate into their modules respectively
     directories = [
       "/etc/nixos"
+      "/etc/infra"
       "/etc/NetworkManager"
       "/var/log"
       "/var/lib/bluetooth"
