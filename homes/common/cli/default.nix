@@ -25,6 +25,7 @@
     ncdu
     htop
     neofetch
+    file
   ];
 
   programs.nix-index = {
