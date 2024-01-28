@@ -1,6 +1,7 @@
 {
   imports = [
     ./browsers/firefox.nix
+    ./communication/cinny.nix
     ./communication/discord.nix
     ./communication/nheko.nix
     ./communication/quaternion.nix
@@ -11,6 +12,7 @@
     ./entertainment/osu.nix
     ./entertainment/prism.nix
     ./entertainment/r2modman.nix
+    ./entertainment/runelite.nix
     ./entertainment/runescape.nix
     ./entertainment/steam.nix
     ./graphics/blender.nix
