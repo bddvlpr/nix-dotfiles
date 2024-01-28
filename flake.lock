@@ -34,6 +34,23 @@
         "type": "github"
       }
     },
+    "base16-alacritty-yaml": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674275109,
+        "narHash": "sha256-Adwx9yP70I6mJrjjODOgZJjt4OPPe8gJu7UuBboXO4M=",
+        "owner": "aarowill",
+        "repo": "base16-alacritty",
+        "rev": "63d8ae5dfefe5db825dd4c699d0cdc2fc2c3eaf7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aarowill",
+        "repo": "base16-alacritty",
+        "rev": "63d8ae5dfefe5db825dd4c699d0cdc2fc2c3eaf7",
+        "type": "github"
+      }
+    },
     "base16-fish": {
       "flake": false,
       "locked": {
@@ -438,6 +455,7 @@
       "inputs": {
         "base16": "base16",
         "base16-alacritty": "base16-alacritty",
+        "base16-alacritty-yaml": "base16-alacritty-yaml",
         "base16-fish": "base16-fish",
         "base16-foot": "base16-foot",
         "base16-helix": "base16-helix",
@@ -451,15 +469,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1705202953,
-        "narHash": "sha256-G6/A3K2hwyXuTqL59VNLgKzR1gyMt4RLrshPTiBNr/I=",
-        "owner": "bluskript",
+        "lastModified": 1706466685,
+        "narHash": "sha256-R6D+3wBQvn7sCZLbM3WrHbKtVNSflkruGQ/5bHfslhg=",
+        "owner": "danth",
         "repo": "stylix",
-        "rev": "19879cb0cefa9cc344a863d622948d45677ef535",
+        "rev": "7a7c90015de7454060e103e94bb4e6010b5aa062",
         "type": "github"
       },
       "original": {
-        "owner": "bluskript",
+        "owner": "danth",
         "repo": "stylix",
         "type": "github"
       }
