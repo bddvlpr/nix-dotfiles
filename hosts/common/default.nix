@@ -53,5 +53,14 @@
   time.timeZone = "Europe/Brussels";
 
   security.polkit.enable = true;
+  security.pam.loginLimits = [
+    {
+      domain = "*";
+      type = "soft";
+      item = "nofile";
+      value = "524288";
+    }
+  ];
+
   system.stateVersion = "22.11";
 }
