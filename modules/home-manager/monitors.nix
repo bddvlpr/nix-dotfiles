@@ -39,7 +39,7 @@ in {
           default = 0;
         };
         scale = mkOption {
-          type = types.int;
+          type = types.float;
           default = 1;
         };
         enabled = mkOption {

@@ -11,9 +11,10 @@
   monitors = [
     {
       name = "eDP-1";
-      width = 1920;
-      height = 1080;
+      width = 3072;
+      height = 1920;
       x = 0;
+      scale = 1.5;
     }
   ];
 }

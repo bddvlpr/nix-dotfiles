@@ -1,19 +1,22 @@
 {
+  fetchFromGitHub,
   fetchurl,
   stdenvNoCC,
   ...
-}: let
-  firmware = fetchurl {
-    url = "https://files.catbox.moe/y6pz3d.gz";
-    hash = "sha256-z/lPdVfiWHWsQDTSE1mR6A5/hg7+JnbmblSXE/oyn10=";
-  };
-in
-  stdenvNoCC.mkDerivation {
-    name = "brcm";
+}:
+stdenvNoCC.mkDerivation {
+  name = "brcm";
 
-    buildCommand = ''
-      target="$out/lib/firmware"
-      mkdir -p "$target"
-      tar -xf ${firmware} -C $target
-    '';
-  }
+  src = fetchFromGitHub {
+    owner = "j3ffyang";
+    repo = "mbp-fedora";
+    rev = "99402df7335afe2bb67474a3d8a5a3ee35f05271";
+    hash = "sha256-JTNU38xeGXDmOdMCVNX+zQKEo71ynsADqV+GeOgK7Sg=";
+  };
+
+  buildCommand = ''
+    target="$out/lib/firmware"
+    mkdir -p "$target"
+    cp -r $src/brcm $target
+  '';
+}

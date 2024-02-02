@@ -14,7 +14,7 @@
     inputs.hardware.nixosModules.common-cpu-intel
     inputs.hardware.nixosModules.common-pc-laptop-ssd
 
-    #inputs.hardware.nixosModules.common-gpu-nvidia
+    inputs.hardware.nixosModules.common-gpu-amd
   ];
 
   boot = {
@@ -22,7 +22,7 @@
       availableKernelModules = ["xhci_pci" "nvme" "usb_storage" "sd_mod"];
       kernelModules = ["dm-snapshot"];
       luks.devices.crypted = {
-        device = "/dev/disk/by-uuid/01cac429-f025-4049-96bc-8c191bc99fe3";
+        device = "/dev/disk/by-uuid/325b56f8-ecee-44b5-bce1-9420450c7840";
         preLVM = true;
       };
     };

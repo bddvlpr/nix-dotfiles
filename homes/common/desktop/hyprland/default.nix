@@ -54,7 +54,7 @@ in {
       input = {
         follow_mouse = 2;
         sensitivity = 0;
-        touchpad.disable_while_typing = false;
+        touchpad.disable_while_typing = true;
       };
 
       exec = [
