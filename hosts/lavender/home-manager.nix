@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   imports = [
     ../../homes/bddvlpr
     ../../homes/common/audio.nix
@@ -7,6 +7,12 @@
     ../../homes/common/desktop/hyprland
     ../../homes/common/services/gnome-keyring.nix
   ];
+
+  wayland.windowManager.hyprland = {
+    settings.input = {
+      sensitivity = lib.mkForce 0.3;
+    };
+  };
 
   monitors = [
     {
