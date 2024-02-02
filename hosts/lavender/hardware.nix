@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   inputs,
   lib,
   modulesPath,
@@ -28,6 +29,10 @@
     kernelModules = ["kvm-intel"];
     extraModulePackages = [];
   };
+
+  hardware.firmware = [
+    pkgs.brcm
+  ];
 
   fileSystems = {
     "/" = {
