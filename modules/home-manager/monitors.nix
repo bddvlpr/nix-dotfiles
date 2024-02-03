@@ -39,8 +39,8 @@ in {
           default = 0;
         };
         scale = mkOption {
-          type = types.int;
-          default = 1;
+          type = types.float;
+          default = 1.0;
         };
         enabled = mkOption {
           type = types.bool;
