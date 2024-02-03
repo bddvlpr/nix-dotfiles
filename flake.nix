@@ -10,11 +10,6 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprwm-hyprland.url = "github:hyprwm/hyprland";
-    hyprwm-hyprland.inputs.nixpkgs.follows = "nixpkgs";
-    hyprwm-contrib.url = "github:hyprwm/contrib";
-    hyprwm-contrib.inputs.nixpkgs.follows = "nixpkgs";
-
     impermanence.url = "github:nix-community/impermanence";
     hardware.url = "github:nixos/nixos-hardware";
 

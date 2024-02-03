@@ -1,13 +1,9 @@
 {
-  inputs,
   lib,
   config,
   pkgs,
   ...
-}: let
-  hyprwm-hyprland = inputs.hyprwm-hyprland.packages.${pkgs.system};
-  hyprwm-contrib = inputs.hyprwm-contrib.packages.${pkgs.system};
-in {
+}: {
   imports = [
     ../wayland
   ];
@@ -36,7 +32,7 @@ in {
       swayidle
       playerctl
       xdg-utils
-      hyprwm-contrib.grimblast
+      pkgs.grimblast
     ];
 
     sessionVariables = {
@@ -46,7 +42,6 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = hyprwm-hyprland.default;
 
     xwayland.enable = true;
 
@@ -148,7 +143,7 @@ in {
 
         thunar = "${pkgs.xfce.thunar}/bin/thunar";
         wofi = "${pkgs.wofi}/bin/wofi";
-        grimblast = "${hyprwm-contrib.grimblast}/bin/grimblast";
+        grimblast = "${pkgs.grimblast}/bin/grimblast";
         light = "${pkgs.light}/bin/light";
         pamixer = "${pkgs.pamixer}/bin/pamixer";
         playerctl = "${pkgs.playerctl}/bin/playerctl";
