@@ -64,6 +64,7 @@
       dissension = mkSystem [./hosts/dissension];
       solaris = mkSystem [./hosts/solaris];
       lavender = mkSystem [./hosts/lavender];
+      apollo = mkSystem [./hosts/apollo];
     };
   };
 }
