@@ -52,15 +52,20 @@
   services.ntp.enable = true;
   time.timeZone = "Europe/Brussels";
 
-  security.polkit.enable = true;
-  security.pam.loginLimits = [
-    {
-      domain = "*";
-      type = "soft";
-      item = "nofile";
-      value = "524288";
-    }
-  ];
+  security = {
+    polkit.enable = true;
+    pam = {
+      services.swaylock = {};
+      loginLimits = [
+        {
+          domain = "*";
+          type = "soft";
+          item = "nofile";
+          value = "524288";
+        }
+      ];
+    };
+  };
 
   system.stateVersion = "22.11";
 }
