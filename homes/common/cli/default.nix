@@ -14,6 +14,7 @@
     ./dev/direnv.nix
     ./dev/git.nix
     ./dev/gpg.nix
+    ./dev/gh.nix
     ./dev/sops.nix
     ./dev/ssh.nix
     ./dev/tools.nix

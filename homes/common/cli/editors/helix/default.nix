@@ -18,6 +18,7 @@
       nodePackages."@prisma/language-server"
       omnisharp-roslyn
       rust-analyzer
+      jdtls
     ];
 
     settings = {

@@ -138,6 +138,15 @@
         "move 100%-41% 6%, title:^(Volume Control)$"
       ];
 
+      windowrulev2 = [
+        "windowdance,class:^(jetbrains-.*)$"
+        "dimaround,class:^(jetbrains-.*)$,floating:1,title:^(?!win)"
+        "center,class:^(jetbrains-.*)$,floating:1,title:^(?!win)"
+        "noanim,class:^(jetbrains-.*)$,title:^(win.*)$"
+        "noinitialfocus,class:^(jetbrains-.*)$,title:^(win.*)$"
+        "rounding 0,class:^(jetbrains-.*)$,title:^(win.*)$"
+      ];
+
       bind = let
         inherit (config.home.sessionVariables) TERMINAL;
 
@@ -147,6 +156,7 @@
         light = "${pkgs.light}/bin/light";
         pamixer = "${pkgs.pamixer}/bin/pamixer";
         playerctl = "${pkgs.playerctl}/bin/playerctl";
+        swaylock = "${config.programs.swaylock.package}/bin/swaylock";
       in [
         "SUPER, Return, exec, ${TERMINAL}"
         "SUPER SHIFT, Return, exec, ${thunar}"
@@ -163,6 +173,8 @@
         ",Print, exec, ${grimblast} --notify copy active"
         "SHIFT, Print, exec, ${grimblast} --notify copy output"
         "SUPER SHIFT, Print, exec, ${grimblast} --notify copy screen"
+
+        "SUPER SHIFT, Insert, exec, ${swaylock} -fFS --clock --effect-blur 8x5 --indicator-idle-visible"
 
         "SUPER, H, movefocus, l"
         "SUPER, L, movefocus, r"

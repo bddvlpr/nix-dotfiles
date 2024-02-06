@@ -5,4 +5,5 @@
   proton-ge-custom = pkgs.callPackage ./entertainment/proton-ge-custom.nix {};
   mpv-discord = pkgs.callPackage ./media/mpv-discord.nix {};
   brcm = pkgs.callPackage ./firmware/brcm.nix {};
+  jdtls = pkgs.callPackage ./lsp/jdtls.nix {};
 }

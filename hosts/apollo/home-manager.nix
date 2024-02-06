@@ -14,7 +14,13 @@
       width = 3840;
       height = 2400;
       x = 0;
-      scale = 1.5;
+      scale = 2.0;
+    }
+    {
+      name = "DP-2";
+      width = 3440;
+      height = 1440;
+      x = 1920;
     }
   ];
 }
