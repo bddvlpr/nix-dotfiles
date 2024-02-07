@@ -16,9 +16,6 @@
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
-    untis-ics-sync.url = "github:bddvlpr/untis-ics-sync/v0.5.9";
-    untis-ics-sync.inputs.nixpkgs.follows = "nixpkgs";
-
     nix-spicetify.url = "github:the-argus/spicetify-nix";
     nix-spicetify.inputs.nixpkgs.follows = "nixpkgs";
 

@@ -354,8 +354,7 @@
         "nix-index-database": "nix-index-database",
         "nix-spicetify": "nix-spicetify",
         "nixpkgs": "nixpkgs",
-        "stylix": "stylix",
-        "untis-ics-sync": "untis-ics-sync"
+        "stylix": "stylix"
       }
     },
     "stylix": {
@@ -401,27 +400,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "untis-ics-sync": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1701445335,
-        "narHash": "sha256-6VZ942W2Ml7eLIKhy6j4D9FosSKPgxJu2+9rbpqzwr4=",
-        "owner": "bddvlpr",
-        "repo": "untis-ics-sync",
-        "rev": "19048a35a130b9b6d76475f9897662d4ce821ad2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "bddvlpr",
-        "ref": "v0.5.9",
-        "repo": "untis-ics-sync",
         "type": "github"
       }
     }
