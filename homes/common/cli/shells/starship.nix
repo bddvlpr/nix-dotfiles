@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.starship = {
     enable = true;
 
@@ -16,7 +16,7 @@
       os = {
         disabled = false;
         symbols = {
-          NixOS = "  ";
+          NixOS = " ";
         };
       };
 
@@ -27,8 +27,6 @@
         time_format = "%H:%M";
         style = "bold cyan";
       };
-
-      hostname.style = "bold lavender";
 
       nix_shell = {
         symbol = " ";
