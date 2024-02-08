@@ -20,7 +20,7 @@
 
     timeouts = [
       {
-        timeout = 60 * 5;
+        timeout = 60 * 2;
         command = "${config.programs.swaylock.package}/bin/swaylock -fFS --clock --effect-blur 8x5 --indicator-idle-visible";
       }
     ];

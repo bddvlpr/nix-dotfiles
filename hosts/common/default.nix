@@ -7,6 +7,7 @@
 }: {
   imports = [
     ./boot.nix
+    ./greetd.nix
     ./gpg.nix
     ./impermanence.nix
     ./networking.nix
