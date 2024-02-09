@@ -1,6 +1,4 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [eza];
-
   programs.fish = {
     enable = true;
     shellAbbrs = {
@@ -21,7 +19,8 @@
     };
 
     shellAliases = {
-      ls = "eza --icons -F -H --group-directories-first --git";
+      ls = "${pkgs.eza}/bin/eza --icons -F -H --group-directories-first --git";
+      cat = "${pkgs.bat}/bin/bat -pp --theme=base16";
       code = "codium";
     };
 
