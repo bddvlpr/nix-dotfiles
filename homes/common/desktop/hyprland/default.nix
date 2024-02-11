@@ -16,10 +16,6 @@
       xdg-utils
       pkgs.grimblast
     ];
-
-    sessionVariables = {
-      WLR_NO_HARDWARE_CURSORS = 1;
-    };
   };
 
   wayland.windowManager.hyprland = {
@@ -39,6 +35,10 @@
 
       exec = [
         "${pkgs.swaybg}/bin/swaybg -i ${config.stylix.image} --mode fill"
+      ];
+
+      env = [
+        "WLR_NO_HARDWARE_CURSORS,1"
       ];
 
       general = {
