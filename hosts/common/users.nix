@@ -8,7 +8,7 @@ in {
       bddvlpr = {
         hashedPasswordFile = "/nix/persist/passwd";
         isNormalUser = true;
-        extraGroups = ["wheel" "networkmanager" "docker" "libvirtd" "video" "adbusers" "dialout"];
+        extraGroups = ["wheel" "networkmanager" "docker" "libvirtd" "video" "adbusers" "dialout" "plugdev"];
         openssh.authorizedKeys.keys = identity.userKeys;
       };
     };

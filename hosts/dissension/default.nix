@@ -15,6 +15,7 @@
     ../common/modules/mullvad.nix
     ../common/modules/nvidia.nix
     ../common/modules/opentabletdriver.nix
+    ../common/modules/sdr.nix
     ../common/modules/thunar.nix
     ../common/modules/xdg.nix
     ./hardware.nix
