@@ -13,6 +13,7 @@
     ../common/modules/docker.nix
     ../common/modules/libvirtd.nix
     ../common/modules/mullvad.nix
+    ../common/modules/sdr.nix
     ../common/modules/thunar.nix
     ../common/modules/xdg.nix
     ./hardware.nix
