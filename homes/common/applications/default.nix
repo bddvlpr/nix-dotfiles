@@ -6,6 +6,7 @@
     ./communication/nheko.nix
     ./communication/quaternion.nix
     ./communication/teams.nix
+    ./editors/beekeeper.nix
     ./editors/ghidra.nix
     ./editors/intellij.nix
     ./editors/openlens.nix
