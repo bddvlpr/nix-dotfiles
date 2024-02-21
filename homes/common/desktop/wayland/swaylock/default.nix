@@ -15,7 +15,7 @@
       effect-blur = "8x5";
     };
   };
- 
+
   services.swayidle = {
     enable = true;
 
