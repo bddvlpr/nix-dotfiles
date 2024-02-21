@@ -17,7 +17,7 @@
       scale = 2.0;
     }
     {
-      name = "DP-3";
+      name = "DP-2";
       width = 3440;
       height = 1440;
       x = 1920;

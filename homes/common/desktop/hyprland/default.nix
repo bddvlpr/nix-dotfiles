@@ -156,7 +156,7 @@
         "SHIFT, Print, exec, ${grimblast} --notify copy output"
         "SUPER SHIFT, Print, exec, ${grimblast} --notify copy screen"
 
-        "SUPER SHIFT, Insert, exec, ${swaylock} -fFS --clock --effect-blur 8x5 --indicator-idle-visible"
+        "SUPER SHIFT, Insert, exec, ${swaylock}"
 
         "SUPER, H, movefocus, l"
         "SUPER, L, movefocus, r"

@@ -6,11 +6,11 @@
 }:
 stdenvNoCC.mkDerivation rec {
   pname = "geist-nf";
-  version = "3.1.0";
+  version = "3.1.1";
 
   src = fetchzip {
     url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/GeistMono.zip";
-    hash = "sha256-MUZJf+gSFImbDNPXYo0Bm3avJ/vg88o8gMjzvCF/TaA=";
+    hash = "sha256-GzWly6hGshy8DYZNweejvPymcxQSIU7oGUmZEhreMCM=";
     stripRoot = false;
   };
 
