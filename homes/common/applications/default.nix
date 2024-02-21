@@ -17,6 +17,7 @@
     ./entertainment/runelite.nix
     ./entertainment/runescape.nix
     ./entertainment/steam.nix
+    ./entertainment/steamguard.nix
     ./graphics/blender.nix
     ./graphics/cura.nix
     ./graphics/unity.nix
