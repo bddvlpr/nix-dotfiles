@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, config, ...}: {
   programs.vscode = {
     enable = true;
 
@@ -16,12 +16,13 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
 
-    userSettings = {
+    userSettings = with config.stylix.fonts; {
       "git.autofetch" = true;
       "editor.formatOnSave" = true;
       "editor.inlineSuggest.enabled" = true;
       "editor.minimap.autohide" = true;
       "editor.minimap.renderCharacters" = false;
+      "editor.fontFamily" = monospace.name;
       "extensions.autoUpdate" = false;
       "explorer.autoReveal" = false;
       "explorer.excludeGitIgnore" = true;
@@ -30,6 +31,8 @@
 
       "workbench.startupEditor" = "none";
       "workbench.tree.indent" = 16;
+      "workbench.iconTheme" = "catppuccin-macchiato";
+      "workbench.colorTheme" = "Catppuccin Macchiato";
 
       "omnisharp.useModernNet" = true;
 
@@ -80,6 +83,10 @@
       esbenp.prettier-vscode
       dbaeumer.vscode-eslint
       github.copilot
+
+      # Themeing
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
     ];
   };
 

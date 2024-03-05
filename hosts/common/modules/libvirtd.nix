@@ -1,5 +1,11 @@
 {
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      swtpm.enable = true;
+      ovmf.enable = true;
+    };
+  };
 
   boot.binfmt.emulatedSystems = ["aarch64-linux"];
 
