@@ -40,6 +40,11 @@
 
       "omnisharp.useModernNet" = true;
 
+      "typescript.updateImportsOnFileMove.enabled" = "always";
+
+      "gitlens.showWhatsNewAfterUpgrades" = false;
+      "gitlens.showWelcomeOnInstall" = false;
+
       "[aspnetcorerazor]" = {
         "editor.formatOnSave" = false;
       };
@@ -48,45 +53,54 @@
       };
     };
 
-    extensions = with pkgs.vscode-extensions; [
-      # Nix(OS)
-      bbenoist.nix
-      kamadorueda.alejandra
+    extensions = with pkgs.vscode-extensions;
+      [
+        # Nix(OS)
+        bbenoist.nix
+        kamadorueda.alejandra
 
-      # Rust
-      rust-lang.rust-analyzer
-      tamasfe.even-better-toml
+        # Rust
+        rust-lang.rust-analyzer
+        tamasfe.even-better-toml
 
-      # Angular
-      angular.ng-template
+        # Angular
+        angular.ng-template
 
-      # Flutter
-      dart-code.flutter
-      dart-code.dart-code
+        # Flutter
+        dart-code.flutter
+        dart-code.dart-code
 
-      # Svelte(Kit)
-      svelte.svelte-vscode
-      bradlc.vscode-tailwindcss
+        # Svelte(Kit)
+        svelte.svelte-vscode
+        bradlc.vscode-tailwindcss
 
-      # C# (.NET)
-      ms-dotnettools.csharp
+        # C# (.NET)
+        ms-dotnettools.csharp
 
-      # Python
-      ms-toolsai.jupyter
-      ms-toolsai.jupyter-keymap
-      ms-toolsai.jupyter-renderers
+        # Python
+        ms-toolsai.jupyter
+        ms-toolsai.jupyter-keymap
+        ms-toolsai.jupyter-renderers
 
-      # Misc
-      editorconfig.editorconfig
-      ms-azuretools.vscode-docker
-      usernamehw.errorlens
-      eamodio.gitlens
-      esbenp.prettier-vscode
-      dbaeumer.vscode-eslint
+        # Misc
+        editorconfig.editorconfig
+        ms-azuretools.vscode-docker
+        usernamehw.errorlens
+        eamodio.gitlens
+        esbenp.prettier-vscode
+        dbaeumer.vscode-eslint
 
-      # Themeing
-      catppuccin.catppuccin-vsc
-      catppuccin.catppuccin-vsc-icons
-    ];
+        # Themeing
+        catppuccin.catppuccin-vsc
+        catppuccin.catppuccin-vsc-icons
+      ]
+      ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "vscord";
+          publisher = "leonardssh";
+          version = "5.2.4";
+          sha256 = "sha256-PlBQG7w1ZHj3bedzwxHMW1wNvDotcrEwpHwwjozPwa4=";
+        }
+      ];
   };
 }
