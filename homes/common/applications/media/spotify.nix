@@ -25,12 +25,11 @@ in {
   };
 
   home = {
-    packages = [pkgs.spotify-tui];
+    packages = [pkgs.spotify-player];
 
     persistence."/nix/persist/home/bddvlpr".directories = [
       ".config/spotify"
       ".cache/spotify"
-      ".config/spotify-tui"
     ];
   };
 }
