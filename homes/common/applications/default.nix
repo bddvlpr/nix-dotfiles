@@ -8,7 +8,6 @@
     ./communication/teams.nix
     ./editors/beekeeper.nix
     ./editors/ghidra.nix
-    ./editors/intellij.nix
     ./editors/openlens.nix
     ./editors/vscode.nix
     ./entertainment/osu.nix
