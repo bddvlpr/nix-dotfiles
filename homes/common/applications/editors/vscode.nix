@@ -71,9 +71,6 @@
       # C# (.NET)
       ms-dotnettools.csharp
 
-      # Databases
-      prisma.prisma
-
       # Python
       ms-toolsai.jupyter
       ms-toolsai.jupyter-keymap
@@ -86,21 +83,10 @@
       eamodio.gitlens
       esbenp.prettier-vscode
       dbaeumer.vscode-eslint
-      github.copilot
 
       # Themeing
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
     ];
-  };
-
-  home.file.".vscode-oss/argv.json" = {
-    force = true;
-    text = ''
-      {
-         "enable-crash-reporter": false,
-         "password-store": "gnome"
-      }
-    '';
   };
 }
