@@ -1,10 +1,7 @@
 {
   imports = [
     ./browsers/firefox.nix
-    ./communication/cinny.nix
     ./communication/discord.nix
-    ./communication/nheko.nix
-    ./communication/quaternion.nix
     ./communication/teams.nix
     ./editors/beekeeper.nix
     ./editors/ghidra.nix
