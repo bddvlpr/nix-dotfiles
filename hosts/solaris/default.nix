@@ -6,7 +6,6 @@
 }: {
   imports = [
     ../common
-    ../common/modules/adb.nix
     ../common/modules/audio.nix
     ../common/modules/bluetooth.nix
     ../common/modules/client.nix

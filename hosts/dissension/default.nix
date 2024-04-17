@@ -6,7 +6,6 @@
 }: {
   imports = [
     ../common
-    ../common/modules/adb.nix
     ../common/modules/audio.nix
     ../common/modules/client.nix
     ../common/modules/docker.nix
