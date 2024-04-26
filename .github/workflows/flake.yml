@@ -1,4 +1,4 @@
-name: "NixOS CI"
+name: "NixOS CI [flake]"
 
 on:
   schedule:
