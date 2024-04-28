@@ -1,0 +1,20 @@
+name: "NixOS CI"
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-flake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v20
+        with:
+          github_access_token: ${{secrets.GITHUB_TOKEN}}
+      - run: nix flake update
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: master
+          commit_message: "chore: flake update"
